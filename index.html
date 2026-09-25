@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تَوْقِيعُ النَّزَاهَةِ - STD 10 · UNIT 4 · L1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&family=Manjari:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#1e3a8a;--primary-light:#2563eb;--tint:#eff6ff;--tint-border:#bfdbfe;--glow1:rgba(37,99,235,.18);--glow2:rgba(217,119,6,.12);
+ --hero:linear-gradient(160deg,#172554 0%,#1e40af 55%,#b45309 140%);
+ --hero-pattern:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 6px,transparent 6px 26px),radial-gradient(ellipse at 50% -20%,rgba(253,224,71,.9),transparent 55%)}
+:root{
+  --card-bg:rgba(255,255,255,.96); --text-color:#0f172a;
+  --shadow-sm:0 4px 6px -1px rgba(0,0,0,.05); --shadow-md:0 10px 25px -5px rgba(0,0,0,.1); --shadow-lg:0 20px 30px -10px rgba(0,0,0,.15);
+  --radius-lg:24px; --radius-md:16px; --radius-sm:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f8fafc;background-image:radial-gradient(at 0% 0%,var(--glow1) 0px,transparent 50%),radial-gradient(at 100% 100%,var(--glow2) 0px,transparent 50%);background-attachment:fixed;min-height:100vh;overflow-x:hidden;color:var(--text-color);direction:rtl;font-family:'Cairo','Segoe UI',Tahoma,sans-serif}
+button,input,textarea,select{font-family:inherit}
+button:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--primary-light);outline-offset:2px}
+.ar{font-family:'Scheherazade New','Amiri',serif;font-weight:700}
+.ml{font-family:'Manjari',sans-serif;font-weight:700;unicode-bidi:plaintext}
+#app{position:relative;z-index:1;max-width:1000px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;padding:16px}
+header{background:var(--card-bg);backdrop-filter:blur(12px);padding:14px 22px;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;border:1px solid rgba(255,255,255,.8);gap:12px}
+.logo-area{display:flex;align-items:center;gap:12px;cursor:pointer}
+.logo-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--primary-light),var(--primary));border-radius:14px;display:flex;justify-content:center;align-items:center;font-size:1.6rem;box-shadow:0 4px 12px var(--glow1)}
+.logo-area h1{font-size:1.25rem;color:var(--primary);font-weight:800;line-height:1.2}
+.logo-area .sub{font-size:.75rem;color:#64748b}
+.logo-area span.tag{font-size:.75rem;background:var(--tint);color:var(--primary);padding:2px 10px;border-radius:20px;font-weight:700}
+.stats-bar{display:flex;align-items:center;gap:16px;background:#fef3c7;padding:6px 16px;border-radius:30px;border:1.5px solid #fde047;font-weight:700;font-size:.95rem;color:#854d0e}
+.stat-item{display:flex;align-items:center;gap:6px}
+.controls{display:flex;gap:8px}
+.icon-btn{background:#fff;border:1px solid #e2e8f0;width:40px;height:40px;border-radius:12px;display:flex;justify-content:center;align-items:center;font-size:1.1rem;cursor:pointer;box-shadow:var(--shadow-sm);transition:all .2s}
+.icon-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.progress-container{width:100%;background:#e2e8f0;height:8px;border-radius:10px;overflow:hidden;margin-bottom:20px}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--primary-light),#d97706);border-radius:10px;transition:width .4s}
+.screen{display:none;flex-direction:column;align-items:center;width:100%;flex:1;animation:fadeIn .3s ease-in-out}
+.screen.active{display:flex}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* HOME */
+.home-card{background:var(--card-bg);border-radius:var(--radius-lg);padding:32px 24px;text-align:center;box-shadow:var(--shadow-lg);width:100%;max-width:900px;margin:auto;border:1px solid rgba(255,255,255,.8);position:relative;overflow:hidden}
+.home-hero{position:relative;margin:-32px -24px 22px;padding:30px 20px 26px;background:var(--hero);color:#fff}
+.home-hero .curtain{position:absolute;inset:0;pointer-events:none;opacity:.25;background:var(--hero-pattern)}
+.lesson-badge{display:inline-block;background:rgba(255,255,255,.2);color:#fff;padding:6px 18px;border-radius:20px;font-weight:700;margin-bottom:10px;font-size:.95rem;border:1px solid rgba(255,255,255,.35)}
+.main-title{font-size:2.8rem;margin-bottom:6px;font-weight:800;line-height:1.5;text-shadow:0 3px 12px rgba(0,0,0,.25)}
+.sub-title{font-size:1.05rem;margin-bottom:10px;font-weight:700;opacity:.95}
+.author-tag{background:rgba(0,0,0,.18);color:#fff;display:inline-block;padding:4px 16px;border-radius:20px;font-size:.82rem;font-weight:600}
+.menu-group-title{text-align:right;color:var(--primary);font-size:1.05rem;font-weight:800;margin:18px 4px 10px;display:flex;align-items:center;gap:8px}
+.menu-group-title::after{content:"";flex:1;height:2px;background:var(--tint-border);border-radius:2px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;width:100%}
+.btn-menu{padding:16px 18px;border:none;border-radius:var(--radius-md);font-size:1.02rem;font-weight:700;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow-md);transition:all .25s;font-family:'Cairo',sans-serif;line-height:1.5;text-align:center}
+.btn-menu small{display:block;font-family:'Manjari',sans-serif;font-weight:700;font-size:.78rem;opacity:.92}
+.btn-menu:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.b1{background:linear-gradient(135deg,#ef4444,#dc2626)}.b2{background:linear-gradient(135deg,#10b981,#059669)}.b3{background:linear-gradient(135deg,#3b82f6,#2563eb)}.b4{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}.b5{background:linear-gradient(135deg,#14b8a6,#0d9488)}.b6{background:linear-gradient(135deg,#f59e0b,#d97706)}.b7{background:linear-gradient(135deg,#87556f,#6b3f56)}.b8{background:linear-gradient(135deg,#64748b,#475569)}.b9{background:linear-gradient(135deg,#581c87,#3b0764)}.b10{background:linear-gradient(135deg,#ec4899,#db2777)}.b11{background:linear-gradient(135deg,#0ea5e9,#0369a1)}.b12{background:linear-gradient(135deg,#65a30d,#3f6212)}
+
+.section-header{width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;background:var(--card-bg);padding:14px 24px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);border:1px solid rgba(255,255,255,.8);flex-wrap:wrap;gap:12px}
+.section-title{font-size:1.3rem;color:var(--primary);display:flex;align-items:center;gap:10px;font-weight:700}
+.back-btn{background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;padding:8px 20px;border-radius:12px;font-weight:700;cursor:pointer}
+.back-btn:hover{background:#e2e8f0}
+.content-box{background:var(--card-bg);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-md);width:100%;max-width:880px;margin:0 auto 20px;border:1px solid rgba(255,255,255,.8)}
+.center-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}
+
+/* READING */
+.story-title-wrap{text-align:center;width:100%;margin-bottom:20px}
+.story-title{font-size:1.4rem;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:inline-block;padding:10px 32px;border-radius:30px;color:#fff}
+.scene-head{margin:26px 0 12px;text-align:center}
+.scene-head span{display:inline-block;background:var(--tint);color:var(--primary);border:2px solid var(--tint-border);padding:6px 26px;border-radius:14px;font-size:1.3rem}
+.stage{background:#fdf2f8;border:1px dashed #f9a8d4;color:#9d174d;padding:12px 18px;border-radius:12px;margin-bottom:14px;font-size:1.2rem;line-height:2;text-align:center}
+.story-para{background:#f8fafc;border-right:4px solid var(--primary-light);padding:12px 16px;border-radius:var(--radius-sm);margin-bottom:12px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;border-top:1px solid #f1f5f9;border-left:1px solid #f1f5f9;border-bottom:1px solid #f1f5f9;transition:background .2s}
+.story-para.now{background:#fffbeb;border-right-color:#d97706}
+.story-para .txt{flex:1}
+.story-para p{font-size:1.4rem;line-height:2.2;color:#1e293b}
+.story-para .who{display:inline-block;font-family:'Cairo';font-weight:800;font-size:.95rem;padding:1px 12px;border-radius:12px;margin-left:8px;color:#fff;vertical-align:middle}
+.story-para .mlt{display:none;margin-top:4px;color:#475569;font-size:.98rem;line-height:1.8;border-top:1px dashed #cbd5e1;padding-top:6px;direction:ltr;text-align:left}
+body.show-ml .story-para .mlt{display:block}
+.verse{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;font-size:1.55rem;line-height:2.1;text-align:center}
+.verse .h2{color:var(--primary)}
+body.memo .verse .h2{color:transparent;background:repeating-linear-gradient(90deg,#e2e8f0 0 10px,#f1f5f9 10px 20px);border-radius:8px}
+.mini-play{background:var(--primary-light);color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;flex-shrink:0;box-shadow:0 3px 8px var(--glow1)}
+.read-all-btn{background:linear-gradient(135deg,var(--primary-light),var(--primary));color:#fff;border:none;padding:11px 24px;border-radius:25px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px var(--glow1)}
+.read-all-btn.alt{background:linear-gradient(135deg,#dc2626,#b91c1c)}
+.read-all-btn.alt2{background:linear-gradient(135deg,#059669,#047857)}
+.read-all-btn.alt3{background:linear-gradient(135deg,#d97706,#b45309)}
+.qbox{background:var(--tint);border:1px solid var(--tint-border);border-radius:var(--radius-md);padding:20px;margin-top:24px}
+.qbox-title{color:var(--primary);font-size:1.2rem;margin-bottom:12px;font-weight:700}
+.qbox-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.qbox-list li{font-size:1.2rem;color:#1f2937;line-height:1.8}
+
+/* PAGES */
+.pages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+.page-tile{background:#fff;border:2px solid #e2e8f0;border-radius:var(--radius-md);padding:16px;cursor:pointer;text-align:center;transition:all .2s;position:relative;box-shadow:var(--shadow-sm)}
+.page-tile:hover{border-color:var(--primary-light);transform:translateY(-4px)}
+.page-tile .pn{font-size:2rem;font-weight:800;color:var(--primary);line-height:1.2}
+.page-tile .pi{font-size:1.8rem}
+.page-tile .pt{font-size:1.05rem;color:#334155;line-height:1.7;margin-top:4px}
+.page-tile .pc{font-size:.78rem;color:#64748b;margin-top:6px}
+.page-tile.done::after{content:"✓";position:absolute;top:8px;left:10px;background:#22c55e;color:#fff;width:24px;height:24px;border-radius:50%;font-size:.9rem;line-height:24px}
+.page-nav{display:flex;justify-content:space-between;gap:10px;margin-top:10px}
+.activity-block{background:#fffbebf5;border:1px solid #fde68a;border-radius:var(--radius-md);padding:20px;margin-bottom:20px}
+.activity-block.info{background:#eff6ff;border-color:#bfdbfe}
+.activity-block.disc{background:#f0fdf4;border-color:#bbf7d0}
+.activity-heading{color:#b45309;font-size:1.2rem;margin-bottom:12px;font-weight:800;line-height:1.9}
+.activity-block.info .activity-heading{color:#1e40af}
+.activity-block.disc .activity-heading{color:#166534}
+.activity-line{font-size:1.2rem;line-height:2.1;margin-bottom:10px;color:#334155}
+.fillbox{width:100%;border:1px solid #cbd5e1;border-radius:12px;padding:10px 14px;font-size:1.15rem;font-family:'Scheherazade New',serif;font-weight:700;background:#fff;outline:none;direction:rtl}
+.fillbox:focus{border-color:var(--primary-light);box-shadow:0 0 0 3px var(--glow1)}
+textarea.fillbox{min-height:100px;line-height:1.9;resize:vertical}
+.fillbox.ok{border-color:#22c55e;background:#f0fdf4}.fillbox.bad{border-color:#ef4444;background:#fef2f2}
+.inline-in{display:inline-block;width:auto;min-width:140px;max-width:220px;padding:4px 10px;margin:0 4px}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.model-answer-btn,.check-btn{border-radius:10px;padding:8px 16px;background:#f1f5f9;color:#475569;font-weight:700;cursor:pointer;font-size:.92rem;border:1px solid #cbd5e1}
+.check-btn{background:var(--primary);color:#fff;border-color:var(--primary)}
+.model-answer{display:none;margin-top:10px;padding:14px 16px;border-radius:12px;background:var(--tint);border:1px solid var(--tint-border);font-size:1.15rem;line-height:2.1;color:var(--primary)}
+.model-answer.show{display:block}
+.feedback{margin-top:8px;font-weight:700}
+.feedback.ok{color:#15803d}.feedback.bad{color:#b91c1c}
+.opt-row{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.opt{background:#fff;border:2px solid #e2e8f0;border-radius:12px;padding:10px 14px;cursor:pointer;font-size:1.15rem;text-align:center}
+.opt:hover{border-color:#94a3b8}
+.opt.correct{background:#dcfce7;border-color:#22c55e;color:#15803d}.opt.wrong{background:#fee2e2;border-color:#ef4444;color:#b91c1c}
+.tf-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:10px 14px}
+.tf-row .s{flex:1;font-size:1.2rem;min-width:220px}
+.tf-btn{border:2px solid #e2e8f0;background:#fff;border-radius:10px;padding:4px 14px;cursor:pointer;font-weight:800}
+.tf-btn.correct{background:#dcfce7;border-color:#22c55e}.tf-btn.wrong{background:#fee2e2;border-color:#ef4444}
+.tf-fix{width:100%;display:none;color:#15803d;font-size:1.1rem}
+.tf-fix.show{display:block}
+.order-pool,.order-done{display:flex;flex-direction:column;gap:8px}
+.order-item{background:#fff;border:2px solid var(--tint-border);border-radius:12px;padding:10px 14px;cursor:pointer;font-size:1.15rem;line-height:1.9}
+.order-item:hover{background:var(--tint)}
+.order-done .order-item{cursor:default;border-color:#22c55e;background:#f0fdf4}
+.order-done .order-item b{color:#15803d;margin-left:6px}
+table.grid-t{width:100%;border-collapse:collapse;margin-top:6px;font-size:1.15rem}
+.grid-t th{background:var(--primary);color:#fff;padding:10px;font-weight:700}
+.grid-t td{border:1px solid #e2e8f0;padding:8px;text-align:center;background:#fff}
+.grid-t td.lab{background:var(--tint);color:var(--primary);font-weight:800}
+.grid-t input{width:100%;min-width:80px;text-align:center}
+.grid-t td.clickable{cursor:pointer}
+.grid-t td.clickable:hover{background:#fffbeb}
+.tbl-wrap{overflow-x:auto}
+.chip{display:inline-block;background:var(--tint);color:var(--primary);border:1px solid var(--tint-border);padding:4px 14px;border-radius:20px;margin:4px;font-size:1.1rem;cursor:pointer}
+.chip.on{background:var(--primary);color:#fff}
+.slogan-box{background:linear-gradient(135deg,#fdf2f8,#f5f3ff);border:2px solid #e9d5ff;border-radius:18px;padding:18px;text-align:center;font-size:1.6rem;color:#6b21a8;line-height:1.9;margin:10px 0}
+
+/* LEARN FLIP CARDS */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:18px;width:100%}
+.flip{perspective:900px;height:190px;cursor:pointer}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius-md);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px;text-align:center;border:2px solid #f1f5f9;box-shadow:var(--shadow-sm);background:#fff}
+.face.back{transform:rotateY(180deg);background:var(--tint);border-color:var(--tint-border)}
+.face .emo{font-size:2.6rem;margin-bottom:6px}
+.face .w{font-size:1.6rem;color:var(--primary)}
+.face .m{font-size:.95rem;color:#334155;line-height:1.6}
+.face .hint{font-size:.72rem;color:#94a3b8;margin-top:6px}
+
+/* GAMES */
+.game-box{background:var(--card-bg);border-radius:var(--radius-lg);padding:28px 22px;box-shadow:var(--shadow-lg);width:100%;max-width:780px;margin:0 auto;display:flex;flex-direction:column;align-items:center;border:1px solid rgba(255,255,255,.8)}
+.game-top{width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.game-count{background:#f1f5f9;border-radius:20px;padding:4px 14px;font-weight:700;color:#475569}
+.game-instruction{font-size:1.2rem;color:var(--primary);margin-bottom:22px;text-align:center;background:var(--tint);padding:10px 24px;border-radius:30px;font-weight:700;border:1px solid var(--tint-border);line-height:1.8}
+.g-box{width:100%;max-width:560px;min-height:110px;background:#f8fafc;border-radius:var(--radius-md);display:flex;justify-content:center;align-items:center;margin-bottom:22px;border:2px dashed #cbd5e1;padding:16px;text-align:center;font-size:1.3rem;line-height:2}
+.options-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;width:100%;max-width:560px}
+.option-btn{background:#fff;border:2px solid #e2e8f0;padding:14px;border-radius:var(--radius-md);font-size:1.25rem;font-weight:700;color:#1e293b;cursor:pointer;box-shadow:var(--shadow-sm);transition:all .2s;line-height:1.7}
+.option-btn:hover{background:#f8fafc;border-color:#94a3b8;transform:translateY(-2px)}
+.option-btn.correct{background:#dcfce7!important;border-color:#22c55e!important;color:#15803d!important}
+.option-btn.wrong{background:#fee2e2!important;border-color:#ef4444!important;color:#b91c1c!important}
+.match-container{display:flex;justify-content:space-between;width:100%;gap:18px}
+.match-column{display:flex;flex-direction:column;gap:12px;flex:1}
+.match-item{background:#fff;border:2px solid #e2e8f0;border-radius:var(--radius-md);padding:10px;display:flex;align-items:center;justify-content:center;min-height:66px;cursor:pointer;transition:all .2s;text-align:center}
+.match-item:hover{border-color:var(--primary-light);background:var(--tint)}
+.match-item.selected{border-color:#f59e0b;background:#fef3c7}
+.match-item.matched{border-color:#22c55e;background:#f0fdf4;opacity:.5;pointer-events:none}
+.match-item.wrong{border-color:#ef4444;background:#fee2e2}
+.drop-slots{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;justify-content:center;min-height:52px}
+.word-slot{min-height:50px;min-width:60px;padding:6px 14px;border:2px dashed #94a3b8;background:#f8fafc;border-radius:12px;display:flex;justify-content:center;align-items:center;font-size:1.25rem}
+.tiles{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.word-tile-btn{padding:10px 18px;background:#fff;border:2px solid var(--primary-light);border-radius:12px;font-size:1.25rem;color:var(--primary);cursor:pointer;box-shadow:var(--shadow-sm)}
+.word-tile-btn:hover{background:var(--tint)}
+.word-tile-btn[disabled]{opacity:.3;cursor:default}
+.mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;max-width:640px}
+.mem-card{height:92px;border-radius:14px;background:linear-gradient(135deg,var(--primary-light),var(--primary));color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.5rem;text-align:center;padding:6px;box-shadow:var(--shadow-sm);user-select:none}
+.mem-card.open{background:#fff;color:var(--primary);border:2px solid var(--tint-border);font-size:1.15rem}
+.mem-card.open .ml{font-size:.82rem;color:#334155}
+.mem-card.gone{background:#dcfce7;color:#15803d;border:2px solid #22c55e;cursor:default}
+.wheel{width:190px;height:190px;border-radius:50%;margin:0 auto 18px;background:conic-gradient(#ef4444 0 45deg,#f59e0b 45deg 90deg,#10b981 90deg 135deg,#3b82f6 135deg 180deg,#8b5cf6 180deg 225deg,#ec4899 225deg 270deg,#14b8a6 270deg 315deg,#64748b 315deg 360deg);border:8px solid #fff;box-shadow:var(--shadow-lg);transition:transform 2.2s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;justify-content:center}
+.wheel span{background:#fff;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.big-emoji{font-size:3.4rem;margin-bottom:10px}
+
+/* QUIZ */
+.quiz-q{background:#fff;border-radius:var(--radius-md);padding:18px;margin-bottom:18px;box-shadow:var(--shadow-sm);border:1px solid #e2e8f0}
+.quiz-q .qtext{font-size:1.25rem;margin-bottom:14px;color:#0f172a;line-height:1.9}
+.quiz-opts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.quiz-opt{background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;padding:10px 14px;cursor:pointer;text-align:center;font-size:1.15rem}
+.quiz-opt.picked{border-color:var(--primary-light);background:var(--tint)}
+.quiz-opt.correct-ans{border-color:#22c55e;background:#dcfce7;color:#15803d}
+.quiz-opt.wrong-ans{border-color:#ef4444;background:#fee2e2;color:#b91c1c}
+.submit-quiz-btn{background:linear-gradient(135deg,var(--primary-light),var(--primary));color:#fff;border:none;padding:14px 44px;border-radius:30px;font-size:1.2rem;font-weight:700;cursor:pointer}
+.quiz-score-box{background:#fef3c7;border:2px solid #fde047;border-radius:var(--radius-md);padding:18px;text-align:center;font-size:1.25rem;font-weight:700;color:#854d0e;margin-bottom:20px}
+
+table.vocab-table{width:100%;border-collapse:separate;border-spacing:0}
+.vocab-table th{background:var(--primary-light);color:#fff;padding:12px;font-size:1.05rem}
+.vocab-table th:first-child{border-top-right-radius:12px}.vocab-table th:last-child{border-top-left-radius:12px}
+.vocab-table td{padding:12px;border-bottom:1px solid #e2e8f0;font-size:1.1rem;text-align:center}
+.vocab-table td.ar{font-size:1.35rem;color:var(--primary);cursor:pointer}
+.vocab-table tr:hover td{background:#f8fafc}
+.search-in{max-width:320px;margin:0 auto 16px;display:block;text-align:center}
+
+.qb-item{background:#fff;border-radius:var(--radius-md);padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm);border:1px solid #e2e8f0}
+.qb-num{color:var(--primary-light);font-weight:bold;margin-left:8px}
+.qb-question{font-size:1.2rem;margin-bottom:10px;color:#1e293b;line-height:1.9}
+.qb-toggle-btn{background:var(--tint);color:var(--primary);border:1px solid var(--tint-border);padding:7px 18px;border-radius:20px;font-weight:700;cursor:pointer;font-size:.92rem}
+.qb-answer{display:none;margin-top:10px;padding:14px;border-radius:12px;background:var(--tint);border:1px solid var(--tint-border);font-size:1.15rem;line-height:2;color:var(--primary)}
+.qb-answer.show{display:block}
+.qb-section-title{color:var(--primary);font-size:1.3rem;margin:26px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--tint-border);font-weight:800}
+.qb-controls{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}
+.qb-action-btn{border:none;padding:10px 22px;border-radius:20px;font-weight:700;cursor:pointer;font-size:1rem;color:#fff;box-shadow:var(--shadow-sm)}
+.qb-showall{background:linear-gradient(135deg,var(--primary-light),var(--primary))}.qb-hideall{background:linear-gradient(135deg,#64748b,#475569)}.qb-print{background:linear-gradient(135deg,#10b981,#047857)}
+
+/* ROLE PLAY / SPECIAL */
+.char-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:18px}
+.char-card{border:2px solid #e2e8f0;border-radius:16px;padding:14px;text-align:center;cursor:pointer;background:#fff}
+.char-card .e{font-size:2.4rem}
+.char-card.sel{border-color:#d97706;background:#fffbeb;box-shadow:0 0 0 3px #fde68a}
+.rp-stage{min-height:170px;border-radius:18px;background:linear-gradient(180deg,#1e3a8a,#1e40af);color:#fff;padding:22px;text-align:center;position:relative;overflow:hidden}
+.rp-stage::before,.rp-stage::after{content:"";position:absolute;top:0;bottom:0;width:40px;background:repeating-linear-gradient(90deg,#1e3a8a 0 8px,#2548b8 8px 16px)}
+.rp-stage::before{right:0}.rp-stage::after{left:0}
+.rp-who{font-size:1.1rem;font-weight:800;background:rgba(255,255,255,.18);display:inline-block;padding:3px 16px;border-radius:20px;margin-bottom:10px}
+.rp-line{font-size:1.55rem;line-height:2.1;padding:0 40px}
+.rp-stage.mine{background:linear-gradient(180deg,#b45309,#d97706)}
+.rp-turn{font-size:1rem;margin-top:10px;background:#fff;color:#b45309;display:inline-block;padding:2px 14px;border-radius:14px;font-weight:800}
+.profile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.profile-grid label{display:block;color:var(--primary);font-weight:800;margin-bottom:4px}
+.timeline{position:relative;margin:10px 0;padding-right:30px}
+.timeline::before{content:"";position:absolute;right:10px;top:0;bottom:0;width:4px;background:var(--tint-border);border-radius:4px}
+.tl-item{position:relative;margin-bottom:16px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:12px 16px}
+.tl-item::before{content:"";position:absolute;right:-27px;top:16px;width:16px;height:16px;border-radius:50%;background:var(--primary);border:3px solid #fff;box-shadow:0 0 0 2px var(--primary)}
+.tl-y{font-weight:800;color:var(--primary);font-size:1.1rem}
+.tl-t{font-size:1.15rem;line-height:1.9}
+.tl-m{font-size:.9rem;color:#64748b}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(4px);z-index:100;display:none;justify-content:center;align-items:center;padding:20px}
+.modal-overlay.active{display:flex}
+.reward-card{background:#fff;border-radius:30px;padding:34px;text-align:center;max-width:440px;width:100%;box-shadow:var(--shadow-lg)}
+.reward-icon{font-size:4rem;margin-bottom:10px}
+.reward-title{color:var(--primary);font-size:2rem;margin-bottom:8px;font-weight:800}
+.reward-subtitle{color:#d97706;font-size:1.1rem;margin-bottom:22px;font-weight:700}
+.primary-action-btn{background:linear-gradient(135deg,var(--primary-light),var(--primary));color:#fff;border:none;padding:12px 34px;border-radius:25px;font-size:1.1rem;font-weight:700;cursor:pointer;margin:4px}
+.instructions-list{text-align:right;line-height:2.1;font-size:1.05rem;background:#f8fafc;padding:22px;border-radius:var(--radius-md);width:100%;border:1px solid #e2e8f0}
+.instructions-list ul{list-style:none}
+.instructions-list li{margin-bottom:8px;color:#334155}
+#printArea{display:none}
+@media print{
+  body *{visibility:hidden}
+  #printArea,#printArea *{visibility:visible}
+  #printArea{display:block!important;position:absolute;top:0;left:0;width:100%;padding:20px;direction:rtl}
+  .print-q{margin-bottom:10px;font-size:1.2rem;page-break-inside:avoid;font-weight:bold}
+  .print-a{margin:6px 0 16px;padding:8px 14px;background:#f5f5f5;border-radius:8px;font-size:1.1rem}
+  .print-title{text-align:center;font-size:1.5rem;margin-bottom:20px;font-weight:bold}
+  body{background:#fff}
+}
+@media (max-width:640px){
+  .main-title{font-size:2rem}
+  .options-grid,.quiz-opts,.opt-row{grid-template-columns:1fr}
+  .match-container{flex-direction:column}
+  .story-para p{font-size:1.2rem}
+  .verse{grid-template-columns:1fr;font-size:1.3rem}
+  header{flex-wrap:wrap;justify-content:center}
+  .stats-bar{order:3;width:100%;justify-content:center}
+  .mem-grid{grid-template-columns:repeat(3,1fr)}
+  .content-box{padding:18px}
+  .rp-line{padding:0 34px;font-size:1.3rem}
+}
+
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo-area" onclick="go('home')">
+      <div class="logo-icon" id="logoIcon">📘</div>
+      <div>
+        <h1 class="ar" id="hdrTitle"></h1>
+        <span class="tag" id="hdrTag"></span>
+        <div class="sub ml" id="hdrSub"></div>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item" title="Score">⭐ <span id="valScore">0</span></div>
+      <div class="stat-item" title="Lives">❤️ <span id="valLives">3</span></div>
+      <div class="stat-item" title="Stars">🏆 <span id="valStars">0</span></div>
+    </div>
+    <div class="controls">
+      <button class="icon-btn" id="btnAudio" onclick="toggleAudio()" title="Sound">🔊</button>
+      <button class="icon-btn" onclick="toggleFullscreen()" title="Fullscreen">⛶</button>
+      <button class="icon-btn" onclick="go('home')" title="Home">🏠</button>
+    </div>
+  </header>
+  <div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+  <div id="homeScreen" class="screen active">
+    <div class="home-card">
+      <div class="home-hero"><div class="curtain"></div>
+        <div class="lesson-badge ar" id="heroBadge"></div>
+        <h1 class="main-title ar" id="heroTitle"></h1>
+        <h2 class="sub-title ml" id="heroSub"></h2>
+        <div class="author-tag ml">Prepared by KATF STATE IT WING</div>
+      </div>
+      <div id="homeMenus"></div>
+    </div>
+  </div>
+
+  <div id="readingScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">📖 نَقْرَأُ وَنَفْهَمُ</div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box">
+      <div class="story-title-wrap"><span class="story-title ar" id="readTitle"></span></div>
+      <div class="center-row">
+        <button class="read-all-btn" onclick="readAll()">🔊 Read All / Stop</button>
+        <button class="read-all-btn alt2" onclick="toggleML()">🌐 മലയാളം അർത്ഥം</button>
+        <button class="read-all-btn alt" onclick="watchVideo()">🎬 Lesson Video</button>
+      </div>
+      <div id="storyContainer"></div>
+      <div id="storyQuestions"></div>
+    </div>
+  </div>
+
+  <div id="pagesScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">📄 صَفْحَةً صَفْحَةً <small class="ml" style="font-size:.8rem;color:#64748b">(പാഠപുസ്തകത്തിലെ ഓരോ പേജിനും പ്രവർത്തനങ്ങൾ)</small></div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box"><div class="pages-grid" id="pagesGrid"></div></div>
+  </div>
+
+  <div id="pageScreen" class="screen">
+    <div class="section-header"><div class="section-title" id="pageTitle"></div><button class="back-btn" onclick="go('pages')">Back</button></div>
+    <div class="content-box" id="pageBox"></div>
+  </div>
+
+  <div id="learnScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">🗂️ نَتَعَلَّمُ الْكَلِمَاتِ <small class="ml" style="font-size:.8rem;color:#64748b">(കാർഡ് തിരിച്ച് അർത്ഥം കാണാം)</small></div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box"><div class="cards-grid" id="learnGrid"></div></div>
+  </div>
+
+  <div id="vocabScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">📚 مُعْجَمُ الْمُفْرَدَاتِ</div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box">
+      <input class="fillbox search-in" placeholder="🔍 ابحث / Search" oninput="renderVocab(this.value)">
+      <div class="tbl-wrap"><table class="vocab-table"><thead><tr><th class="ar">الْكَلِمَةُ</th><th>Meaning (മലയാളം / English)</th><th class="ar">الْمَعْنَى بِالْعَرَبِيَّةِ</th></tr></thead><tbody id="vocabBody"></tbody></table></div>
+    </div>
+  </div>
+
+  <div id="gamesMenuScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">🎮 اِخْتَرْ لُعْبَةً</div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="menu-grid" id="gamesGrid" style="max-width:820px;margin:10px auto"></div>
+  </div>
+
+  <div id="gameScreen" class="screen">
+    <div class="game-box">
+      <div class="game-top"><button class="back-btn" onclick="go('games')">← Games</button><div class="section-title ar" id="gameTitle" style="font-size:1.15rem"></div><div class="game-count" id="gameCount"></div></div>
+      <div class="game-instruction ar" id="gameInstr"></div>
+      <div id="gameArea" style="width:100%;display:flex;flex-direction:column;align-items:center"></div>
+    </div>
+  </div>
+
+  <div id="quizScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">❓ اِخْتِبَارٌ سَرِيعٌ</div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box">
+      <div id="quizScore" class="quiz-score-box" style="display:none"></div>
+      <div id="quizBox"></div>
+      <div style="text-align:center;margin-top:20px"><button class="submit-quiz-btn" onclick="submitQuiz()">✅ Submit Answers</button> <button class="back-btn" onclick="renderQuiz();window.scrollTo({top:0})">↺ Retry</button></div>
+    </div>
+  </div>
+
+  <div id="qbankScreen" class="screen">
+    <div class="section-header"><div class="section-title ar">🗒️ بَنْكُ الْأَسْئِلَةِ (Question Bank & PDF)</div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box">
+      <div class="qb-controls">
+        <button class="qb-action-btn qb-showall" onclick="qbAll(true)">👁️ Show All Answers</button>
+        <button class="qb-action-btn qb-hideall" onclick="qbAll(false)">🙈 Hide All Answers</button>
+        <button class="qb-action-btn qb-print" onclick="printQB()">🖨️ Print / Download PDF</button>
+      </div>
+      <div id="qbankBox"></div>
+    </div>
+  </div>
+
+  <div id="extraScreen" class="screen">
+    <div class="section-header"><div class="section-title ar" id="extraTitle"></div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box" id="extraBox"></div>
+  </div>
+
+  <div id="helpScreen" class="screen">
+    <div class="section-header"><div class="section-title">ℹ️ Instructions / നിർദ്ദേശങ്ങൾ</div><button class="back-btn" onclick="go('home')">Back</button></div>
+    <div class="content-box"><div class="instructions-list ml"><ul id="helpList"></ul></div></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="rewardModal">
+  <div class="reward-card">
+    <div class="reward-icon" id="rwIcon">👑</div>
+    <h2 class="reward-title" id="rwTitle"></h2>
+    <p class="reward-subtitle ml" id="rwSub"></p>
+    <button class="primary-action-btn" id="rwAgain" onclick="closeReward('again')">🔁 Play Again</button>
+    <button class="primary-action-btn" onclick="closeReward('games')">🎮 Games</button>
+    <button class="primary-action-btn" style="background:#64748b" onclick="closeReward('home')">🏠 Home</button>
+  </div>
+</div>
+<div id="printArea"></div>
+
+<script>
+/* ================= SHARED ENGINE (STD 10 · UNIT 4) ================= */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const stripH = s => String(s).replace(/[\u064B-\u0652\u0670\u0640]/g, '');
+const norm = s => stripH(s).replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه')
+  .replace(/[^\u0600-\u06FFa-zA-Z0-9 ]/g, ' ').replace(/[،؟؛]/g, ' ').replace(/\s+/g, ' ').trim();
+const matches = (val, ans) => String(ans).split('|').some(a => norm(a) === norm(val));
+
+const GAMES = {};   // registry (lessons may add more)
+const EXTRAS = {};  // lesson-specific screens
+let state = { score: 0, lives: 3, stars: 0, audio: true, g: null, timer: null, quizDone: false, visited: new Set(), curPage: null };
+let audioCtx = null;
+
+/* ---------- sound + speech ---------- */
+function playSound(type) {
+  if (!state.audio) return;
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const o = audioCtx.createOscillator(), g = audioCtx.createGain(); o.connect(g); g.connect(audioCtx.destination);
+    const n = audioCtx.currentTime;
+    if (type === 'correct') { o.frequency.setValueAtTime(523, n); o.frequency.exponentialRampToValueAtTime(784, n + .25); g.gain.setValueAtTime(.2, n); g.gain.exponentialRampToValueAtTime(.01, n + .35); o.start(n); o.stop(n + .35); }
+    else if (type === 'wrong') { o.frequency.setValueAtTime(220, n); o.frequency.linearRampToValueAtTime(130, n + .25); g.gain.setValueAtTime(.2, n); g.gain.exponentialRampToValueAtTime(.01, n + .3); o.start(n); o.stop(n + .3); }
+    else { o.frequency.setValueAtTime(400, n); g.gain.setValueAtTime(.08, n); g.gain.exponentialRampToValueAtTime(.01, n + .08); o.start(n); o.stop(n + .08); }
+  } catch (e) {}
+}
+function speakArabic(text, onend) {
+  if (!state.audio || !('speechSynthesis' in window)) { if (onend) setTimeout(onend, 300); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(String(text).replace(/[«»()]/g, ''));
+  u.lang = 'ar-SA'; u.rate = .82;
+  const v = speechSynthesis.getVoices().find(v => v.lang && v.lang.startsWith('ar')); if (v) u.voice = v;
+  if (onend) { u.onend = onend; u.onerror = onend; }
+  speechSynthesis.speak(u);
+}
+function stopSpeech() { if ('speechSynthesis' in window) speechSynthesis.cancel(); }
+function toggleAudio() { state.audio = !state.audio; $('btnAudio').innerText = state.audio ? '🔊' : '🔇'; if (!state.audio) stopSpeech(); }
+function toggleFullscreen() { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {}); else document.exitFullscreen(); }
+function updateStats() { $('valScore').innerText = state.score; $('valLives').innerText = state.lives; $('valStars').innerText = state.stars; $('progressBar').style.width = Math.min(100, state.score / 3) + '%'; }
+function addScore(n) { state.score += n; updateStats(); }
+
+/* ---------- navigation ---------- */
+function showScreen(id) {
+  playSound('click'); stopSpeech(); readAllOn = false; rpStop();
+  if (state.timer) { clearInterval(state.timer); state.timer = null; }
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  $(id).classList.add('active'); window.scrollTo({ top: 0 });
+}
+function go(t) {
+  if (t === 'home') return showScreen('homeScreen');
+  if (t === 'reading') { renderReading(); return showScreen('readingScreen'); }
+  if (t === 'pages') { renderPages(); return showScreen('pagesScreen'); }
+  if (t.startsWith('page:')) return openPage(+t.split(':')[1]);
+  if (t === 'learn') { renderLearn(); return showScreen('learnScreen'); }
+  if (t === 'vocab') { renderVocab(); return showScreen('vocabScreen'); }
+  if (t === 'games') { renderGamesMenu(); return showScreen('gamesMenuScreen'); }
+  if (t.startsWith('game:')) return startGame(t.slice(5));
+  if (t === 'quiz') { renderQuiz(); return showScreen('quizScreen'); }
+  if (t === 'qbank') { renderQBank(); return showScreen('qbankScreen'); }
+  if (t === 'writing') return openWriting();
+  if (t === 'help') { renderHelp(); return showScreen('helpScreen'); }
+  if (t.startsWith('extra:')) {
+    const ex = EXTRAS[t.slice(6)]; if (!ex) return;
+    $('extraTitle').innerHTML = ex.title; $('extraBox').innerHTML = '';
+    showScreen('extraScreen'); ex.render($('extraBox'));
+  }
+}
+
+/* ---------- home ---------- */
+function renderHome() {
+  document.title = stripH(LESSON.title) + ' - STD 10 · UNIT 4 · ' + LESSON.code;
+  $('hdrTitle').innerText = 'اللُّغَةُ الْعَرَبِيَّةُ'; $('hdrTag').innerText = 'STD 10 · UNIT 4 · ' + LESSON.code;
+  $('hdrSub').innerText = LESSON.hdrSub; $('logoIcon').innerText = LESSON.icon;
+  $('heroBadge').innerText = LESSON.badge; $('heroTitle').innerText = LESSON.title; $('heroSub').innerText = LESSON.heroSub;
+  const box = $('homeMenus'); box.innerHTML = '';
+  LESSON.home.forEach(gr => {
+    const h = document.createElement('div'); h.className = 'menu-group-title'; h.innerHTML = gr.title; box.appendChild(h);
+    const g = document.createElement('div'); g.className = 'menu-grid';
+    gr.items.forEach(it => {
+      const b = document.createElement('button'); b.className = 'btn-menu ' + (it.cls || 'b3');
+      b.innerHTML = `<span>${it.label}${it.ml ? `<small>${it.ml}</small>` : ''}</span>`;
+      b.onclick = () => go(it.go); g.appendChild(b);
+    });
+    box.appendChild(g);
+  });
+}
+
+/* ---------- reading ---------- */
+let readAllOn = false;
+function renderReading() {
+  $('readTitle').innerText = LESSON.reading.title;
+  const c = $('storyContainer'); c.innerHTML = '';
+  LESSON.reading.blocks.forEach((b, i) => {
+    let d;
+    if (b.k === 'scene') { d = document.createElement('div'); d.className = 'scene-head'; d.innerHTML = `<span class="ar">${b.ar}</span>`; }
+    else if (b.k === 'stage') { d = document.createElement('div'); d.className = 'stage ar'; d.dataset.i = i; d.innerHTML = `${b.ar}${b.ml ? `<div class="mlt ml" style="text-align:center;direction:ltr">${b.ml}</div>` : ''}`; d.onclick = () => speakArabic(b.ar); }
+    else {
+      d = document.createElement('div'); d.className = 'story-para'; d.dataset.i = i;
+      const ch = b.sp && LESSON.chars ? LESSON.chars[b.sp] : null;
+      const who = b.sp ? `<span class="who" style="background:${ch ? ch.color : '#64748b'}">${ch ? ch.emoji + ' ' : ''}${b.sp}</span>` : '';
+      const body = b.k === 'verse' ? `<div class="verse ar"><div class="h1">${b.a}</div><div class="h2">${b.b}</div></div>` : `<p class="ar">${who}${b.ar}</p>`;
+      d.innerHTML = `<div class="txt">${body}${b.ml ? `<div class="mlt ml">${b.ml}</div>` : ''}</div><button class="mini-play" aria-label="Listen">🔊</button>`;
+      d.querySelector('button').onclick = () => speakArabic(b.k === 'verse' ? b.a + ' ... ' + b.b : b.ar);
+    }
+    c.appendChild(d);
+  });
+  const q = LESSON.reading.questions || [];
+  $('storyQuestions').innerHTML = q.length ? `<div class="qbox"><div class="qbox-title ar">🤔 نُجِيبُ عَنِ الْأَسْئِلَةِ:</div><ul class="qbox-list">${q.map(x => `<li class="ar">• ${x}</li>`).join('')}</ul></div>` : '';
+}
+function readAll() {
+  if (readAllOn) { readAllOn = false; stopSpeech(); document.querySelectorAll('.now').forEach(x => x.classList.remove('now')); return; }
+  readAllOn = true;
+  const blocks = LESSON.reading.blocks.map((b, i) => ({ b, i })).filter(x => x.b.k !== 'scene');
+  let n = 0;
+  const step = () => {
+    document.querySelectorAll('.now').forEach(x => x.classList.remove('now'));
+    if (!readAllOn || n >= blocks.length) { readAllOn = false; return; }
+    const { b, i } = blocks[n++]; const el = document.querySelector(`#storyContainer [data-i="${i}"]`);
+    if (el) { el.classList.add('now'); el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    speakArabic(b.k === 'verse' ? b.a + ' ... ' + b.b : b.ar, step);
+  };
+  step();
+}
+function toggleML() { document.body.classList.toggle('show-ml'); }
+function watchVideo() { window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(LESSON.videoQuery), '_blank'); }
+
+/* ---------- page-by-page activities ---------- */
+function renderPages() {
+  const g = $('pagesGrid'); g.innerHTML = '';
+  LESSON.pages.forEach(p => {
+    const t = document.createElement('div'); t.className = 'page-tile' + (state.visited.has(p.p) ? ' done' : ''); t.tabIndex = 0;
+    t.innerHTML = `<div class="pi">${p.icon}</div><div class="pn">صَفْحَة ${p.p}</div><div class="pt ar">${p.title}</div><div class="pc ml">${p.items.length} പ്രവർത്തനങ്ങൾ</div>`;
+    t.onclick = () => openPage(p.p); t.onkeydown = e => { if (e.key === 'Enter') openPage(p.p); };
+    g.appendChild(t);
+  });
+}
+function openPage(pn) {
+  const idx = LESSON.pages.findIndex(p => p.p === pn); if (idx < 0) return;
+  const p = LESSON.pages[idx]; state.curPage = idx; state.visited.add(pn);
+  $('pageTitle').innerHTML = `${p.icon} صَفْحَة ${p.p} — <span class="ar">${p.title}</span>`;
+  const c = $('pageBox'); c.innerHTML = '';
+  p.items.forEach((it, i) => c.appendChild(renderItem(it, i + 1)));
+  const nav = document.createElement('div'); nav.className = 'page-nav';
+  const prev = LESSON.pages[idx - 1], next = LESSON.pages[idx + 1];
+  nav.innerHTML = `<button class="back-btn" ${prev ? '' : 'disabled style="opacity:.4"'}>→ صفحة ${prev ? prev.p : ''}</button><button class="back-btn" onclick="go('pages')">📄 كل الصفحات</button><button class="back-btn" ${next ? '' : 'disabled style="opacity:.4"'}>صفحة ${next ? next.p : ''} ←</button>`;
+  const bs = nav.querySelectorAll('button'); if (prev) bs[0].onclick = () => openPage(prev.p); if (next) bs[2].onclick = () => openPage(next.p);
+  c.appendChild(nav);
+  showScreen('pageScreen');
+}
+function answerBtn(html, label) {
+  const w = document.createElement('div');
+  w.innerHTML = `<div class="btn-row"><button class="model-answer-btn">💡 ${label || 'Model Answer'}</button></div><div class="model-answer ar">${html}</div>`;
+  w.querySelector('button').onclick = () => w.querySelector('.model-answer').classList.toggle('show');
+  return w;
+}
+function renderItem(it, n) {
+  const d = document.createElement('div');
+  d.className = 'activity-block' + (it.t === 'info' || it.t === 'listen' ? ' info' : '') + (it.t === 'disc' ? ' disc' : '');
+  d.innerHTML = `<div class="activity-heading ar">${n}) ${it.h}</div>`;
+  const add = el => { typeof el === 'string' ? d.insertAdjacentHTML('beforeend', el) : d.appendChild(el); };
+  switch (it.t) {
+    case 'info': add(`<div class="activity-line ar">${it.html}</div>`); break;
+    case 'listen':
+      it.lines.forEach(l => { const r = document.createElement('div'); r.className = 'story-para'; r.innerHTML = `<div class="txt"><p class="ar">${l}</p></div><button class="mini-play">🔊</button>`; r.querySelector('button').onclick = () => speakArabic(l); add(r); });
+      break;
+    case 'qa':
+      it.qs.forEach((q, i) => {
+        add(`<div class="activity-line ar">• ${q.q}</div>`);
+        const ta = document.createElement('textarea'); ta.className = 'fillbox'; ta.style.minHeight = '60px'; ta.placeholder = 'اُكْتُبِ الْجَوَابَ هُنَا...'; add(ta);
+        add(answerBtn(q.a)); add('<div style="height:10px"></div>');
+      });
+      break;
+    case 'write':
+      if (it.prompt) add(`<div class="activity-line ar">${it.prompt}</div>`);
+      { const ta = document.createElement('textarea'); ta.className = 'fillbox'; ta.style.minHeight = '140px'; ta.value = it.start || ''; ta.placeholder = 'اُكْتُبْ هُنَا...'; add(ta); }
+      if (it.hint) add(`<div class="activity-line ml" style="font-size:.95rem;color:#64748b">💭 ${it.hint}</div>`);
+      add(answerBtn(it.a));
+      break;
+    case 'disc':
+      add(`<ul class="qbox-list">${it.qs.map(q => `<li class="ar activity-line">🗣️ ${q}</li>`).join('')}</ul>`);
+      if (it.a) add(answerBtn(it.a, 'Discussion Points'));
+      break;
+    case 'mcq': {
+      add(`<div class="activity-line ar">${it.q}</div>`);
+      const row = document.createElement('div'); row.className = 'opt-row';
+      it.opts.forEach((o, i) => { const b = document.createElement('div'); b.className = 'opt ar'; b.innerText = o; b.onclick = () => { if (row.dataset.done) return; if (i === it.ans) { b.classList.add('correct'); row.dataset.done = 1; playSound('correct'); addScore(5); } else { b.classList.add('wrong'); playSound('wrong'); } }; row.appendChild(b); });
+      add(row); break;
+    }
+    case 'fill': {
+      const ins = [];
+      it.rows.forEach(r => {
+        const line = document.createElement('div'); line.className = 'activity-line ar';
+        const parts = r.q.split('____');
+        line.innerHTML = parts.map((p, i) => p + (i < parts.length - 1 ? `<input class="fillbox inline-in" data-a="${esc(r.a)}">` : '')).join('');
+        add(line); line.querySelectorAll('input').forEach(x => ins.push(x));
+      });
+      add(checkRow(ins, it.rows.map(r => r.q.replace('____', `<u>${r.a.split('|')[0]}</u>`)).join('<br>')));
+      break;
+    }
+    case 'table': {
+      const w = document.createElement('div'); w.className = 'tbl-wrap';
+      let html = `<table class="grid-t">${it.cols ? `<tr>${it.cols.map(c => `<th class="ar">${c}</th>`).join('')}</tr>` : ''}`;
+      it.rows.forEach(r => {
+        html += '<tr>' + r.map(c => {
+          const o = typeof c === 'object' ? c : { v: c }; const sp = o.span ? ` colspan="${o.span}"` : ''; const rs = o.rs ? ` rowspan="${o.rs}"` : '';
+          if (String(o.v).startsWith('?')) return `<td${sp}${rs}><input class="fillbox" data-a="${esc(o.v.slice(1))}"></td>`;
+          return `<td${sp}${rs} class="ar ${o.lab ? 'lab' : 'clickable'}">${o.v}</td>`;
+        }).join('') + '</tr>';
+      });
+      w.innerHTML = html + '</table>'; add(w);
+      w.querySelectorAll('td.clickable').forEach(td => td.onclick = () => speakArabic(td.innerText));
+      add(checkRow([...w.querySelectorAll('input')]));
+      break;
+    }
+    case 'tf':
+      it.rows.forEach(r => {
+        const row = document.createElement('div'); row.className = 'tf-row';
+        row.innerHTML = `<div class="s ar">${r.s}</div><button class="tf-btn">✔ صَحِيح</button><button class="tf-btn">✘ خَطَأ</button><div class="tf-fix ar">✅ ${r.fix || ''}</div>`;
+        const [bt, bf] = row.querySelectorAll('.tf-btn');
+        const pick = (v, b) => { if (row.dataset.done) return; if (v === r.a) { b.classList.add('correct'); row.dataset.done = 1; playSound('correct'); addScore(5); if (r.fix) row.querySelector('.tf-fix').classList.add('show'); } else { b.classList.add('wrong'); playSound('wrong'); } };
+        bt.onclick = () => pick(true, bt); bf.onclick = () => pick(false, bf); add(row);
+      });
+      break;
+    case 'order': {
+      if (it.note) add(`<div class="activity-line ml" style="font-size:.95rem;color:#64748b">${it.note}</div>`);
+      const done = document.createElement('div'); done.className = 'order-done'; const pool = document.createElement('div'); pool.className = 'order-pool'; pool.style.marginTop = '12px';
+      let k = 0;
+      shuffle(it.items.map((s, i) => ({ s, i }))).forEach(o => {
+        const b = document.createElement('div'); b.className = 'order-item ar'; b.innerText = o.s;
+        b.onclick = () => { if (o.i === k) { k++; playSound('correct'); addScore(3); b.innerHTML = `<b>${k}.</b>${o.s}`; done.appendChild(b); b.onclick = null; if (k === it.items.length) { d.querySelector('.activity-heading').insertAdjacentHTML('beforeend', ' 🎉'); } } else { playSound('wrong'); b.style.borderColor = '#ef4444'; setTimeout(() => b.style.borderColor = '', 500); } };
+        pool.appendChild(b);
+      });
+      add(done); add(pool); break;
+    }
+    case 'chips': {
+      const w = document.createElement('div'); const good = new Set(it.correct);
+      shuffle(it.words).forEach(x => { const c = document.createElement('span'); c.className = 'chip ar'; c.innerText = x; c.onclick = () => c.classList.toggle('on'); w.appendChild(c); });
+      add(w);
+      const row = document.createElement('div'); row.className = 'btn-row'; row.innerHTML = '<button class="check-btn">✅ تَحَقَّقْ</button>'; const fb = document.createElement('div'); fb.className = 'feedback';
+      row.querySelector('button').onclick = () => { let ok = 0, bad = 0; w.querySelectorAll('.chip').forEach(c => { const g = good.has(c.innerText); c.style.borderColor = ''; if (c.classList.contains('on')) { if (g) { ok++; c.style.borderColor = '#22c55e'; } else { bad++; c.style.borderColor = '#ef4444'; } } }); fb.className = 'feedback ' + (bad ? 'bad' : 'ok'); fb.innerHTML = `✔ ${ok} / ${good.size}` + (bad ? ` — ✘ ${bad}` : ' 🎉'); if (!bad && ok === good.size) { playSound('correct'); addScore(10); } };
+      add(row); add(fb); break;
+    }
+    case 'slogans': {
+      const box = document.createElement('div'); box.className = 'slogan-box ar'; let i = 0; box.innerText = it.list[0];
+      const row = document.createElement('div'); row.className = 'btn-row'; row.style.justifyContent = 'center';
+      row.innerHTML = '<button class="check-btn">➡️ التَّالِي</button><button class="model-answer-btn">🔊 اِسْتَمِعْ</button>';
+      const [nx, ls] = row.querySelectorAll('button');
+      nx.onclick = () => { i = (i + 1) % it.list.length; box.innerText = it.list[i]; playSound('click'); }; ls.onclick = () => speakArabic(box.innerText);
+      add(box); add(row);
+      const ta = document.createElement('textarea'); ta.className = 'fillbox'; ta.style.marginTop = '12px'; ta.placeholder = 'اُكْتُبْ هُتَافَاتِكَ هُنَا...'; ta.value = it.start || ''; add(ta);
+      break;
+    }
+    case 'html': add(it.html); if (it.after) it.after(d); break;
+  }
+  return d;
+}
+function checkRow(inputs, full) {
+  const w = document.createElement('div');
+  w.innerHTML = `<div class="btn-row"><button class="check-btn">✅ تَحَقَّقْ</button><button class="model-answer-btn">👁️ أَظْهِرِ الْأَجْوِبَةَ</button><button class="model-answer-btn">↺ إِعَادَة</button></div><div class="feedback"></div>`;
+  const [c, s, r] = w.querySelectorAll('button'); const fb = w.querySelector('.feedback');
+  c.onclick = () => { let ok = 0; inputs.forEach(x => { const g = matches(x.value, x.dataset.a); x.classList.toggle('ok', g); x.classList.toggle('bad', !g); if (g) ok++; }); fb.className = 'feedback ' + (ok === inputs.length ? 'ok' : 'bad'); fb.innerText = `${ok} / ${inputs.length} ` + (ok === inputs.length ? '— مُمْتَاز! 🎉' : '— حَاوِلْ مَرَّةً أُخْرَى 💪'); playSound(ok === inputs.length ? 'correct' : 'wrong'); if (ok === inputs.length) addScore(10); };
+  s.onclick = () => inputs.forEach(x => { x.value = x.dataset.a.split('|')[0]; x.classList.add('ok'); x.classList.remove('bad'); });
+  r.onclick = () => { inputs.forEach(x => { x.value = ''; x.classList.remove('ok', 'bad'); }); fb.innerText = ''; };
+  return w;
+}
+function openWriting() {
+  $('extraTitle').innerHTML = '✍️ رُكْنُ الْكِتَابَةِ <small class="ml" style="font-size:.8rem;color:#64748b">(എഴുത്ത് പ്രവർത്തനങ്ങൾ എല്ലാം ഒരിടത്ത്)</small>';
+  const box = $('extraBox'); box.innerHTML = ''; let n = 0;
+  LESSON.pages.forEach(p => p.items.filter(i => ['write', 'slogans', 'qa'].includes(i.t)).forEach(i => { const el = renderItem(i, ++n); el.querySelector('.activity-heading').insertAdjacentHTML('beforeend', ` <small class="ml" style="color:#64748b;font-size:.8rem">(പേജ് ${p.p})</small>`); box.appendChild(el); }));
+  showScreen('extraScreen');
+}
+
+/* ---------- learn + vocab ---------- */
+function renderLearn() {
+  const g = $('learnGrid'); g.innerHTML = '';
+  LESSON.vocab.forEach(v => {
+    const c = document.createElement('div'); c.className = 'flip'; c.tabIndex = 0;
+    c.innerHTML = `<div class="flip-in"><div class="face"><div class="emo">${v.emoji || '📘'}</div><div class="w ar">${v.word}</div><div class="hint ml">തിരിക്കാൻ ക്ലിക്ക് ചെയ്യുക</div></div><div class="face back"><div class="w ar" style="font-size:1.2rem">${v.word}</div><div class="m ml">${v.meaning}</div>${v.ar ? `<div class="m ar" style="color:var(--primary)">${v.ar}</div>` : ''}</div></div>`;
+    const f = () => { c.classList.toggle('on'); speakArabic(v.word); };
+    c.onclick = f; c.onkeydown = e => { if (e.key === 'Enter') f(); }; g.appendChild(c);
+  });
+}
+function renderVocab(filter = '') {
+  const t = $('vocabBody'); t.innerHTML = '';
+  const have = new Set(LESSON.vocab.map(v => norm(v.word)));
+  const list = [...LESSON.vocab, ...UNIT_GLOSSARY.filter(g => !have.has(norm(g.word)))];
+  list.filter(v => !filter || norm(v.word).includes(norm(filter)) || v.meaning.toLowerCase().includes(filter.toLowerCase())).forEach(v => {
+    const tr = document.createElement('tr'); tr.innerHTML = `<td class="ar">🔊 ${v.word}</td><td class="ml">${v.meaning}</td><td class="ar" style="font-size:1.05rem;color:#475569;cursor:default">${v.ar || '—'}</td>`;
+    tr.querySelector('td').onclick = () => speakArabic(v.word); t.appendChild(tr);
+  });
+}
+
+/* ---------- games ---------- */
+function renderGamesMenu() {
+  const g = $('gamesGrid'); g.innerHTML = '';
+  LESSON.games.forEach((id, i) => { const gm = gameDef(id); if (!gm) return; const b = document.createElement('button'); b.className = 'btn-menu b' + ((i % 12) + 1); b.innerHTML = `<span>${gm.icon} ${gm.name}${gm.ml ? `<small>${gm.ml}</small>` : ''}</span>`; b.onclick = () => startGame(id); g.appendChild(b); });
+}
+function gameDef(id) {
+  if (id.startsWith('mcq')) { const m = LESSON.mcqGames[+id.split(':')[1]]; return { name: m.title, icon: m.icon, ml: m.ml, instr: m.instr, init: () => shuffle(m.items), render: renderMcqGame }; }
+  return GAMES[id];
+}
+function startGame(id) {
+  const gm = gameDef(id); const q = gm.init();
+  state.g = { id, gm, q, i: 0, total: Math.min(gm.rounds || 8, q.length), ok: 0 };
+  $('gameTitle').innerHTML = gm.icon + ' ' + gm.name; $('gameInstr').innerHTML = gm.instr;
+  showScreen('gameScreen'); renderRound();
+}
+function renderRound() { const g = state.g; $('gameCount').innerText = `${g.i + 1} / ${g.total}`; $('gameArea').innerHTML = ''; g.gm.render(g.q[g.i], $('gameArea')); }
+function nextRound() {
+  const g = state.g; if (!g) return; g.i++;
+  if (state.timer) { clearInterval(state.timer); state.timer = null; }
+  if (g.i >= g.total) { state.stars++; updateStats(); showReward('🏅', 'مُمْتَاز! Excellent! 🎉', `${g.ok} / ${g.total} ശരിയുത്തരങ്ങൾ`, true); }
+  else renderRound();
+}
+function handleAnswer(correct, el, delay = 800) {
+  if (correct) { state.g.ok++; addScore(10); playSound('correct'); if (el) el.classList.add('correct'); setTimeout(nextRound, delay); }
+  else {
+    playSound('wrong'); if (el) el.classList.add('wrong'); state.lives--; updateStats();
+    if (state.lives <= 0) { state.lives = 3; updateStats(); setTimeout(() => showReward('💔', 'Game Over!', 'വീണ്ടും ശ്രമിക്കൂ — Try again!', true), 400); }
+  }
+}
+function optButtons(area, opts, correct, cls = 'ar', say = true) {
+  const g = document.createElement('div'); g.className = 'options-grid';
+  let done = false;
+  shuffle(opts).forEach(o => { const b = document.createElement('button'); b.className = 'option-btn ' + cls; b.innerText = o; b.onclick = () => { if (done) return; if (say && cls === 'ar') speakArabic(o); const ok = o === correct; if (ok) done = true; handleAnswer(ok, b); }; g.appendChild(b); });
+  area.appendChild(g); return g;
+}
+const pickOthers = (arr, key, not, n = 3) => shuffle(arr.map(x => x[key]).filter(x => x && x !== not)).filter((v, i, a) => a.indexOf(v) === i).slice(0, n);
+const box = (html, cls = 'ar') => { const d = document.createElement('div'); d.className = 'g-box ' + cls; d.innerHTML = html; return d; };
+
+GAMES.guess = { name: 'خَمِّنِ الْكَلِمَةَ', ml: 'അർത്ഥം നോക്കി വാക്ക് കണ്ടെത്താം', icon: '🎯', instr: 'اِخْتَرِ الْكَلِمَةَ الصَّحِيحَةَ لِهٰذَا الْمَعْنَى!', init: () => shuffle(LESSON.vocab),
+  render: (v, a) => { a.appendChild(box(`<div><div style="font-size:2.4rem">${v.emoji || '📘'}</div><div class="ml">${v.meaning}</div></div>`, 'ml')); optButtons(a, [v.word, ...pickOthers(LESSON.vocab, 'word', v.word)], v.word); } };
+GAMES.speed = { name: 'اِخْتَبِرْ سُرْعَتَكَ', ml: '10 സെക്കൻഡിനുള്ളിൽ അർത്ഥം', icon: '⏱️', instr: 'اِخْتَرِ الْمَعْنَى الصَّحِيحَ قَبْلَ نَفَادِ الْوَقْتِ!', init: () => shuffle(LESSON.vocab),
+  render: (v, a) => {
+    const t = document.createElement('div'); t.className = 'stats-bar'; t.style.marginBottom = '16px'; t.innerHTML = '⏱️ <span id="tLeft">10</span>s'; a.appendChild(t);
+    a.appendChild(box(`<div style="font-size:1.9rem">${v.word}</div>`)); const g = optButtons(a, [v.meaning, ...pickOthers(LESSON.vocab, 'meaning', v.meaning)], v.meaning, 'ml', false);
+    let left = 10; state.timer = setInterval(() => { left--; const e = $('tLeft'); if (e) e.innerText = left; if (left <= 0) { clearInterval(state.timer); state.timer = null; g.querySelectorAll('button').forEach(b => b.disabled = true); handleAnswer(false, null); setTimeout(nextRound, 600); } }, 1000);
+  } };
+GAMES.fill = { name: 'أَكْمِلِ الْجُمْلَةَ', ml: 'വിട്ടുപോയ വാക്ക് പൂരിപ്പിക്കാം', icon: '✍️', instr: 'أَكْمِلِ الْجُمْلَةَ بِالْكَلِمَةِ الْمُنَاسِبَةِ!', init: () => shuffle(LESSON.vocab.filter(v => v.blank)),
+  render: (v, a) => { a.appendChild(box(v.blank.replace('____', '<span style="color:#d97706">_______</span>'))); optButtons(a, [v.answer, ...pickOthers(LESSON.vocab, 'answer', v.answer)], v.answer); } };
+GAMES.arrange = { name: 'رَتِّبِ الْكَلِمَاتِ', ml: 'വാക്കുകൾ ക്രമീകരിച്ച് വാക്യമുണ്ടാക്കാം', icon: '🧩', instr: 'رَتِّبِ الْكَلِمَاتِ لِتُكَوِّنَ جُمْلَةً صَحِيحَةً!', init: () => shuffle(LESSON.sentences),
+  render: (s, a) => {
+    const words = s.split(' '); const slots = document.createElement('div'); slots.className = 'drop-slots'; const picked = [];
+    words.forEach(() => { const d = document.createElement('div'); d.className = 'word-slot ar'; slots.appendChild(d); });
+    const tiles = document.createElement('div'); tiles.className = 'tiles';
+    shuffle(words.map((w, i) => ({ w, i }))).forEach(o => { const b = document.createElement('button'); b.className = 'word-tile-btn ar'; b.innerText = o.w; b.onclick = () => { b.disabled = true; picked.push(o.w); slots.children[picked.length - 1].innerText = o.w; if (picked.length === words.length) { const ok = picked.join(' ') === s; if (!ok) { handleAnswer(false, null); setTimeout(() => { a.appendChild(box('✅ ' + s)); setTimeout(nextRound, 1800); }, 300); } else handleAnswer(true, null, 900); } }; tiles.appendChild(b); });
+    const undo = document.createElement('button'); undo.className = 'back-btn'; undo.style.marginTop = '16px'; undo.innerText = '↺ إِعَادَة'; undo.onclick = renderRound;
+    a.append(slots, tiles, undo);
+  } };
+GAMES.match = { name: 'طَابِقِ الْكَلِمَةَ وَمَعْنَاهَا', ml: 'വാക്കും അർത്ഥവും ചേർക്കാം', icon: '🔗', instr: 'طَابِقْ بَيْنَ الْكَلِمَةِ وَمَعْنَاهَا!', rounds: 3,
+  init: () => { const s = shuffle(LESSON.vocab); const out = []; for (let i = 0; i + 3 < s.length && out.length < 3; i += 4) out.push(s.slice(i, i + 4)); return out; },
+  render: (set, a) => {
+    const c = document.createElement('div'); c.className = 'match-container'; const L = document.createElement('div'), R = document.createElement('div'); L.className = R.className = 'match-column';
+    let sl = null, sr = null, m = 0;
+    const check = () => { if (sl == null || sr == null) return; const el = L.querySelector('.selected'), er = R.querySelector('.selected');
+      if (sl === sr) { el.classList.add('matched'); er.classList.add('matched'); el.classList.remove('selected'); er.classList.remove('selected'); playSound('correct'); addScore(5); m++; if (m === set.length) { state.g.ok++; setTimeout(nextRound, 600); } }
+      else { playSound('wrong'); state.lives--; updateStats(); el.classList.add('wrong'); er.classList.add('wrong'); setTimeout(() => { el.classList.remove('selected', 'wrong'); er.classList.remove('selected', 'wrong'); }, 500); if (state.lives <= 0) { state.lives = 3; updateStats(); } }
+      sl = sr = null; };
+    set.forEach(v => { const d = document.createElement('div'); d.className = 'match-item ar'; d.style.fontSize = '1.35rem'; d.innerText = v.word; d.onclick = () => { L.querySelectorAll('.selected').forEach(x => x.classList.remove('selected')); d.classList.add('selected'); sl = v.word; speakArabic(v.word); check(); }; L.appendChild(d); });
+    shuffle(set).forEach(v => { const d = document.createElement('div'); d.className = 'match-item ml'; d.innerText = v.meaning; d.onclick = () => { R.querySelectorAll('.selected').forEach(x => x.classList.remove('selected')); d.classList.add('selected'); sr = v.word; check(); }; R.appendChild(d); });
+    c.append(L, R); a.appendChild(c);
+  } };
+GAMES.tf = { name: 'صَحِيحٌ أَمْ خَطَأٌ؟', ml: 'ശരിയോ തെറ്റോ?', icon: '✅', instr: 'هَلْ هٰذِهِ الْجُمْلَةُ صَحِيحَةٌ أَمْ خَطَأٌ؟', rounds: 10, init: () => shuffle(LESSON.tf),
+  render: (r, a) => {
+    a.appendChild(box(r.s)); const g = document.createElement('div'); g.className = 'options-grid'; let done = false;
+    [['✔ صَحِيحٌ', true], ['✘ خَطَأٌ', false]].forEach(([t, v]) => { const b = document.createElement('button'); b.className = 'option-btn ar'; b.innerText = t; b.onclick = () => { if (done) return; done = true; const ok = v === r.a; if (!ok) { b.classList.add('wrong'); playSound('wrong'); state.lives--; updateStats(); } else { b.classList.add('correct'); state.g.ok++; addScore(10); playSound('correct'); } if (r.fix) a.appendChild(box('✅ ' + r.fix)); setTimeout(nextRound, r.fix ? 1900 : 800); }; g.appendChild(b); });
+    a.appendChild(g);
+  } };
+function renderMcqGame(it, a) { a.appendChild(box(it.q)); optButtons(a, it.opts, it.opts[it.a], 'ar', false); }
+GAMES.memory = { name: 'بِطَاقَاتُ الذَّاكِرَةِ', ml: 'ഓർമ്മക്കളി — ജോഡി കണ്ടെത്താം', icon: '🧠', instr: 'اِقْلِبِ الْبِطَاقَاتِ وَابْحَثْ عَنِ الْكَلِمَةِ وَمَعْنَاهَا!', rounds: 1, init: () => [shuffle(LESSON.vocab).slice(0, 6)],
+  render: (set, a) => {
+    const cards = shuffle([...set.map((v, i) => ({ i, html: `<span class="ar">${v.word}</span>` })), ...set.map((v, i) => ({ i, html: `<span class="ml">${v.meaning.split('(')[0]}</span>` }))]);
+    const g = document.createElement('div'); g.className = 'mem-grid'; let open = [], found = 0, tries = 0; const info = box('🔄 0', 'ml'); info.style.minHeight = '50px';
+    cards.forEach(c => { const d = document.createElement('div'); d.className = 'mem-card'; d.innerText = '❓'; d.onclick = () => {
+      if (open.length === 2 || d.classList.contains('open') || d.classList.contains('gone')) return;
+      d.classList.add('open'); d.innerHTML = c.html; open.push({ d, c });
+      if (open.length === 2) { tries++; info.innerText = '🔄 ' + tries; const [x, y] = open;
+        if (x.c.i === y.c.i) { setTimeout(() => { x.d.classList.add('gone'); y.d.classList.add('gone'); open = []; found++; playSound('correct'); addScore(5); if (found === set.length) { state.g.ok++; setTimeout(nextRound, 600); } }, 350); }
+        else setTimeout(() => { [x, y].forEach(o => { o.d.classList.remove('open'); o.d.innerText = '❓'; }); open = []; playSound('wrong'); }, 900); }
+    }; g.appendChild(d); });
+    a.append(info, g);
+  } };
+GAMES.sequence = { name: 'رَتِّبِ الْأَحْدَاثَ', ml: 'സംഭവങ്ങൾ ക്രമത്തിലാക്കാം', icon: '📜', instr: 'اُنْقُرْ عَلَى الْأَحْدَاثِ حَسَبَ تَرْتِيبِهَا فِي النَّصِّ!', rounds: 1, init: () => [LESSON.events],
+  render: (ev, a) => { const it = renderItem({ t: 'order', h: '📜 ' + (LESSON.eventsTitle || 'رَتِّبِ الْأَحْدَاثَ'), items: ev }, 1); a.appendChild(it);
+    const b = document.createElement('button'); b.className = 'primary-action-btn'; b.style.marginTop = '12px'; b.innerText = '✅ Finish'; b.onclick = () => { if (it.querySelectorAll('.order-done .order-item').length === ev.length) { state.g.ok++; } nextRound(); }; a.appendChild(b); } };
+GAMES.spell = { name: 'تَهْجِئَةُ الْكَلِمَةِ', ml: 'അക്ഷരങ്ങൾ ചേർത്ത് വാക്ക് എഴുതാം', icon: '🔤', instr: 'اُنْقُرْ عَلَى الْحُرُوفِ بِالتَّرْتِيبِ لِتَكْتُبَ الْكَلِمَةَ!', init: () => shuffle(LESSON.vocab.filter(v => stripH(v.word).replace(/\s/g, '').length <= 7)),
+  render: (v, a) => {
+    const w = stripH(v.word).replace(/^ال/, '').replace(/\s/g, ''); const letters = [...w];
+    a.appendChild(box(`<div><div style="font-size:2.2rem">${v.emoji || '📘'}</div><div class="ml">${v.meaning}</div></div>`, 'ml'));
+    const out = box('&nbsp;'); out.style.minHeight = '60px'; out.style.fontSize = '2rem'; a.appendChild(out); let typed = '';
+    const tiles = document.createElement('div'); tiles.className = 'tiles';
+    shuffle(letters.map((l, i) => ({ l, i }))).forEach(o => { const b = document.createElement('button'); b.className = 'word-tile-btn ar'; b.style.fontSize = '1.6rem'; b.innerText = o.l; b.onclick = () => { b.disabled = true; typed += o.l; out.innerText = typed; if (typed.length === w.length) { if (typed === w) handleAnswer(true, null); else { handleAnswer(false, null); out.innerHTML = `<span style="color:#b91c1c">${typed}</span> ← <span style="color:#15803d">${w}</span>`; setTimeout(nextRound, 1500); } } }; tiles.appendChild(b); });
+    const undo = document.createElement('button'); undo.className = 'back-btn'; undo.style.marginTop = '14px'; undo.innerText = '↺ إِعَادَة'; undo.onclick = renderRound; a.append(tiles, undo);
+  } };
+GAMES.wheel = { name: 'عَجَلَةُ الْأَسْئِلَةِ', ml: 'ചക്രം കറക്കി ചോദ്യം — ക്ലാസ് മത്സരം', icon: '🎡', instr: 'أَدِرِ الْعَجَلَةَ وَأَجِبْ عَنِ السُّؤَالِ!', rounds: 10, init: () => shuffle(LESSON.qbank.flatMap(s => s.items)),
+  render: (q, a) => {
+    const w = document.createElement('div'); w.className = 'wheel'; w.innerHTML = '<span>❓</span>'; a.appendChild(w);
+    const qb = box('<span class="ml" style="color:#94a3b8">ചക്രം കറക്കുക</span>'); a.appendChild(qb);
+    const row = document.createElement('div'); row.className = 'btn-row'; row.style.justifyContent = 'center';
+    row.innerHTML = '<button class="primary-action-btn">🎡 أَدِرْ</button><button class="primary-action-btn" style="background:#10b981" disabled>👁️ الْجَوَاب</button><button class="primary-action-btn" style="background:#64748b" disabled>➡️ التَّالِي</button>';
+    const [sp, an, nx] = row.querySelectorAll('button'); a.appendChild(row);
+    sp.onclick = () => { sp.disabled = true; w.style.transform = `rotate(${1080 + Math.floor(Math.random() * 360)}deg)`; playSound('click'); setTimeout(() => { qb.innerHTML = q.q; speakArabic(q.q); an.disabled = nx.disabled = false; }, 2200); };
+    an.onclick = () => { qb.innerHTML = `${q.q}<hr style="margin:10px 0;border-color:#e2e8f0"><span style="color:#15803d">${q.a}</span>`; };
+    nx.onclick = () => { state.g.ok++; addScore(5); nextRound(); };
+  } };
+
+const UNIT_GLOSSARY = [{word:"احْتِرَام",meaning:"ബഹുമാനം (Respect)",ar:"📘 ص ٨١–٨٢"},{word:"أَدْوِيَة",meaning:"മരുന്നുകൾ (Medicines)",ar:"📘 ص ٨١–٨٢"},{word:"اِسْتَعَدَّ",meaning:"തയ്യാറായി (Prepared)",ar:"📘 ص ٨١–٨٢"},{word:"اِسْتَقَالَ",meaning:"രാജിവെച്ചു (Resigned)",ar:"📘 ص ٨١–٨٢"},{word:"أَمَسُّ الْحَاجَةِ",meaning:"അത്യാവശ്യം (Urgent need)",ar:"📘 ص ٨١–٨٢"},{word:"بَسِيط",meaning:"ലളിതം (Simple)",ar:"📘 ص ٨١–٨٢"},{word:"تَتَدَهْوَرُ",meaning:"മോശമാവുന്നു (Worsening)",ar:"📘 ص ٨١–٨٢"},{word:"تَكَالِيف",meaning:"ചെലവുകൾ (Expenditure)",ar:"📘 ص ٨١–٨٢"},{word:"ثَرَى",meaning:"മണ്ണ് (Soil)",ar:"📘 ص ٨١–٨٢"},{word:"جَنَاحُ الْأَطْفَالِ",meaning:"കുട്ടികളുടെ വാർഡ് (Children’s ward)",ar:"📘 ص ٨١–٨٢"},{word:"حَرَّضَ عَلَى",meaning:"പ്രേരിപ്പിച്ചു (Instigated)",ar:"📘 ص ٨١–٨٢"},{word:"حَزْم",meaning:"ദൃഢത (Firmness)",ar:"📘 ص ٨١–٨٢"},{word:"رَاعَ",meaning:"ആശ്ചര്യപ്പെടുത്തി (Astonished)",ar:"📘 ص ٨١–٨٢"},{word:"رُسُوم",meaning:"ഫീസ് (Fees)",ar:"📘 ص ٨١–٨٢"},{word:"رِشْوَة",meaning:"കൈക്കൂലി (Bribe)",ar:"📘 ص ٨١–٨٢"},{word:"رَفَضَ",meaning:"നിരസിച്ചു (Rejected)",ar:"📘 ص ٨١–٨٢"},{word:"سَيَّارَةُ أُجْرَةٍ",meaning:"ടാക്സി കാർ (Taxi)",ar:"📘 ص ٨١–٨٢"},{word:"طَازَج",meaning:"പുതിയത് (Fresh)",ar:"📘 ص ٨١–٨٢"},{word:"طَعْنَة",meaning:"കുത്തൽ (Stabbing)",ar:"📘 ص ٨١–٨٢"},{word:"عَزَّزَ",meaning:"ശക്തിപ്പെടുത്തി (Empowered)",ar:"📘 ص ٨١–٨٢"},{word:"عِلَاج",meaning:"ചികിത്സ (Treatment)",ar:"📘 ص ٨١–٨٢"},{word:"غُرْفَةُ الْعَمَلِيَّةِ الْجِرَاحِيَّةِ",meaning:"ഓപ്പറേഷൻ തിയേറ്റർ (Operation theatre)",ar:"📘 ص ٨١–٨٢"},{word:"غَلَط",meaning:"തെറ്റ് (Wrong)",ar:"📘 ص ٨١–٨٢"},{word:"قَرَّرَ",meaning:"തീരുമാനിച്ചു (Decided)",ar:"📘 ص ٨١–٨٢"},{word:"قَلَق",meaning:"അസ്വസ്ഥത (Anxiety)",ar:"📘 ص ٨١–٨٢"},{word:"مَبْلَغ",meaning:"തുക (Amount)",ar:"📘 ص ٨١–٨٢"},{word:"مُجَرَّد",meaning:"കേവലം (Merely)",ar:"📘 ص ٨١–٨٢"},{word:"مُرْتَاح",meaning:"സുഖപ്രദമായ (Comfortable)",ar:"📘 ص ٨١–٨٢"},{word:"مَسْقَطُ الرَّأْسِ",meaning:"ജനനസ്ഥലം (Birth place)",ar:"📘 ص ٨١–٨٢"},{word:"مُشْتَمِل",meaning:"മൂടിയ (Covered)",ar:"📘 ص ٨١–٨٢"},{word:"مَشْرُوع",meaning:"പദ്ധതി (Project)",ar:"📘 ص ٨١–٨٢"},{word:"مُقَاوِل",meaning:"കോൺട്രാക്ടർ (Contractor)",ar:"📘 ص ٨١–٨٢"},{word:"مُمْتَلَكَات",meaning:"സ്വത്ത് (Property)",ar:"📘 ص ٨١–٨٢"},{word:"نَزِيه",meaning:"നിഷ്കളങ്കൻ (Incorrupt)",ar:"📘 ص ٨١–٨٢"},{word:"نَقِيَّة",meaning:"സംശുദ്ധമായ (Pure)",ar:"📘 ص ٨١–٨٢"},{word:"هَدِيَّة",meaning:"സമ്മാനം (Gift)",ar:"📘 ص ٨١–٨٢"},{word:"وَرْشَة",meaning:"പണിശാല (Workshop)",ar:"📘 ص ٨١–٨٢"}];
+GAMES.glossary = { name: 'مَعَانِي كَلِمَاتِ الْوَحْدَةِ', ml: 'യൂണിറ്റ് നിഘണ്ടു (പേജ് 81–82)', icon: '📚', instr: 'اِخْتَرِ الْمَعْنَى الصَّحِيحَ لِلْكَلِمَةِ!', rounds: 10, init: () => shuffle(UNIT_GLOSSARY),
+  render: (g, a) => { a.appendChild(box(`<div style="font-size:2rem">${g.word}</div>`)); optButtons(a, [g.meaning, ...pickOthers(UNIT_GLOSSARY, 'meaning', g.meaning)], g.meaning, 'ml', false); } };
+
+/* ---------- quiz ---------- */
+function renderQuiz() {
+  state.quizDone = false; $('quizScore').style.display = 'none'; const c = $('quizBox'); c.innerHTML = '';
+  LESSON.quiz.forEach((it, qi) => {
+    const sh = it.opts.map((t, i) => ({ t, i })); const s = shuffle(sh);
+    const q = document.createElement('div'); q.className = 'quiz-q'; q.dataset.c = s.findIndex(x => x.i === it.ans);
+    q.innerHTML = `<div class="qtext ar">${qi + 1}. ${it.q}</div><div class="quiz-opts"></div>`;
+    s.forEach((o, oi) => { const b = document.createElement('div'); b.className = 'quiz-opt ar'; b.innerText = o.t; b.dataset.oi = oi; b.onclick = () => { if (state.quizDone) return; q.querySelectorAll('.quiz-opt').forEach(x => x.classList.remove('picked')); b.classList.add('picked'); }; q.querySelector('.quiz-opts').appendChild(b); });
+    c.appendChild(q);
+  });
+}
+function submitQuiz() {
+  if (state.quizDone) return; state.quizDone = true; let sc = 0;
+  document.querySelectorAll('#quizBox .quiz-q').forEach(q => { const ci = +q.dataset.c; const p = q.querySelector('.picked'); if (p && +p.dataset.oi === ci) sc++; q.querySelectorAll('.quiz-opt').forEach(o => { if (+o.dataset.oi === ci) o.classList.add('correct-ans'); else if (o.classList.contains('picked')) o.classList.add('wrong-ans'); }); });
+  state.score += sc * 10; state.stars++; updateStats(); const pct = Math.round(sc / LESSON.quiz.length * 100);
+  const b = $('quizScore'); b.style.display = 'block'; b.innerText = `🏆 Score: ${sc} / ${LESSON.quiz.length} (${pct}%) ${pct >= 80 ? '— Excellent! 🎉' : pct >= 50 ? '— Good job! 👍' : '— Keep practicing! 💪'}`; window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ---------- question bank ---------- */
+function renderQBank() {
+  const c = $('qbankBox'); c.innerHTML = ''; let n = 0;
+  LESSON.qbank.forEach(s => { c.insertAdjacentHTML('beforeend', `<div class="qb-section-title ar">${s.section}</div>`);
+    s.items.forEach(it => { n++; const d = document.createElement('div'); d.className = 'qb-item'; d.innerHTML = `<div class="qb-question ar"><span class="qb-num">${n}.</span>${it.q} <button class="mini-play" style="width:30px;height:30px;font-size:.8rem">🔊</button></div><button class="qb-toggle-btn">👁️ Show Answer</button><div class="qb-answer ar">${it.a}</div>`; d.querySelector('.mini-play').onclick = () => speakArabic(it.q); d.querySelector('.qb-toggle-btn').onclick = () => d.querySelector('.qb-answer').classList.toggle('show'); c.appendChild(d); }); });
+}
+function qbAll(show) { document.querySelectorAll('.qb-answer').forEach(a => a.classList.toggle('show', show)); }
+function printQB() {
+  let html = `<div class="print-title ar">بَنْكُ الْأَسْئِلَةِ — ${LESSON.title} (STD 10 · UNIT 4 · ${LESSON.code})</div>`; let n = 0;
+  LESSON.qbank.forEach(s => { html += `<div class="print-title ar" style="font-size:1.2rem;text-align:right;margin-top:18px">${s.section}</div>`; s.items.forEach(it => { n++; html += `<div class="print-q ar">${n}. ${it.q}</div><div class="print-a ar">✔ ${it.a}</div>`; }); });
+  $('printArea').innerHTML = html; window.print();
+}
+
+/* ---------- help / modal ---------- */
+function renderHelp() { $('helpList').innerHTML = LESSON.help.map(h => `<li>• ${h}</li>`).join(''); }
+function showReward(icon, title, sub, gameBtns) {
+  $('rwIcon').innerText = icon; $('rwTitle').innerText = title; $('rwSub').innerText = sub;
+  $('rwAgain').style.display = gameBtns ? 'inline-block' : 'none'; $('rewardModal').classList.add('active');
+}
+function closeReward(to) { $('rewardModal').classList.remove('active'); if (to === 'again' && state.g) startGame(state.g.id); else go(to || 'games'); }
+
+/* role-play stubs (overridden by lesson if used) */
+let rpTimer = null; function rpStop() { if (typeof rpHalt === 'function') rpHalt(); }
+
+window.addEventListener('load', () => { renderHome(); updateStats(); if ('speechSynthesis' in window) speechSynthesis.getVoices(); });
+
+</script>
+<script>
+const LESSON = {
+  code: 'L1', icon: '🎭', title: 'تَوْقِيعُ النَّزَاهَةِ',
+  badge: 'الْوَحْدَةُ الرَّابِعَةُ · خَدَمُ الْأُمَّةِ · الدَّرْسُ الْأَوَّلُ (مَسْرَحِيَّةٌ)',
+  heroSub: 'STD 10 · Unit 4 · Lesson 1 · The Signature of Integrity (Drama) · സത്യസന്ധതയുടെ ഒപ്പ്',
+  hdrSub: 'പത്താം ക്ലാസ് • യൂണിറ്റ് 4 • പാഠം 1 • നാടകം',
+  videoQuery: 'توقيع النزاهة مسرحية الصف العاشر العربي كيرالا Unit 4',
+  chars: {
+    'سُهَيْل': { color: '#1d4ed8', emoji: '👨‍💼' }, 'طَارِق': { color: '#b45309', emoji: '🧑‍💼' },
+    'هَالَة': { color: '#be185d', emoji: '👩' }, 'زِيَاد': { color: '#047857', emoji: '👨‍⚕️' }, 'غَانِم': { color: '#7c3aed', emoji: '👦' }
+  },
+  reading: {
+    title: 'تَوْقِيعُ النَّزَاهَةِ',
+    blocks: [
+      { k: 'scene', ar: 'الْمَشْهَدُ الْأَوَّلُ' },
+      { k: 'stage', ar: '(عَلَى الْمَسْرَحِ مَكْتَبُ الْبَلَدِيَّةِ، يَجْلِسُ سُهَيْلٌ فِي مَكْتَبِهِ يُرَاجِعُ الْأَوْرَاقَ. يَدْخُلُ طَارِقٌ الْمَكْتَبَ مُبْتَسِمًا.)', ml: 'വേദിയിൽ മുനിസിപ്പാലിറ്റി ഓഫീസ്. സുഹൈൽ ഫയലുകൾ പരിശോധിക്കുന്നു. താരിഖ് പുഞ്ചിരിച്ചുകൊണ്ട് കടന്നുവരുന്നു.' },
+      { k: 'line', sp: 'طَارِق', ar: 'صَبَاحَ الْخَيْرِ.', ml: 'സുപ്രഭാതം.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'صَبَاحَ النُّورِ، كَيْفَ أُسَاعِدُكَ؟', ml: 'സുപ്രഭാതം, ഞാൻ എങ്ങനെ സഹായിക്കണം?' },
+      { k: 'line', sp: 'طَارِق', ar: 'عِنْدِي مَشْرُوعُ بِنَاءٍ وَأَنَا مُحْتَاجٌ إِلَى مُوَافَقَتِكَ.', ml: 'എനിക്കൊരു കെട്ടിട നിർമ്മാണ പദ്ധതിയുണ്ട്, താങ്കളുടെ അനുമതി വേണം.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'هَاتِ الْأَوْرَاقَ. دَعْنِي أَنْظُرْ.', ml: 'രേഖകൾ തരൂ. ഞാനൊന്ന് നോക്കട്ടെ.' },
+      { k: 'line', sp: 'طَارِق', ar: 'إِذَا سَاعَدْتَنِي عَلَى هٰذَا الْمَشْرُوعِ أَعْطَيْتُ لَكَ هَدِيَّةً.', ml: 'ഈ പദ്ധതിക്ക് സഹായിച്ചാൽ ഞാൻ താങ്കൾക്ക് ഒരു സമ്മാനം തരാം.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'يَا طَارِقُ، تَعْرِفُ جَيِّدًا أَنَّنِي لَا أَقْبَلُ الرِّشْوَةَ، إِذَا كَانَ مَشْرُوعُكَ قَانُونِيًّا قَرَّرْتُهُ، وَلَا حَاجَةَ إِلَى أَيِّ هَدِيَّةٍ.', ml: 'താരിഖ്, ഞാൻ കൈക്കൂലി വാങ്ങില്ലെന്ന് നിനക്ക് നന്നായി അറിയാം. പദ്ധതി നിയമപരമാണെങ്കിൽ ഞാൻ അനുവദിക്കും; ഒരു സമ്മാനവും ആവശ്യമില്ല.' },
+      { k: 'line', sp: 'طَارِق', ar: '(ضَاحِكًا) يَا سُهَيْلُ، فَكِّرْ فِي أُسْرَتِكَ، وَفِي ابْنِكَ غَانِمٍ، أَعْتَقِدُ أَنَّكَ مُحْتَاجٌ إِلَى مَبْلَغٍ كَبِيرٍ لِعِلَاجِهِ. دَعْنِي أُسَاعِدْكَ...', ml: '(ചിരിച്ചുകൊണ്ട്) സുഹൈൽ, കുടുംബത്തെക്കുറിച്ചും മകൻ ഗാനിമിനെക്കുറിച്ചും ചിന്തിക്കൂ. അവന്റെ ചികിത്സയ്ക്ക് വലിയ തുക വേണ്ടിവരും. ഞാൻ സഹായിക്കട്ടെ...' },
+      { k: 'line', sp: 'سُهَيْل', ar: '(بِحَزْمٍ) صَحْ، أَنَا أُفَكِّرُ فِي ابْنِي، إِنَّهُ يَحْتَاجُ إِلَى عَمَلِيَّةٍ جِرَاحِيَّةٍ لِزِرَاعَةِ الْكَبِدِ، وَلٰكِنْ لَا أَقْبَلُ الرِّشْوَةَ لِأَجْلِهِ، هٰذِهِ الْأَمْوَالُ لَيْسَتْ نَقِيَّةً.', ml: '(ദൃഢതയോടെ) ശരിയാണ്, ഞാൻ മകനെക്കുറിച്ച് ചിന്തിക്കുന്നു. കരൾ മാറ്റിവെക്കൽ ശസ്ത്രക്രിയ വേണം. പക്ഷേ അവനുവേണ്ടി കൈക്കൂലി വാങ്ങില്ല. ഈ പണം ശുദ്ധമല്ല.' },
+      { k: 'stage', ar: '(يُغَادِرُ طَارِقٌ وَهُوَ يَضْحَكُ مِنْهُ سَاخِرًا)', ml: '(താരിഖ് പരിഹസിച്ച് ചിരിച്ചുകൊണ്ട് പോകുന്നു)' },
+
+      { k: 'scene', ar: 'الْمَشْهَدُ الثَّانِي' },
+      { k: 'stage', ar: '(يَدْخُلُ طَارِقٌ جَنَاحَ الْأَطْفَالِ فِي الْمُسْتَشْفَى لِزِيَارَةِ غَانِمٍ)', ml: '(ഗാനിമിനെ കാണാൻ താരിഖ് ആശുപത്രിയിലെ കുട്ടികളുടെ വാർഡിലെത്തുന്നു)' },
+      { k: 'line', sp: 'طَارِق', ar: 'مَرْحَبًا يَا بُنَيَّ، كَيْفَ حَالُكَ الْيَوْمَ؟', ml: 'ഹലോ മോനേ, ഇന്ന് എങ്ങനെയുണ്ട്?' },
+      { k: 'line', sp: 'غَانِم', ar: 'الْحَمْدُ لِلّٰهِ، أَنَا بِخَيْرٍ. مَنْ أَنْتَ؟ مَاذَا تُرِيدُ؟', ml: 'അൽഹംദുലില്ലാഹ്, സുഖമാണ്. നിങ്ങൾ ആരാണ്? എന്താണ് വേണ്ടത്?' },
+      { k: 'line', sp: 'طَارِق', ar: 'اِسْمِي طَارِقٌ، أَنَا مُقَاوِلٌ، جِئْتُكَ لِأُسَاعِدَكَ. أَيْنَ بَابَا؟', ml: 'എന്റെ പേര് താരിഖ്, ഞാനൊരു കോൺട്രാക്ടറാണ്, നിന്നെ സഹായിക്കാൻ വന്നതാണ്. ഉപ്പ എവിടെ?' },
+      { k: 'line', sp: 'غَانِم', ar: 'بَابَا خَرَجَ إِلَى الصَّيْدَلِيَّةِ.', ml: 'ഉപ്പ ഫാർമസിയിലേക്ക് പോയി.' },
+      { k: 'line', sp: 'طَارِق', ar: 'يَا بُنَيَّ، أَعْرِفُ أَنَّكُمْ فِي حَاجَةٍ إِلَى مَبْلَغٍ طَائِلٍ لِعِلَاجِكَ. يَسُرُّنِي أَنْ أَدْفَعَ تَكَالِيفَ عِلَاجِكَ. أَطْلُبُ مِنْ وَالِدِكَ أَنْ يَفْعَلَ شَيْئًا بَسِيطًا مِنْ أَجْلِي، إِذَا تَمَّ ذٰلِكَ كُنَّا جَمِيعًا سُعَدَاءَ.', ml: 'മോനേ, നിന്റെ ചികിത്സയ്ക്ക് ഭീമമായ തുക വേണമെന്ന് എനിക്കറിയാം. ചെലവ് വഹിക്കാൻ എനിക്ക് സന്തോഷമാണ്. എനിക്കുവേണ്ടി നിന്റെ ഉപ്പ ഒരു ചെറിയ കാര്യം ചെയ്താൽ മതി; അത് നടന്നാൽ നമുക്കെല്ലാം സന്തോഷം.' },
+      { k: 'line', sp: 'غَانِم', ar: 'دَعْنِي أَسْمَعْ مَاذَا تُرِيدُ؟', ml: 'എന്താണ് വേണ്ടതെന്ന് ഞാൻ കേൾക്കട്ടെ?' },
+      { k: 'line', sp: 'طَارِق', ar: 'أَحْتَاجُ إِلَى تَوْقِيعِ الْمُوَافَقَةِ مِنْ وَالِدِكَ لِمَشْرُوعِي الْجَارِي، مُمْكِنٌ أَنْ تَتَكَلَّمَ مَعَ أَبِيكَ؟', ml: 'എന്റെ നിലവിലെ പദ്ധതിക്ക് നിന്റെ ഉപ്പയുടെ അനുമതി ഒപ്പ് വേണം. ഉപ്പയോട് സംസാരിക്കാമോ?' },
+      { k: 'line', sp: 'غَانِم', ar: 'لَا، هٰذَا غَيْرُ صَحِيحٍ. بَابَا لَنْ يَقْبَلَ الرِّشْوَةَ أَبَدًا، وَأَعْتَقِدُ أَنَّهُ لَا يُوَافِقُ عَلَى شَيْءٍ مِثْلِ هٰذَا.', ml: 'ഇല്ല, ഇത് ശരിയല്ല. ഉപ്പ ഒരിക്കലും കൈക്കൂലി വാങ്ങില്ല. ഇങ്ങനെയൊന്നിന് ഉപ്പ സമ്മതിക്കില്ലെന്ന് എനിക്കുറപ്പാണ്.' },
+      { k: 'line', sp: 'طَارِق', ar: 'أَنَا فَاهِمٌ، لٰكِنْ هٰذِهِ مُجَرَّدُ هَدِيَّةٍ تَقْدِيرِيَّةٍ، لَا غَيْرُ.', ml: 'എനിക്ക് മനസ്സിലായി, പക്ഷേ ഇത് വെറുമൊരു ആദരസമ്മാനം മാത്രമാണ്.' },
+      { k: 'line', sp: 'غَانِم', ar: 'الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي.', ml: 'എനിക്കുവേണ്ടി കൈക്കൂലി വാങ്ങുന്നതിനേക്കാൾ എനിക്കിഷ്ടം മരണമാണ്.' },
+      { k: 'line', sp: 'طَارِق', ar: '(يَسْكُتُ قَلِيلًا ثُمَّ يَقُولُ مُتَعَجِّبًا) أَنْتَ ذَكِيٌّ يَا صَغِيرُ. كُنْتُ غَلْطَانَ فِي التَّفْكِيرِ. سَأَبْذُلُ قُصَارَى جُهْدِي فِي حَلِّ هٰذِهِ الْقَضِيَّةِ بِطَرِيقَةٍ صَحِيحَةٍ. هَيَّا نُحَارِبُ ضِدَّ هٰذَا الشَّرِّ الِاجْتِمَاعِيِّ.', ml: '(അൽപം മൗനത്തിനു ശേഷം അത്ഭുതത്തോടെ) കുഞ്ഞേ, നീ ബുദ്ധിമാനാണ്. എന്റെ ചിന്ത തെറ്റായിരുന്നു. ഈ പ്രശ്നം ശരിയായ വഴിയിൽ പരിഹരിക്കാൻ ഞാൻ പരമാവധി ശ്രമിക്കും. ഈ സാമൂഹിക തിന്മക്കെതിരെ നമുക്ക് പോരാടാം.' },
+      { k: 'line', sp: 'غَانِم', ar: 'نَعَمْ، هٰذَا هُوَ الْأَفْضَلُ. يَجِبُ أَنْ يَتِمَّ كُلُّ شَيْءٍ بِصِدْقٍ وَأَمَانَةٍ. شُكْرًا يَا عَمِّي... يَسَّرَ اللّٰهُ أُمُورَكَ.', ml: 'അതെ, അതാണ് ഏറ്റവും നല്ലത്. എല്ലാം സത്യസന്ധതയോടെയും വിശ്വസ്തതയോടെയും നടക്കണം. നന്ദി അമ്മാവാ... അല്ലാഹു കാര്യങ്ങൾ എളുപ്പമാക്കട്ടെ.' },
+
+      { k: 'scene', ar: 'الْمَشْهَدُ الثَّالِثُ' },
+      { k: 'stage', ar: '(جَنَاحُ الْأَطْفَالِ فِي الْمُسْتَشْفَى، يَجْلِسُ سُهَيْلٌ وَهَالَةُ بِجَانِبِ غَانِمٍ)', ml: '(ആശുപത്രി വാർഡിൽ സുഹൈലും ഹാലയും ഗാനിമിന്റെ അരികിൽ ഇരിക്കുന്നു)' },
+      { k: 'line', sp: 'غَانِم', ar: 'بَابَا... عِنْدِي خَبَرٌ؟', ml: 'ഉപ്പാ... ഒരു വാർത്തയുണ്ട്.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'تَفَضَّلْ يَا بُنَيَّ...', ml: 'പറയൂ മോനേ...' },
+      { k: 'line', sp: 'غَانِم', ar: 'إِذْ كُنْتَ فِي الْخَارِجِ أَتَانِي مُقَاوِلٌ.', ml: 'ഉപ്പ പുറത്തുപോയപ്പോൾ ഒരു കോൺട്രാക്ടർ എന്നെ കാണാൻ വന്നു.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'مُقَاوِلٌ! مَاذَا أَخْبَرَكَ؟', ml: 'കോൺട്രാക്ടറോ! എന്താണ് പറഞ്ഞത്?' },
+      { k: 'line', sp: 'غَانِم', ar: 'إِنَّهُ يُرِيدُ أَنْ يَدْفَعَ تَكَالِيفَ عِلَاجِي مُقَابِلَ تَوْقِيعٍ مِنْ عِنْدِكَ.', ml: 'ഉപ്പയുടെ ഒരു ഒപ്പിന് പകരമായി എന്റെ ചികിത്സാച്ചെലവ് വഹിക്കാമെന്ന്.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'كَيْفَ تَعَامَلْتَ مَعَهُ؟', ml: 'നീ അയാളോട് എങ്ങനെ പെരുമാറി?' },
+      { k: 'line', sp: 'غَانِم', ar: 'قُلْتُ لَهُ إِنَّنِي أُحِبُّ أَنْ يَكُونَ أَبِي دَائِمًا مُوَظَّفًا نَزِيهًا. بَابَا... أَنْتَ مِثَالِي وَقُدْوَتِي...', ml: 'എന്റെ ഉപ്പ എപ്പോഴും സത്യസന്ധനായ ഉദ്യോഗസ്ഥനാകണമെന്നാണ് എനിക്കിഷ്ടം എന്ന് ഞാൻ പറഞ്ഞു. ഉപ്പാ... ഉപ്പയാണ് എന്റെ മാതൃക...' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'صَدَقْتَ يَا بُنَيَّ... الرِّشْوَةُ هِيَ طَعْنَةٌ فِي قَلْبِ النَّزَاهَةِ وَالْأَمَانَةِ. وَهِيَ تُفْسِدُ الضَّمِيرَ وَتُدَمِّرُ الْعَدَالَةَ.', ml: 'നീ പറഞ്ഞത് ശരിയാണ് മോനേ... കൈക്കൂലി സത്യസന്ധതയുടെയും വിശ്വസ്തതയുടെയും ഹൃദയത്തിലേറ്റ കുത്താണ്. അത് മനസ്സാക്ഷിയെ ദുഷിപ്പിക്കുകയും നീതിയെ നശിപ്പിക്കുകയും ചെയ്യുന്നു.' },
+      { k: 'stage', ar: '(تُشِيرُ هَالَةُ إِلَى سُهَيْلٍ بِأَنَّ حَالَةَ غَانِمٍ تَتَدَهْوَرُ.)', ml: '(ഗാനിമിന്റെ നില മോശമാകുന്നുവെന്ന് ഹാല സുഹൈലിനെ ആംഗ്യം കാണിക്കുന്നു)' },
+      { k: 'line', sp: 'غَانِم', ar: '(بِصَوْتٍ ضَعِيفٍ) آهِ... بَابَا... مَامَا... أُحِبُّكُمَا.', ml: '(ദുർബല സ്വരത്തിൽ) ആഹ്... ഉപ്പാ... ഉമ്മാ... ഞാൻ നിങ്ങളെ സ്നേഹിക്കുന്നു.' },
+      { k: 'line', sp: 'هَالَة', ar: '(بَاكِيَةً) وَنَحْنُ نُحِبُّكَ يَا بُنَيَّ. لَا حَيَاةَ لَنَا إِلَّا مَعَكَ يَا كَبِدِي.', ml: '(കരഞ്ഞുകൊണ്ട്) ഞങ്ങളും നിന്നെ സ്നേഹിക്കുന്നു മോനേ. നീയില്ലാതെ ഞങ്ങൾക്ക് ജീവിതമില്ല എന്റെ കരളേ.' },
+      { k: 'line', sp: 'غَانِم', ar: 'بَابَا... هَلْ لِي شِفَاءٌ مِنْ هٰذَا الْمَرَضِ؟ هَلِ الْحَيَاةُ تَنْتَهِي هُنَا؟', ml: 'ഉപ്പാ... ഈ രോഗം എനിക്ക് മാറുമോ? ജീവിതം ഇവിടെ അവസാനിക്കുമോ?' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'لَا بَأْسَ، طَهُورٌ إِنْ شَاءَ اللّٰهُ.', ml: 'സാരമില്ല, ഇൻശാ അല്ലാഹ് ഇത് ശുദ്ധീകരണമാണ് (സുഖമാകും).' },
+      { k: 'line', sp: 'هَالَة', ar: 'يَا إِلٰهِي أَلْبِسْهُ لِبَاسَ الشِّفَاءِ.', ml: 'എന്റെ നാഥാ, അവന് രോഗശമനത്തിന്റെ വസ്ത്രം അണിയിക്കേണമേ.' },
+      { k: 'stage', ar: '(يَدْخُلُ الطَّبِيبُ زِيَادٌ)', ml: '(ഡോക്ടർ സിയാദ് കടന്നുവരുന്നു)' },
+      { k: 'line', sp: 'زِيَاد', ar: 'يَا سُهَيْلُ لَقَدْ تَمَّتِ التَّجْهِيزَاتُ لِإِجْرَاءِ الْعَمَلِيَّةِ الْجِرَاحِيَّةِ، الْآنَ نَأْخُذُ غَانِمًا إِلَى غُرْفَةِ الْجِرَاحِيَّةِ.', ml: 'സുഹൈൽ, ശസ്ത്രക്രിയയ്ക്കുള്ള ഒരുക്കങ്ങൾ പൂർത്തിയായി. ഇപ്പോൾ ഗാനിമിനെ ഓപ്പറേഷൻ തിയേറ്ററിലേക്ക് കൊണ്ടുപോകുന്നു.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'كَيْفَ هٰذَا يَا دُكْتُورُ؟ مَنْ يَدْفَعُ تَكَالِيفَ الْعِلَاجِ؟', ml: 'ഇതെങ്ങനെ ഡോക്ടർ? ചികിത്സാച്ചെലവ് ആരാണ് അടയ്ക്കുന്നത്?' },
+      { k: 'line', sp: 'زِيَاد', ar: 'خُذْ رَاحَتَكَ يَا سُهَيْلُ. الرُّسُومُ كُلُّهَا مَدْفُوعَةٌ. الْوَقْتُ ضَيِّقٌ، دَعْنِي أَقُمْ بِالْعَمَلِيَّةِ الْجِرَاحِيَّةِ.', ml: 'ആശ്വസിക്കൂ സുഹൈൽ. ഫീസ് മുഴുവൻ അടച്ചുകഴിഞ്ഞു. സമയം കുറവാണ്, ഞാൻ ശസ്ത്രക്രിയ നടത്തട്ടെ.' },
+
+      { k: 'scene', ar: 'الْمَشْهَدُ الرَّابِعُ' },
+      { k: 'stage', ar: '(عَلَى الْمَسْرَحِ غُرْفَةُ الطَّبِيبِ، يَجْلِسُ غَانِمٌ مَعَ وَالِدَيْهِ مَسْرُورًا)', ml: '(ഡോക്ടറുടെ മുറി. ഗാനിം സന്തോഷത്തോടെ മാതാപിതാക്കളോടൊപ്പം)' },
+      { k: 'line', sp: 'زِيَاد', ar: 'بِمَ تَشْعُرُ الْآنَ يَا غَانِمُ؟', ml: 'ഗാനിം, ഇപ്പോൾ എങ്ങനെ തോന്നുന്നു?' },
+      { k: 'line', sp: 'غَانِم', ar: 'الْحَمْدُ لِلّٰهِ، أَنَا مُرْتَاحٌ يَا سَيِّدِي.', ml: 'അൽഹംദുലില്ലാഹ്, എനിക്ക് ആശ്വാസമുണ്ട് സർ.' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'لَوْ سَمَحْتَ يَا دُكْتُورُ، أَسْأَلُكَ شَيْئًا؟', ml: 'ഡോക്ടർ, അനുവദിച്ചാൽ ഒരു കാര്യം ചോദിക്കട്ടെ?' },
+      { k: 'line', sp: 'زِيَاد', ar: 'تَفَضَّلْ...', ml: 'ചോദിച്ചോളൂ...' },
+      { k: 'line', sp: 'سُهَيْل', ar: 'مَنْ ذٰلِكَ الرَّجُلُ الْفَاضِلُ الَّذِي أَنْفَقَ لِعِلَاجِ ابْنِي وَأَعَادَهُ إِلَى الْحَيَاةِ؟', ml: 'എന്റെ മകന്റെ ചികിത്സയ്ക്ക് പണം ചെലവഴിച്ച് അവനെ ജീവിതത്തിലേക്ക് തിരികെ കൊണ്ടുവന്ന ആ മഹാനുഭാവൻ ആരാണ്?' },
+      { k: 'line', sp: 'زِيَاد', ar: '(مُبْتَسِمًا) لَا يُحْتَرَمُ إِلَّا الْكَرِيمُ. أُقَدِّرُ حِرْصَكُمْ عَلَى التَّمَسُّكِ بِالْأَمَانَةِ وَالنَّزَاهَةِ، وَهِيَ أَثْمَنُ مِنْ أَيِّ مَالٍ.', ml: '(പുഞ്ചിരിയോടെ) മാന്യൻ മാത്രമേ ആദരിക്കപ്പെടൂ. വിശ്വസ്തതയും സത്യസന്ധതയും മുറുകെപ്പിടിക്കാനുള്ള നിങ്ങളുടെ താൽപര്യത്തെ ഞാൻ ആദരിക്കുന്നു; അത് ഏത് പണത്തേക്കാളും വിലപ്പെട്ടതാണ്.' },
+      { k: 'stage', ar: '(صَوْتٌ مِنَ الْخَلْفِيَّةِ) وَمَنْ يَتَّقِ اللّٰهَ يَجْعَلْ لَهُ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ — (السِّتَارُ)', ml: '(പശ്ചാത്തലത്തിൽ നിന്ന്) ആര് അല്ലാഹുവിനെ സൂക്ഷിക്കുന്നുവോ അവന് അല്ലാഹു ഒരു പോംവഴി ഉണ്ടാക്കിക്കൊടുക്കും; അവൻ പ്രതീക്ഷിക്കാത്ത വഴിയിലൂടെ അവന് ഉപജീവനം നൽകും (സൂറ അത്ത്വലാഖ് 2-3). — തിരശ്ശീല' }
+    ],
+    questions: ['أَيْنَ يَعْمَلُ سُهَيْلٌ؟', 'مَنْ طَارِقٌ؟ وَمَاذَا يُرِيدُ؟', 'هَلْ قَبِلَ سُهَيْلٌ الرِّشْوَةَ؟ لِمَ؟', 'مَنِ الْمَرِيضُ؟ وَمَا مَرَضُهُ؟', 'مَاذَا قَالَ غَانِمٌ لِلْمُقَاوِلِ؟', 'مَنْ دَفَعَ تَكَالِيفَ الْعَمَلِيَّةِ؟', 'مَا الْقِيَمُ الَّتِي تَعَلَّمْتَهَا مِنَ الْمَسْرَحِيَّةِ؟']
+  },
+
+  vocab: [
+    { word: 'رِشْوَة', emoji: '💰', meaning: 'കൈക്കൂലി (Bribe)', ar: 'مَالٌ يُعْطَى لِإِفْسَادِ الْحَقِّ', answer: 'الرِّشْوَةَ', blank: 'أَنَا لَا أَقْبَلُ ____ أَبَدًا.' },
+    { word: 'مُقَاوِل', emoji: '👷', meaning: 'കോൺട്രാക്ടർ (Contractor)', ar: 'صَاحِبُ مَشَارِيعِ الْبِنَاءِ', answer: 'مُقَاوِلٌ', blank: 'اِسْمِي طَارِقٌ، أَنَا ____.' },
+    { word: 'مَشْرُوع', emoji: '🏗️', meaning: 'പദ്ധതി (Project)', ar: 'عَمَلٌ مُخَطَّطٌ', answer: 'مَشْرُوعُ', blank: 'عِنْدِي ____ بِنَاءٍ.' },
+    { word: 'هَدِيَّة', emoji: '🎁', meaning: 'സമ്മാനം (Gift)', ar: 'تُحْفَةٌ', answer: 'هَدِيَّةً', blank: 'إِذَا سَاعَدْتَنِي أَعْطَيْتُ لَكَ ____.' },
+    { word: 'مُوَافَقَة', emoji: '👍', meaning: 'അനുമതി (Approval)', ar: 'إِذْنٌ', answer: 'الْمُوَافَقَةِ', blank: 'أَحْتَاجُ إِلَى تَوْقِيعِ ____ مِنْ وَالِدِكَ.' },
+    { word: 'تَوْقِيع', emoji: '✍️', meaning: 'ഒപ്പ് (Signature)', ar: 'كِتَابَةُ الِاسْمِ عَلَى الْوَرَقَةِ', answer: 'تَوْقِيعٍ', blank: 'يَدْفَعُ التَّكَالِيفَ مُقَابِلَ ____ مِنْ عِنْدِكَ.' },
+    { word: 'نَزَاهَة', emoji: '🕊️', meaning: 'സത്യസന്ധത / ശുദ്ധി (Integrity)', ar: 'الْبُعْدُ عَنِ الْفَسَادِ', answer: 'النَّزَاهَةِ', blank: 'الرِّشْوَةُ طَعْنَةٌ فِي قَلْبِ ____.' },
+    { word: 'أَمَانَة', emoji: '🤝', meaning: 'വിശ്വസ്തത (Honesty / Trust)', ar: 'ضِدُّ الْخِيَانَةِ', answer: 'أَمَانَةٍ', blank: 'يَجِبُ أَنْ يَتِمَّ كُلُّ شَيْءٍ بِصِدْقٍ وَ____.' },
+    { word: 'نَزِيه', emoji: '😇', meaning: 'നിഷ്കളങ്കൻ / സത്യസന്ധൻ (Incorrupt)', ar: 'شَرِيفٌ أَمِينٌ', answer: 'نَزِيهًا', blank: 'أُحِبُّ أَنْ يَكُونَ أَبِي مُوَظَّفًا ____.' },
+    { word: 'عِلَاج', emoji: '💊', meaning: 'ചികിത്സ (Treatment)', ar: 'مُدَاوَاةٌ', answer: 'عِلَاجِكَ', blank: 'يَسُرُّنِي أَنْ أَدْفَعَ تَكَالِيفَ ____.' },
+    { word: 'تَكَالِيف', emoji: '🧾', meaning: 'ചെലവുകൾ (Expenditure)', ar: 'نَفَقَاتٌ', answer: 'تَكَالِيفَ', blank: 'مَنْ يَدْفَعُ ____ الْعِلَاجِ؟' },
+    { word: 'مَبْلَغ', emoji: '💵', meaning: 'തുക (Amount)', ar: 'قَدْرٌ مِنَ الْمَالِ', answer: 'مَبْلَغٍ', blank: 'أَنْتَ مُحْتَاجٌ إِلَى ____ كَبِيرٍ لِعِلَاجِهِ.' },
+    { word: 'عَمَلِيَّة جِرَاحِيَّة', emoji: '🏥', meaning: 'ശസ്ത്രക്രിയ (Surgery)', ar: 'عِلَاجٌ بِالْجِرَاحَةِ', answer: 'عَمَلِيَّةٍ', blank: 'إِنَّهُ يَحْتَاجُ إِلَى ____ جِرَاحِيَّةٍ.' },
+    { word: 'كَبِد', emoji: '🫀', meaning: 'കരൾ (Liver)', ar: 'عُضْوٌ فِي الْبَطْنِ', answer: 'الْكَبِدِ', blank: 'يَحْتَاجُ غَانِمٌ إِلَى زِرَاعَةِ ____.' },
+    { word: 'جَنَاح الْأَطْفَال', emoji: '🛏️', meaning: 'കുട്ടികളുടെ വാർഡ് (Children’s ward)', ar: 'قِسْمُ الْأَطْفَالِ فِي الْمُسْتَشْفَى', answer: 'جَنَاحَ', blank: 'يَدْخُلُ طَارِقٌ ____ الْأَطْفَالِ.' },
+    { word: 'صَيْدَلِيَّة', emoji: '💉', meaning: 'ഫാർമസി (Pharmacy)', ar: 'مَكَانُ بَيْعِ الْأَدْوِيَةِ', answer: 'الصَّيْدَلِيَّةِ', blank: 'بَابَا خَرَجَ إِلَى ____.' },
+    { word: 'طَعْنَة', emoji: '🗡️', meaning: 'കുത്ത് (Stabbing)', ar: 'ضَرْبَةٌ بِالسِّكِّينِ', answer: 'طَعْنَةٌ', blank: 'الرِّشْوَةُ ____ فِي قَلْبِ النَّزَاهَةِ.' },
+    { word: 'ضَمِير', emoji: '💭', meaning: 'മനസ്സാക്ഷി (Conscience)', ar: 'الْإِحْسَاسُ الدَّاخِلِيُّ بِالْخَيْرِ وَالشَّرِّ', answer: 'الضَّمِيرَ', blank: 'الرِّشْوَةُ تُفْسِدُ ____.' },
+    { word: 'عَدَالَة', emoji: '⚖️', meaning: 'നീതി (Justice)', ar: 'الْعَدْلُ', answer: 'الْعَدَالَةَ', blank: 'الرِّشْوَةُ تُدَمِّرُ ____.' },
+    { word: 'تَتَدَهْوَرُ', emoji: '📉', meaning: 'മോശമാവുന്നു (Worsening)', ar: 'تَسُوءُ', answer: 'تَتَدَهْوَرُ', blank: 'حَالَةُ غَانِمٍ ____.' },
+    { word: 'رُسُوم', emoji: '🎫', meaning: 'ഫീസ് (Fees)', ar: 'أُجُورٌ', answer: 'الرُّسُومُ', blank: '____ كُلُّهَا مَدْفُوعَةٌ.' },
+    { word: 'حَزْم', emoji: '💪', meaning: 'ദൃഢത (Firmness)', ar: 'قُوَّةُ الْإِرَادَةِ', answer: 'بِحَزْمٍ', blank: 'قَالَ سُهَيْلٌ ____: لَا أَقْبَلُ الرِّشْوَةَ.' },
+    { word: 'قُدْوَة', emoji: '🌟', meaning: 'മാതൃക (Role model)', ar: 'مِثَالٌ يُقْتَدَى بِهِ', answer: 'قُدْوَتِي', blank: 'بَابَا... أَنْتَ مِثَالِي وَ____.' },
+    { word: 'سَاخِرًا', emoji: '😏', meaning: 'പരിഹസിച്ചുകൊണ്ട് (Mockingly)', ar: 'مُسْتَهْزِئًا', answer: 'سَاخِرًا', blank: 'يُغَادِرُ طَارِقٌ وَهُوَ يَضْحَكُ مِنْهُ ____.' },
+    { word: 'نَقِيَّة', emoji: '💧', meaning: 'സംശുദ്ധമായ (Pure)', ar: 'طَاهِرَةٌ', answer: 'نَقِيَّةً', blank: 'هٰذِهِ الْأَمْوَالُ لَيْسَتْ ____.' },
+    { word: 'مُرْتَاح', emoji: '😌', meaning: 'ആശ്വാസമുള്ള (Comfortable)', ar: 'فِي رَاحَةٍ', answer: 'مُرْتَاحٌ', blank: 'الْحَمْدُ لِلّٰهِ، أَنَا ____ يَا سَيِّدِي.' }
+  ],
+
+  sentences: ['أَنَا لَا أَقْبَلُ الرِّشْوَةَ', 'عِنْدِي مَشْرُوعُ بِنَاءٍ', 'بَابَا خَرَجَ إِلَى الصَّيْدَلِيَّةِ', 'الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ', 'الرُّسُومُ كُلُّهَا مَدْفُوعَةٌ', 'أَنْتَ مِثَالِي وَقُدْوَتِي', 'نَحْنُ نُحِبُّ وَطَنَنَا', 'يَجِبُ أَنْ يَتِمَّ كُلُّ شَيْءٍ بِصِدْقٍ', 'هٰذِهِ الْأَمْوَالُ لَيْسَتْ نَقِيَّةً', 'الرِّشْوَةُ تُفْسِدُ الضَّمِيرَ', 'دَعْنِي أُسَاعِدْكَ', 'حَالَةُ غَانِمٍ تَتَدَهْوَرُ'],
+
+  eventsTitle: 'رَتِّبْ أَحْدَاثَ الْمَسْرَحِيَّةِ',
+  events: [
+    'يَزُورُ طَارِقٌ مَكْتَبَ سُهَيْلٍ وَيَعْرِضُ عَلَيْهِ هَدِيَّةً.',
+    'يَرْفُضُ سُهَيْلٌ الرِّشْوَةَ بِحَزْمٍ.',
+    'يَزُورُ طَارِقٌ غَانِمًا فِي جَنَاحِ الْأَطْفَالِ.',
+    'يَقُولُ غَانِمٌ: الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي.',
+    'يَعْزِمُ طَارِقٌ عَلَى مُحَارَبَةِ الرِّشْوَةِ.',
+    'يُخْبِرُ غَانِمٌ أَبَاهُ بِزِيَارَةِ الْمُقَاوِلِ.',
+    'تَتَدَهْوَرُ حَالَةُ غَانِمٍ.',
+    'يُخْبِرُ الطَّبِيبُ أَنَّ الرُّسُومَ كُلَّهَا مَدْفُوعَةٌ.',
+    'يَشْعُرُ غَانِمٌ بِالرَّاحَةِ بَعْدَ الْعَمَلِيَّةِ.'
+  ],
+
+  tf: [
+    { s: 'يَعْمَلُ سُهَيْلٌ مُوَظَّفًا فِي الْبَلَدِيَّةِ.', a: true },
+    { s: 'طَارِقٌ طَبِيبٌ فِي الْمُسْتَشْفَى.', a: false, fix: 'طَارِقٌ مُقَاوِلٌ.' },
+    { s: 'قَبِلَ سُهَيْلٌ هَدِيَّةَ طَارِقٍ.', a: false, fix: 'رَفَضَ سُهَيْلٌ الرِّشْوَةَ بِحَزْمٍ.' },
+    { s: 'يَحْتَاجُ غَانِمٌ إِلَى عَمَلِيَّةٍ لِزِرَاعَةِ الْكَبِدِ.', a: true },
+    { s: 'كَانَ سُهَيْلٌ فِي الصَّيْدَلِيَّةِ حِينَ زَارَ طَارِقٌ غَانِمًا.', a: true },
+    { s: 'وَافَقَ غَانِمٌ عَلَى عَرْضِ الْمُقَاوِلِ.', a: false, fix: 'قَالَ غَانِمٌ: الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ.' },
+    { s: 'هَالَةُ زَوْجَةُ سُهَيْلٍ.', a: true },
+    { s: 'زِيَادٌ هُوَ ابْنُ سُهَيْلٍ.', a: false, fix: 'زِيَادٌ طَبِيبٌ، وَغَانِمٌ ابْنُ سُهَيْلٍ.' },
+    { s: 'الرُّسُومُ كُلُّهَا مَدْفُوعَةٌ.', a: true },
+    { s: 'تَحَسَّنَتْ حَالَةُ غَانِمٍ فِي الْمَشْهَدِ الثَّالِثِ.', a: false, fix: 'تَدَهْوَرَتْ حَالَتُهُ فِي الْمَشْهَدِ الثَّالِثِ.' },
+    { s: 'غَيَّرَ طَارِقٌ رَأْيَهُ بَعْدَ كَلَامِ غَانِمٍ.', a: true },
+    { s: 'الرِّشْوَةُ تُفْسِدُ الضَّمِيرَ وَتُدَمِّرُ الْعَدَالَةَ.', a: true }
+  ],
+
+  mcqGames: [
+    { title: 'مَنِ الْقَائِلُ؟', icon: '🗣️', ml: 'ആരാണ് പറഞ്ഞത്?', instr: 'اِقْرَأِ الْجُمْلَةَ وَاخْتَرِ الشَّخْصِيَّةَ الَّتِي قَالَتْهَا!', items: [
+      { q: 'لَقَدْ تَمَّتِ التَّجْهِيزَاتُ لِلْعَمَلِيَّةِ الْجِرَاحِيَّةِ.', opts: ['زِيَادٌ', 'سُهَيْلٌ', 'طَارِقٌ', 'هَالَةُ'], a: 0 },
+      { q: 'لَا حَيَاةَ لَنَا إِلَّا مَعَكَ يَا كَبِدِي.', opts: ['هَالَةُ', 'غَانِمٌ', 'زِيَادٌ', 'سُهَيْلٌ'], a: 0 },
+      { q: 'لَا بَأْسَ، طَهُورٌ إِنْ شَاءَ اللّٰهُ.', opts: ['سُهَيْلٌ', 'زِيَادٌ', 'طَارِقٌ', 'غَانِمٌ'], a: 0 },
+      { q: 'هَلِ الْحَيَاةُ تَنْتَهِي هُنَا؟', opts: ['غَانِمٌ', 'هَالَةُ', 'سُهَيْلٌ', 'زِيَادٌ'], a: 0 },
+      { q: 'عِنْدِي مَشْرُوعُ بِنَاءٍ وَأَنَا مُحْتَاجٌ إِلَى مُوَافَقَتِكَ.', opts: ['طَارِقٌ', 'سُهَيْلٌ', 'غَانِمٌ', 'زِيَادٌ'], a: 0 },
+      { q: 'هٰذِهِ الْأَمْوَالُ لَيْسَتْ نَقِيَّةً.', opts: ['سُهَيْلٌ', 'طَارِقٌ', 'هَالَةُ', 'زِيَادٌ'], a: 0 },
+      { q: 'الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي.', opts: ['غَانِمٌ', 'سُهَيْلٌ', 'هَالَةُ', 'طَارِقٌ'], a: 0 },
+      { q: 'كُنْتُ غَلْطَانَ فِي التَّفْكِيرِ.', opts: ['طَارِقٌ', 'غَانِمٌ', 'زِيَادٌ', 'سُهَيْلٌ'], a: 0 },
+      { q: 'يَا إِلٰهِي أَلْبِسْهُ لِبَاسَ الشِّفَاءِ.', opts: ['هَالَةُ', 'سُهَيْلٌ', 'غَانِمٌ', 'زِيَادٌ'], a: 0 },
+      { q: 'لَا يُحْتَرَمُ إِلَّا الْكَرِيمُ.', opts: ['زِيَادٌ', 'طَارِقٌ', 'سُهَيْلٌ', 'هَالَةُ'], a: 0 },
+      { q: 'بَابَا خَرَجَ إِلَى الصَّيْدَلِيَّةِ.', opts: ['غَانِمٌ', 'هَالَةُ', 'زِيَادٌ', 'طَارِقٌ'], a: 0 },
+      { q: 'مَنْ يَدْفَعُ تَكَالِيفَ الْعِلَاجِ؟', opts: ['سُهَيْلٌ', 'زِيَادٌ', 'غَانِمٌ', 'طَارِقٌ'], a: 0 }
+    ] },
+    { title: 'تَحَدِّي الْقَوَاعِدِ', icon: '📐', ml: 'ഭൂതകാലം, വർത്തമാനകാലം, സർവ്വനാമം', instr: 'اِخْتَرِ الصِّيغَةَ الصَّحِيحَةَ!', items: [
+      { q: 'أَنْتُمْ ______ الْحَلِيبَ. (شَرِبَ — مَاضٍ)', opts: ['شَرِبْتُمْ', 'شَرِبْتُمَا', 'شَرِبْنَا', 'شَرِبْتُنَّ'], a: 0 },
+      { q: 'أَنْتِ ______ فِي الْغُرْفَةِ. (جَلَسَ — مُضَارِعٌ)', opts: ['تَجْلِسِينَ', 'تَجْلِسُ', 'تَجْلِسْنَ', 'أَجْلِسُ'], a: 0 },
+      { q: 'نَحْنُ ______ وَطَنَنَا. (أَحَبَّ — مُضَارِعٌ)', opts: ['نُحِبُّ', 'تُحِبُّ', 'أُحِبُّ', 'تُحِبُّونَ'], a: 0 },
+      { q: 'يَا بَنَاتُ، ______ تَشْكُرْنَ لِلْوَالِدَيْنِ.', opts: ['أَنْتُنَّ', 'أَنْتُمْ', 'أَنْتِ', 'أَنْتُمَا'], a: 0 },
+      { q: 'يَا صَدِيقَانِ، ______ تَفْعَلَانِ فِعْلًا حَسَنًا.', opts: ['أَنْتُمَا', 'أَنْتُمْ', 'أَنْتَ', 'نَحْنُ'], a: 0 },
+      { q: 'أَنَا ______ الرِّسَالَةَ أَمْسِ. (كَتَبَ — مَاضٍ)', opts: ['كَتَبْتُ', 'كَتَبْتَ', 'كَتَبْنَا', 'كَتَبْتِ'], a: 0 },
+      { q: 'أَنْتُنَّ ______ الدَّرْسَ. (فَهِمَ — مَاضٍ)', opts: ['فَهِمْتُنَّ', 'فَهِمْتُمْ', 'فَهِمْتُمَا', 'فَهِمْتِ'], a: 0 },
+      { q: 'أَنْتُمْ ______ ضِدَّ الرِّشْوَةِ. (نَاقَشَ — مُضَارِعٌ)', opts: ['تُنَاقِشُونَ', 'تُنَاقِشَانِ', 'نُنَاقِشُ', 'تُنَاقِشْنَ'], a: 0 },
+      { q: 'مَا مُضَارِعُ «اِسْتَيْقَظَ»؟', opts: ['يَسْتَيْقِظُ', 'يَقُومُ', 'اِسْتَيْقَظْتُ', 'يَتَيَقَّظُونَ'], a: 0 },
+      { q: 'أَنَا ______ إِلَى الْكُوَيْتِ فِي الشَّهْرِ الْقَادِمِ. (خَرَجَ)', opts: ['أَخْرُجُ', 'نَخْرُجُ', 'تَخْرُجُ', 'خَرَجْتُ'], a: 0 },
+      { q: 'ضَمِيرُ الْمُتَكَلِّمِ الْجَمْعِ هُوَ:', opts: ['نَحْنُ', 'أَنَا', 'أَنْتُمْ', 'هُمْ'], a: 0 },
+      { q: 'أَنْتِ ______ مُعَامَلَةً طَيِّبَةً. (عَامَلَ — مُضَارِعٌ)', opts: ['تُعَامِلِينَ', 'تُعَامِلُ', 'تُعَامِلْنَ', 'أُعَامِلُ'], a: 0 }
+    ] }
+  ],
+
+  games: ['guess', 'match', 'fill', 'arrange', 'speed', 'tf', 'mcq:0', 'mcq:1', 'conj', 'memory', 'sequence', 'spell', 'wheel', 'glossary'],
+
+  quiz: [
+    { q: 'أَيْنَ يَعْمَلُ سُهَيْلٌ؟', opts: ['فِي الْبَلَدِيَّةِ', 'فِي الْمُسْتَشْفَى', 'فِي الصَّيْدَلِيَّةِ', 'فِي الْمَدْرَسَةِ'], ans: 0 },
+    { q: 'مَنْ طَارِقٌ؟', opts: ['مُقَاوِلٌ', 'طَبِيبٌ', 'مُعَلِّمٌ', 'مُوَظَّفٌ'], ans: 0 },
+    { q: 'مَاذَا عَرَضَ طَارِقٌ عَلَى سُهَيْلٍ؟', opts: ['هَدِيَّةً (رِشْوَةً)', 'وَظِيفَةً', 'بَيْتًا', 'سَيَّارَةً'], ans: 0 },
+    { q: 'مَا مَرَضُ غَانِمٍ؟', opts: ['يَحْتَاجُ إِلَى زِرَاعَةِ الْكَبِدِ', 'مَرَضُ الْقَلْبِ', 'الْحُمَّى', 'كَسْرٌ فِي الرِّجْلِ'], ans: 0 },
+    { q: 'أَيْنَ كَانَ سُهَيْلٌ حِينَ زَارَ طَارِقٌ غَانِمًا؟', opts: ['فِي الصَّيْدَلِيَّةِ', 'فِي الْمَكْتَبِ', 'فِي الْبَيْتِ', 'فِي غُرْفَةِ الطَّبِيبِ'], ans: 0 },
+    { q: 'مَا الَّذِي طَلَبَهُ طَارِقٌ مِنْ غَانِمٍ؟', opts: ['أَنْ يَتَكَلَّمَ مَعَ أَبِيهِ لِتَوْقِيعِ الْمُوَافَقَةِ', 'أَنْ يَخْرُجَ مِنَ الْمُسْتَشْفَى', 'أَنْ يَدْفَعَ الرُّسُومَ', 'أَنْ يَزُورَ الْمَكْتَبَ'], ans: 0 },
+    { q: '«الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي». مَنِ الْقَائِلُ؟', opts: ['غَانِمٌ', 'سُهَيْلٌ', 'هَالَةُ', 'زِيَادٌ'], ans: 0 },
+    { q: 'الرِّشْوَةُ عِنْدَ سُهَيْلٍ هِيَ...', opts: ['طَعْنَةٌ فِي قَلْبِ النَّزَاهَةِ', 'هَدِيَّةٌ تَقْدِيرِيَّةٌ', 'مُسَاعَدَةٌ بَسِيطَةٌ', 'عَمَلٌ قَانُونِيٌّ'], ans: 0 },
+    { q: 'مَنْ هُوَ زِيَادٌ؟', opts: ['طَبِيبٌ', 'مُقَاوِلٌ', 'ابْنُ سُهَيْلٍ', 'مُوَظَّفٌ'], ans: 0 },
+    { q: 'مَنْ يَرَى غَانِمٌ مِثَالًا وَقُدْوَةً فِي حَيَاتِهِ؟', opts: ['أَبَاهُ سُهَيْلًا', 'طَارِقًا', 'زِيَادًا', 'صَدِيقَهُ'], ans: 0 },
+    { q: 'كَيْفَ غَادَرَ طَارِقٌ الْمَكْتَبَ؟', opts: ['يَضْحَكُ سَاخِرًا', 'بَاكِيًا', 'غَاضِبًا صَامِتًا', 'مَسْرُورًا شَاكِرًا'], ans: 0 },
+    { q: 'مَا مَعْنَى «دَعْنِي أُسَاعِدْكَ»؟', opts: ['ഞാൻ സഹായിക്കട്ടെ', 'എന്നെ സഹായിക്കൂ', 'സഹായിക്കരുത്', 'ഞാൻ സഹായിച്ചു'], ans: 0 },
+    { q: 'مَاضِي الْمُخَاطَبَةِ الْمُفْرَدَةِ مِنْ «فَعَلَ»:', opts: ['فَعَلْتِ', 'فَعَلْتَ', 'فَعَلْتُ', 'فَعَلْنَا'], ans: 0 },
+    { q: 'مُضَارِعُ «أَنْتُمَا» مِنْ «جَلَسَ»:', opts: ['تَجْلِسَانِ', 'تَجْلِسُونَ', 'تَجْلِسْنَ', 'نَجْلِسُ'], ans: 0 },
+    { q: 'مَا الْآيَةُ الَّتِي سُمِعَتْ مِنَ الْخَلْفِيَّةِ فِي آخِرِ الْمَسْرَحِيَّةِ؟', opts: ['وَمَنْ يَتَّقِ اللّٰهَ يَجْعَلْ لَهُ مَخْرَجًا', 'إِنَّ مَعَ الْعُسْرِ يُسْرًا', 'وَقُلْ رَبِّ زِدْنِي عِلْمًا', 'اِقْرَأْ بِاسْمِ رَبِّكَ'], ans: 0 }
+  ],
+
+  qbank: [
+    { section: 'أَسْئِلَةُ الِاسْتِيعَابِ (Comprehension)', items: [
+      { q: 'مَنْ شَخْصِيَّاتُ الْمَسْرَحِيَّةِ؟', a: 'سُهَيْلٌ مُوَظَّفُ الْبَلَدِيَّةِ، وَطَارِقٌ الْمُقَاوِلُ، وَهَالَةُ زَوْجَةُ سُهَيْلٍ، وَزِيَادٌ الطَّبِيبُ، وَغَانِمٌ ابْنُ سُهَيْلٍ.' },
+      { q: 'أَيْنَ يَجْرِي الْمَشْهَدُ الْأَوَّلُ؟', a: 'يَجْرِي فِي مَكْتَبِ الْبَلَدِيَّةِ.' },
+      { q: 'مَاذَا يُرِيدُ طَارِقٌ مِنْ سُهَيْلٍ؟', a: 'يُرِيدُ مُوَافَقَةَ سُهَيْلٍ عَلَى مَشْرُوعِ الْبِنَاءِ، وَعَرَضَ عَلَيْهِ هَدِيَّةً (رِشْوَةً).' },
+      { q: 'هَلْ قَبِلَ سُهَيْلٌ الرِّشْوَةَ؟ لِمَ؟', a: 'لَا، لَمْ يَقْبَلْهَا؛ لِأَنَّهُ مُوَظَّفٌ نَزِيهٌ، وَيَرَى أَنَّ أَمْوَالَ الرِّشْوَةِ لَيْسَتْ نَقِيَّةً.' },
+      { q: 'مَنِ الْمَرِيضُ؟ وَمَا مَرَضُهُ؟', a: 'الْمَرِيضُ غَانِمٌ ابْنُ سُهَيْلٍ، وَيَحْتَاجُ إِلَى عَمَلِيَّةٍ جِرَاحِيَّةٍ لِزِرَاعَةِ الْكَبِدِ.' },
+      { q: 'كَيْفَ غَادَرَ طَارِقٌ الْمَكْتَبَ؟', a: 'غَادَرَ وَهُوَ يَضْحَكُ مِنْ سُهَيْلٍ سَاخِرًا.' },
+      { q: 'لِمَ جَاءَ طَارِقٌ إِلَى الْمُسْتَشْفَى؟', a: 'جَاءَ لِيَعْرِضَ عَلَى غَانِمٍ دَفْعَ تَكَالِيفِ عِلَاجِهِ مُقَابِلَ تَوْقِيعِ أَبِيهِ عَلَى مَشْرُوعِهِ.' },
+      { q: 'مَاذَا كَانَ جَوَابُ غَانِمٍ لِطَارِقٍ؟', a: 'قَالَ: هٰذَا غَيْرُ صَحِيحٍ، بَابَا لَنْ يَقْبَلَ الرِّشْوَةَ أَبَدًا، وَالْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي.' },
+      { q: 'كَيْفَ تَغَيَّرَ طَارِقٌ بَعْدَ كَلَامِ غَانِمٍ؟', a: 'تَعَجَّبَ وَاعْتَرَفَ بِخَطَئِهِ، وَعَزَمَ عَلَى حَلِّ الْقَضِيَّةِ بِطَرِيقَةٍ صَحِيحَةٍ وَمُحَارَبَةِ الرِّشْوَةِ.' },
+      { q: 'مَاذَا قَالَ سُهَيْلٌ عَنِ الرِّشْوَةِ؟', a: 'قَالَ: الرِّشْوَةُ طَعْنَةٌ فِي قَلْبِ النَّزَاهَةِ وَالْأَمَانَةِ، وَهِيَ تُفْسِدُ الضَّمِيرَ وَتُدَمِّرُ الْعَدَالَةَ.' },
+      { q: 'مَنْ دَفَعَ تَكَالِيفَ الْعَمَلِيَّةِ؟', a: 'لَمْ يُذْكَرِ اسْمُهُ؛ قَالَ الطَّبِيبُ إِنَّ الرُّسُومَ كُلَّهَا مَدْفُوعَةٌ، وَيُفْهَمُ أَنَّ الْمُقَاوِلَ طَارِقًا دَفَعَهَا بَعْدَ أَنْ تَابَ، وَذٰلِكَ مِنْ حَيْثُ لَا يَحْتَسِبُ سُهَيْلٌ.' },
+      { q: 'مَاذَا قَالَ زِيَادٌ عَنِ الْأَمَانَةِ وَالنَّزَاهَةِ؟', a: 'قَالَ: أُقَدِّرُ حِرْصَكُمْ عَلَى التَّمَسُّكِ بِالْأَمَانَةِ وَالنَّزَاهَةِ، وَهِيَ أَثْمَنُ مِنْ أَيِّ مَالٍ.' },
+      { q: 'مَا الْآيَةُ الَّتِي تُسْمَعُ فِي آخِرِ الْمَسْرَحِيَّةِ؟ وَمَا مَعْنَاهَا؟', a: 'وَمَنْ يَتَّقِ اللّٰهَ يَجْعَلْ لَهُ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ — مَنْ يَخَفِ اللّٰهَ يَجِدْ حَلًّا وَرِزْقًا مِنْ مَكَانٍ لَا يَتَوَقَّعُهُ.' }
+    ] },
+    { section: 'أَسْئِلَةُ اللُّغَةِ وَالْقَوَاعِدِ (Language & Grammar)', items: [
+      { q: 'صَرِّفِ الْفِعْلَ «شَرِبَ» فِي الْمَاضِي لِلْمُخَاطَبِ وَالْمُتَكَلِّمِ.', a: 'شَرِبْتَ، شَرِبْتُمَا، شَرِبْتُمْ، شَرِبْتِ، شَرِبْتُمَا، شَرِبْتُنَّ، شَرِبْتُ، شَرِبْنَا.' },
+      { q: 'صَرِّفِ الْفِعْلَ «جَلَسَ» فِي الْمُضَارِعِ لِلْمُخَاطَبِ وَالْمُتَكَلِّمِ.', a: 'تَجْلِسُ، تَجْلِسَانِ، تَجْلِسُونَ، تَجْلِسِينَ، تَجْلِسَانِ، تَجْلِسْنَ، أَجْلِسُ، نَجْلِسُ.' },
+      { q: 'اُذْكُرْ ضَمَائِرَ الْمُخَاطَبِ وَالْمُتَكَلِّمِ.', a: 'الْمُخَاطَبُ: أَنْتَ، أَنْتُمَا، أَنْتُمْ، أَنْتِ، أَنْتُمَا، أَنْتُنَّ — الْمُتَكَلِّمُ: أَنَا، نَحْنُ.' },
+      { q: 'اِسْتَعْمِلْ «دَعْنِي» فِي جُمْلَتَيْنِ.', a: 'دَعْنِي أُفَكِّرْ. دَعْنِي أُعْطِكَ طَعَامًا. (دَعْنِي = ഞാൻ ... ചെയ്യട്ടെ / Let me)' },
+      { q: 'اُكْتُبْ مُضَارِعَ: قَامَ، ذَهَبَ، بَحَثَ، اِتَّصَلَ، شَاهَدَ.', a: 'يَقُومُ، يَذْهَبُ، يَبْحَثُ، يَتَّصِلُ، يُشَاهِدُ.' },
+      { q: 'أَكْمِلْ: أَنْتِ ... مُعَامَلَةً طَيِّبَةً (عَامَلَ).', a: 'أَنْتِ تُعَامِلِينَ مُعَامَلَةً طَيِّبَةً.' },
+      { q: 'مَا مَعْنَى: رِشْوَة، نَزِيه، تَتَدَهْوَرُ، مُقَاوِل؟', a: 'رِشْوَة: കൈക്കൂലി — نَزِيه: സത്യസന്ധൻ — تَتَدَهْوَرُ: മോശമാവുന്നു — مُقَاوِل: കോൺട്രാക്ടർ.' }
+    ] },
+    { section: 'أَسْئِلَةٌ تَحْلِيلِيَّةٌ وَإِبْدَاعِيَّةٌ (Analytical & Creative)', items: [
+      { q: 'مَنِ الشَّخْصِيَّةُ الَّتِي أَعْجَبَتْكَ فِي الْمَسْرَحِيَّةِ؟ لِمَ؟', a: 'أَعْجَبَنِي غَانِمٌ؛ لِأَنَّهُ رَغْمَ مَرَضِهِ الشَّدِيدِ رَفَضَ الرِّشْوَةَ وَقَالَ: الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ، وَهُوَ صَغِيرٌ شُجَاعٌ أَمِينٌ.' },
+      { q: 'لِمَ رَفَضَ سُهَيْلٌ الرِّشْوَةَ مَعَ أَنَّهُ فِي أَمَسِّ الْحَاجَةِ إِلَى الْمَالِ؟', a: 'لِأَنَّهُ مُوَظَّفٌ نَزِيهٌ أَمِينٌ، يَعْرِفُ أَنَّ الرِّشْوَةَ حَرَامٌ وَجَرِيمَةٌ، وَأَنَّهَا تُفْسِدُ الضَّمِيرَ وَتُدَمِّرُ الْعَدَالَةَ، وَأَنَّ الْمَالَ الْحَرَامَ لَيْسَ نَقِيًّا.' },
+      { q: 'مَا رَأْيُكَ فِي الرِّشْوَةِ؟', a: 'الرِّشْوَةُ شَرٌّ اجْتِمَاعِيٌّ وَجَرِيمَةٌ نَحْوَ الْوَطَنِ، تَضِيعُ بِهَا حُقُوقُ النَّاسِ وَيَنْتَشِرُ الْفَسَادُ، فَيَجِبُ أَنْ نُحَارِبَهَا.' },
+      { q: 'هَلْ تَكُونُ الْحَيَاةُ سَعِيدَةً بِمَالِ الرِّشْوَةِ؟', a: 'لَا، لِأَنَّ صَاحِبَهَا يَعِيشُ فِي قَلَقٍ وَخَوْفٍ، وَيَفْقِدُ احْتِرَامَ النَّاسِ وَرَاحَةَ الضَّمِيرِ، وَلَا بَرَكَةَ فِي الْمَالِ الْحَرَامِ.' },
+      { q: 'اُكْتُبْ ثَلَاثَةَ هُتَافَاتٍ ضِدَّ الرِّشْوَةِ.', a: 'الرِّشْوَةُ جَرِيمَةٌ نَحْوَ الْوَطَنِ — النَّزَاهَةُ رَاحَةٌ وَالرِّشْوَةُ آفَةٌ — لَا لِلرِّشْوَةِ، نَعَمْ لِلْأَمَانَةِ.' },
+      { q: 'مَا الْقِيَمُ الْأَخْلَاقِيَّةُ فِي الْمَسْرَحِيَّةِ؟', a: 'النَّزَاهَةُ، الْأَمَانَةُ، الصِّدْقُ، الْهِمَّةُ، ثِقَةُ النَّفْسِ، الْإِخْلَاصُ فِي الْعَمَلِ، الصَّبْرُ عِنْدَ الشِّدَّةِ، إِكْرَامُ الْآخَرِينَ، حُبُّ الْأَطْفَالِ، حُبُّ الْوَالِدَيْنِ.' }
+    ] }
+  ],
+
+  pages: [
+    { p: 59, icon: '🖼️', title: 'نُفَكِّرُ وَنُعَبِّرُ', items: [
+      { t: 'info', h: '👀 نُلَاحِظُ الصُّورَتَيْنِ', html: 'الصُّورَةُ الْأُولَى: حَاكِمٌ يَقِفُ بِالسَّيْفِ فَوْقَ ظُهُورِ النَّاسِ الْمُلْقَيْنَ عَلَى الدَّرَجِ.<br>الصُّورَةُ الثَّانِيَةُ: حَاكِمٌ يَصْعَدُ إِلَى الْعَرْشِ وَالنَّاسُ حَوْلَهُ يَرْفَعُونَ أَيْدِيَهُمْ فَرِحِينَ.<br><span class="ml" style="font-size:.95rem;color:#475569">ഒന്നാം ചിത്രം: ജനങ്ങളെ ചവിട്ടിമെതിക്കുന്ന ക്രൂരനായ ഭരണാധികാരി. രണ്ടാം ചിത്രം: ജനങ്ങൾ സന്തോഷത്തോടെ സ്വീകരിക്കുന്ന നീതിമാനായ ഭരണാധികാരി.</span>' },
+      { t: 'mcq', h: '❓ نَخْتَارُ', q: 'الْحَاكِمُ فِي الصُّورَةِ الْأُولَى...', opts: ['ظَالِمٌ', 'عَادِلٌ', 'مُتَوَاضِعٌ', 'رَحِيمٌ'], ans: 0 },
+      { t: 'mcq', h: '❓ نَخْتَارُ', q: 'الْحَاكِمُ الَّذِي يُحِبُّهُ النَّاسُ هُوَ...', opts: ['الْعَادِلُ الْأَمِينُ', 'الظَّالِمُ', 'الْمُتَكَبِّرُ', 'الْخَائِنُ'], ans: 0 },
+      { t: 'disc', h: '🗣️ نُفَكِّرُ وَنُعَبِّرُ', qs: ['مَاذَا تَرَى فِي الصُّورَةِ الْأُولَى؟', 'مَاذَا تَرَى فِي الصُّورَةِ الثَّانِيَةِ؟', 'أَيُّ الْحَاكِمَيْنِ تُحِبُّ؟ لِمَاذَا؟', 'مَا صِفَاتُ الْحَاكِمِ الْعَادِلِ؟'], a: 'فِي الْأُولَى حَاكِمٌ ظَالِمٌ يَحْكُمُ بِالْقُوَّةِ وَالسَّيْفِ وَيَدُوسُ عَلَى رَعِيَّتِهِ. فِي الثَّانِيَةِ حَاكِمٌ عَادِلٌ يُحِبُّهُ النَّاسُ وَيُرَحِّبُونَ بِهِ. أُحِبُّ الْحَاكِمَ الثَّانِيَ لِأَنَّهُ يَخْدُمُ الْأُمَّةَ. صِفَاتُ الْحَاكِمِ الْعَادِلِ: الْعَدْلُ، الْأَمَانَةُ، الصِّدْقُ، الرَّحْمَةُ، التَّوَاضُعُ، النَّزَاهَةُ.' },
+      { t: 'write', h: '✍️ نَكْتُبُ جُمْلَتَيْنِ عَنْ كُلِّ صُورَةٍ', a: 'الْحَاكِمُ الْأَوَّلُ ظَالِمٌ. النَّاسُ يَخَافُونَ مِنْهُ.<br>الْحَاكِمُ الثَّانِي عَادِلٌ. النَّاسُ يُحِبُّونَهُ وَيَفْرَحُونَ بِهِ.' }
+    ] },
+    { p: 60, icon: '🎭', title: 'الشَّخْصِيَّاتُ وَالْمَشْهَدُ الْأَوَّلُ', items: [
+      { t: 'disc', h: '🎬 نَسْتَعِدُّ لِلْمَسْرَحِيَّةِ (Warm-up)', qs: ['هَلْ شَارَكْتَ فِي الْمِهْرَجَانِ الْفَنِّيِّ الْمَدْرَسِيِّ؟', 'مَا الْمُسَابَقَةُ الْفَنِّيَّةُ الْمُفَضَّلَةُ لَدَيْكَ؟', 'هَلْ شَارَكْتَ فِي مَسْرَحِيَّةٍ مِنْ قَبْلُ؟', 'مَا الْإِعْدَادَاتُ الَّتِي نَحْتَاجُ إِلَيْهَا لِتَنْظِيمِ الْمَسْرَحِيَّةِ؟'], a: 'نَحْتَاجُ إِلَى: سِينَارْيُو، مَسْرَحٍ، قِصَّةٍ، مُحَاوَرَاتٍ، شَخْصِيَّاتٍ، بَدْلَةٍ (costume)، أَدَوَاتٍ، إِضَاءَةٍ، سِتَارٍ.' },
+      { t: 'fill', h: '👥 نُكْمِلُ: الشَّخْصِيَّاتُ', rows: [
+        { q: 'سُهَيْلٌ: ____ الْبَلَدِيَّةِ', a: 'مُوَظَّفُ' }, { q: 'طَارِقٌ: ____', a: 'الْمُقَاوِلُ|مُقَاوِلٌ|مقاول' }, { q: 'هَالَةُ: ____ سُهَيْلٍ', a: 'زَوْجَةُ' }, { q: 'زِيَادٌ: ____', a: 'طَبِيبٌ|الطبيب|طبيب' }, { q: 'غَانِمٌ: ____ سُهَيْلٍ', a: 'ابْنُ|اِبْنُ' } ] },
+      { t: 'listen', h: '🔊 نَسْتَمِعُ إِلَى وَصْفِ الْمَسْرَحِ', lines: ['عَلَى الْمَسْرَحِ مَكْتَبُ الْبَلَدِيَّةِ، يَجْلِسُ سُهَيْلٌ فِي مَكْتَبِهِ يُرَاجِعُ الْأَوْرَاقَ. يَدْخُلُ طَارِقٌ الْمَكْتَبَ مُبْتَسِمًا.'] },
+      { t: 'qa', h: '💬 نُجِيبُ', qs: [ { q: 'مَنْ شَخْصِيَّاتُ هٰذَا الْمَشْهَدِ؟', a: 'سُهَيْلٌ وَطَارِقٌ.' }, { q: 'أَيْنَ يَجْرِي هٰذَا الْمَشْهَدُ؟', a: 'فِي مَكْتَبِ الْبَلَدِيَّةِ.' }, { q: 'مَاذَا يَفْعَلُ سُهَيْلٌ فِي مَكْتَبِهِ؟', a: 'يُرَاجِعُ الْأَوْرَاقَ.' }, { q: 'كَيْفَ دَخَلَ طَارِقٌ الْمَكْتَبَ؟', a: 'دَخَلَ مُبْتَسِمًا.' } ] }
+    ] },
+    { p: 61, icon: '💼', title: 'الْمَشْهَدُ الْأَوَّلُ: فِي الْمَكْتَبِ', items: [
+      { t: 'html', h: '🎭 نَقْرَأُ الْمَشْهَدَ', html: '<div class="btn-row"><button class="read-all-btn" onclick="go(\'reading\')">📖 اِقْرَأِ الْمَشْهَدَ كَامِلًا</button><button class="read-all-btn alt3" onclick="go(\'extra:roleplay\')">🎭 مَثِّلِ الْمَشْهَدَ</button></div>' },
+      { t: 'qa', h: '💬 نُجِيبُ (١)', qs: [ { q: 'أَيْنَ يَعْمَلُ سُهَيْلٌ؟', a: 'يَعْمَلُ سُهَيْلٌ فِي الْبَلَدِيَّةِ.' }, { q: 'مَنْ طَارِقٌ؟', a: 'طَارِقٌ مُقَاوِلٌ.' }, { q: 'مَاذَا يُرِيدُ طَارِقٌ؟', a: 'يُرِيدُ مُوَافَقَةَ سُهَيْلٍ عَلَى مَشْرُوعِ الْبِنَاءِ.' } ] },
+      { t: 'qa', h: '💬 نُجِيبُ (٢)', qs: [ { q: 'هَلْ قَبِلَ سُهَيْلٌ الرِّشْوَةَ؟ لِمَ؟', a: 'لَا، لِأَنَّهُ نَزِيهٌ وَيَرَى أَنَّ أَمْوَالَ الرِّشْوَةِ لَيْسَتْ نَقِيَّةً.' }, { q: 'مَنِ الْمَرِيضُ؟ وَمَا مَرَضُهُ؟', a: 'غَانِمٌ، يَحْتَاجُ إِلَى عَمَلِيَّةٍ جِرَاحِيَّةٍ لِزِرَاعَةِ الْكَبِدِ.' }, { q: 'كَيْفَ غَادَرَ طَارِقٌ مِنَ الْمَكْتَبِ؟', a: 'غَادَرَ وَهُوَ يَضْحَكُ مِنْهُ سَاخِرًا.' } ] },
+      { t: 'tf', h: '✅ صَحِيحٌ أَمْ خَطَأٌ؟', rows: [ { s: 'دَخَلَ طَارِقٌ الْمَكْتَبَ غَاضِبًا.', a: false, fix: 'دَخَلَ مُبْتَسِمًا.' }, { s: 'قَالَ سُهَيْلٌ: لَا حَاجَةَ إِلَى أَيِّ هَدِيَّةٍ.', a: true }, { s: 'يَحْتَاجُ غَانِمٌ إِلَى مَبْلَغٍ كَبِيرٍ لِعِلَاجِهِ.', a: true } ] },
+      { t: 'write', h: '✍️ نَتَخَيَّلُ وَنَكْتُبُ: حَكَى سُهَيْلٌ لِزَوْجَتِهِ مَا جَرَى فِي الْمَكْتَبِ، نُعِدُّ الْحِكَايَةَ', start: 'عَزِيزَتِي... ', hint: 'ആരാണ് വന്നത്? എന്താണ് ചോദിച്ചത്? എന്ത് വാഗ്ദാനം ചെയ്തു? സുഹൈൽ എന്ത് മറുപടി പറഞ്ഞു? താരിഖ് എങ്ങനെ പോയി?', a: 'عَزِيزَتِي... الْيَوْمَ جَاءَنِي مُقَاوِلٌ، وَطَلَبَ مِنِّي الْمُوَافَقَةَ لِمَشْرُوعِ الْبِنَاءِ، فَطَلَبْتُ مِنْهُ الْأَوْرَاقَ، فَوَعَدَنِي مَبْلَغًا كَبِيرًا، وَهُوَ يَعْرِفُ أَنَّنَا نَحْتَاجُ إِلَى الْمَالِ لِعِلَاجِ ابْنِنَا، فَقُلْتُ لَهُ: إِنِّي لَا أَقْبَلُ الرِّشْوَةَ. فَقَالَ لِي: إِنَّهَا لَيْسَتْ رِشْوَةً، إِنَّهَا مُسَاعَدَةٌ فَقَطْ. وَلٰكِنَّنِي لَمْ أَقْبَلْ مِنْهُ شَيْئًا، فَذَهَبَ غَاضِبًا وَهُوَ يَضْحَكُ سُخْرِيَةً مِنِّي.' }
+    ] },
+    { p: 62, icon: '🏥', title: 'الْمَشْهَدُ الثَّانِي: فِي الْمُسْتَشْفَى', items: [
+      { t: 'listen', h: '🔊 نَسْتَمِعُ وَنُرَدِّدُ', lines: ['مَرْحَبًا يَا بُنَيَّ، كَيْفَ حَالُكَ الْيَوْمَ؟', 'الْحَمْدُ لِلّٰهِ، أَنَا بِخَيْرٍ. مَنْ أَنْتَ؟ مَاذَا تُرِيدُ؟', 'اِسْمِي طَارِقٌ، أَنَا مُقَاوِلٌ، جِئْتُكَ لِأُسَاعِدَكَ.', 'بَابَا خَرَجَ إِلَى الصَّيْدَلِيَّةِ.'] },
+      { t: 'qa', h: '💬 أَسْئِلَةُ الْإِدْرَاكِ', qs: [ { q: 'مَنِ الْمَرِيضُ؟', a: 'غَانِمٌ.' }, { q: 'مَنْ يَزُورُ غَانِمًا فِي الْمُسْتَشْفَى؟', a: 'طَارِقٌ الْمُقَاوِلُ.' }, { q: 'لِمَ جَاءَ طَارِقٌ إِلَى الْمُسْتَشْفَى؟', a: 'لِيُسَاعِدَ غَانِمًا فِي دَفْعِ تَكَالِيفِ الْعِلَاجِ مُقَابِلَ تَوْقِيعِ أَبِيهِ.' }, { q: 'أَيْنَ كَانَ سُهَيْلٌ حِينَمَا جَاءَ طَارِقٌ؟', a: 'كَانَ فِي الصَّيْدَلِيَّةِ.' } ] },
+      { t: 'fill', h: '✏️ نُكْمِلُ مِنَ النَّصِّ', rows: [ { q: 'يَدْخُلُ طَارِقٌ ____ الْأَطْفَالِ فِي الْمُسْتَشْفَى.', a: 'جَنَاحَ' }, { q: 'أَعْرِفُ أَنَّكُمْ فِي حَاجَةٍ إِلَى مَبْلَغٍ ____ لِعِلَاجِكَ.', a: 'طَائِلٍ' }, { q: 'يَسُرُّنِي أَنْ أَدْفَعَ ____ عِلَاجِكَ.', a: 'تَكَالِيفَ' } ] },
+      { t: 'mcq', h: '❓ نَخْتَارُ', q: 'مَعْنَى «مَبْلَغٌ طَائِلٌ»:', opts: ['ഭീമമായ തുക', 'ചെറിയ തുക', 'കൈക്കൂലി', 'ഫീസ്'], ans: 0 }
+    ] },
+    { p: 63, icon: '📝', title: 'نُحَوِّلُ الْمَشْهَدَ الثَّانِيَ إِلَى حِكَايَةٍ', items: [
+      { t: 'qa', h: '💬 نُجِيبُ', qs: [ { q: 'مَاذَا طَلَبَ طَارِقٌ مِنْ غَانِمٍ؟', a: 'طَلَبَ أَنْ يَتَكَلَّمَ مَعَ أَبِيهِ لِيُوَقِّعَ الْمُوَافَقَةَ لِمَشْرُوعِهِ.' }, { q: '«بَابَا لَنْ يَقْبَلَ الرِّشْوَةَ أَبَدًا» مَنْ قَالَ؟ وَلِمَنْ؟', a: 'قَالَهُ غَانِمٌ لِطَارِقٍ.' }, { q: 'مَاذَا اخْتَارَ غَانِمٌ: الرِّشْوَةَ لِلْعِلَاجِ أَوِ الْمَوْتَ؟', a: 'اخْتَارَ الْمَوْتَ، وَقَالَ: الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي.' }, { q: 'مَاذَا قَرَّرَ طَارِقٌ فِي النِّهَايَةِ؟', a: 'قَرَّرَ أَنْ يَحُلَّ الْقَضِيَّةَ بِطَرِيقَةٍ صَحِيحَةٍ وَيُحَارِبَ الرِّشْوَةَ.' } ] },
+      { t: 'order', h: '📜 نُرَتِّبُ أَحْدَاثَ الْمَشْهَدِ الثَّانِي', note: 'ശരിയായ ക്രമത്തിൽ ക്ലിക്ക് ചെയ്യുക', items: ['دَخَلَ طَارِقٌ جَنَاحَ الْأَطْفَالِ.', 'سَأَلَ عَنْ حَالِ غَانِمٍ وَعَنْ أَبِيهِ.', 'عَرَضَ أَنْ يَدْفَعَ تَكَالِيفَ الْعِلَاجِ.', 'طَلَبَ تَوْقِيعَ الْمُوَافَقَةِ مِنْ وَالِدِ غَانِمٍ.', 'رَفَضَ غَانِمٌ الْعَرْضَ.', 'تَعَجَّبَ طَارِقٌ وَقَرَّرَ الطَّرِيقَ الصَّحِيحَ.'] },
+      { t: 'write', h: '✍️ نُحَوِّلُ الْمَشْهَدَ الثَّانِيَ إِلَى حِكَايَةٍ', start: 'زَارَ الْمُقَاوِلُ غَانِمًا فِي جَنَاحِ الْأَطْفَالِ ', hint: 'അവസാന വാക്യം: بَيَّنَ غَانِمٌ عَنِ الِالْتِزَامِ بِالصِّدْقِ وَالْأَمَانَةِ فِي الْحَيَاةِ وَغَادَرَ الْمُقَاوِلُ الْمَسْرَحَ.', a: 'جَاءَ طَارِقٌ إِلَى جَنَاحِ الْأَطْفَالِ لِزِيَارَةِ غَانِمٍ حِينَمَا خَرَجَ وَالِدُهُ إِلَى الصَّيْدَلِيَّةِ. سَأَلَهُ غَانِمٌ: مَنْ أَنْتَ؟ وَمَاذَا تُرِيدُ؟ فَعَرَّفَ نَفْسَهُ وَأَخْبَرَ بِأَنَّهُ مُقَاوِلٌ جَاءَ لِمُسَاعَدَتِهِ. طَلَبَ طَارِقٌ مِنْ غَانِمٍ أَنْ يَنْصَحَ أَبَاهُ بِقَبُولِ هَدِيَّتِهِ لِعِلَاجِهِ، فَغَضِبَ غَانِمٌ وَقَالَ: «الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي». تَعَجَّبَ طَارِقٌ مِنْ قَوْلِهِ، وَفَكَّرَ قَلِيلًا، وَعَزَمَ عَلَى إِجْرَاءِ مَشْرُوعِهِ بِالطَّرِيقَةِ الصَّحِيحَةِ. بَيَّنَ غَانِمٌ عَنِ الِالْتِزَامِ بِالصِّدْقِ وَالْأَمَانَةِ فِي الْحَيَاةِ وَغَادَرَ الْمُقَاوِلُ الْمَسْرَحَ.' }
+    ] },
+    { p: 64, icon: '👨‍👩‍👦', title: 'الْمَشْهَدُ الثَّالِثُ: غَانِمٌ يُخْبِرُ أَبَاهُ', items: [
+      { t: 'disc', h: '🤔 قَبْلَ الْقِرَاءَةِ', qs: ['هَلْ عَلِمَ سُهَيْلٌ زِيَارَةَ الْمُقَاوِلِ؟', 'كَيْفَ يَتَجَاوَبُ سُهَيْلٌ إِذَا عَلِمَ الْخَبَرَ؟', 'هَلْ تَجْرِي الْعَمَلِيَّةُ الْجِرَاحِيَّةُ؟'], a: 'نَعَمْ، أَخْبَرَهُ غَانِمٌ. فَرِحَ سُهَيْلٌ بِمَوْقِفِ ابْنِهِ وَقَالَ: صَدَقْتَ يَا بُنَيَّ. نَعَمْ، جَرَتِ الْعَمَلِيَّةُ لِأَنَّ الرُّسُومَ دُفِعَتْ.' },
+      { t: 'qa', h: '💬 نُجِيبُ', qs: [ { q: 'مَاذَا أَخْبَرَ غَانِمٌ أَبَاهُ؟', a: 'أَخْبَرَهُ أَنَّ مُقَاوِلًا أَتَاهُ يُرِيدُ دَفْعَ تَكَالِيفِ عِلَاجِهِ مُقَابِلَ تَوْقِيعٍ مِنْ عِنْدِهِ.' }, { q: 'كَيْفَ تَعَامَلَ غَانِمٌ مَعَ الْمُقَاوِلِ؟', a: 'قَالَ لَهُ: إِنَّنِي أُحِبُّ أَنْ يَكُونَ أَبِي دَائِمًا مُوَظَّفًا نَزِيهًا.' }, { q: 'مَنْ يَرَى غَانِمٌ مِثَالًا فِي حَيَاتِهِ؟', a: 'يَرَى أَبَاهُ سُهَيْلًا مِثَالًا وَقُدْوَةً.' } ] },
+      { t: 'fill', h: '✏️ نُكْمِلُ', rows: [ { q: 'إِنَّهُ يُرِيدُ أَنْ يَدْفَعَ ____ عِلَاجِي.', a: 'تَكَالِيفَ' }, { q: 'أُحِبُّ أَنْ يَكُونَ أَبِي دَائِمًا مُوَظَّفًا ____.', a: 'نَزِيهًا' }, { q: 'بَابَا... أَنْتَ مِثَالِي وَ____.', a: 'قُدْوَتِي' } ] }
+    ] },
+    { p: 65, icon: '🗣️', title: 'الْمَشْهَدُ الثَّالِثُ: نُنَاقِشُ — مَنِ الْقَائِلُ؟', items: [
+      { t: 'mcq', h: '🗣️ مَنِ الْقَائِلُ؟', q: 'لَقَدْ تَمَّتِ التَّجْهِيزَاتُ لِلْعَمَلِيَّةِ الْجِرَاحِيَّةِ.', opts: ['زِيَادٌ', 'سُهَيْلٌ', 'هَالَةُ', 'غَانِمٌ'], ans: 0 },
+      { t: 'mcq', h: '🗣️ مَنِ الْقَائِلُ؟', q: 'لَا حَيَاةَ لَنَا إِلَّا مَعَكَ يَا كَبِدِي.', opts: ['سُهَيْلٌ', 'هَالَةُ', 'زِيَادٌ', 'طَارِقٌ'], ans: 1 },
+      { t: 'mcq', h: '🗣️ مَنِ الْقَائِلُ؟', q: 'لَا بَأْسَ، طَهُورٌ إِنْ شَاءَ اللّٰهُ.', opts: ['غَانِمٌ', 'زِيَادٌ', 'سُهَيْلٌ', 'هَالَةُ'], ans: 2 },
+      { t: 'mcq', h: '🗣️ مَنِ الْقَائِلُ؟', q: 'هَلِ الْحَيَاةُ تَنْتَهِي هُنَا؟', opts: ['هَالَةُ', 'سُهَيْلٌ', 'زِيَادٌ', 'غَانِمٌ'], ans: 3 },
+      { t: 'qa', h: '💬 نُجِيبُ', qs: [ { q: 'هِيَ طَعْنَةٌ فِي قَلْبِ النَّزَاهَةِ، مَا هِيَ؟', a: 'الرِّشْوَةُ.' }, { q: 'مَنْ هُوَ زِيَادٌ؟', a: 'زِيَادٌ طَبِيبٌ.' }, { q: 'مَنْ أَخْبَرَهُمْ بِأَنَّ الرُّسُومَ كُلَّهَا مَدْفُوعَةٌ؟', a: 'الطَّبِيبُ زِيَادٌ.' }, { q: 'مَاذَا سَأَلَ سُهَيْلٌ زِيَادًا؟', a: 'سَأَلَهُ: كَيْفَ هٰذَا يَا دُكْتُورُ؟ مَنْ يَدْفَعُ تَكَالِيفَ الْعِلَاجِ؟' } ] }
+    ] },
+    { p: 66, icon: '🎉', title: 'الْمَشْهَدُ الرَّابِعُ: فِي غُرْفَةِ الطَّبِيبِ', items: [
+      { t: 'qa', h: '💬 نُجِيبُ', qs: [ { q: 'بِمَ يَشْعُرُ غَانِمٌ الْآنَ؟', a: 'يَشْعُرُ بِالرَّاحَةِ، يَقُولُ: الْحَمْدُ لِلّٰهِ، أَنَا مُرْتَاحٌ.' }, { q: 'مَاذَا سَأَلَ سُهَيْلٌ الطَّبِيبَ؟', a: 'سَأَلَهُ عَنِ الرَّجُلِ الْفَاضِلِ الَّذِي أَنْفَقَ لِعِلَاجِ ابْنِهِ.' }, { q: 'مَا رَدُّ زِيَادٍ؟', a: 'قَالَ: لَا يُحْتَرَمُ إِلَّا الْكَرِيمُ، أُقَدِّرُ حِرْصَكُمْ عَلَى التَّمَسُّكِ بِالْأَمَانَةِ وَالنَّزَاهَةِ، وَهِيَ أَثْمَنُ مِنْ أَيِّ مَالٍ.' }, { q: 'مَاذَا يُسْمَعُ مِنَ الْخَلْفِيَّةِ؟', a: 'وَمَنْ يَتَّقِ اللّٰهَ يَجْعَلْ لَهُ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ.' } ] },
+      { t: 'listen', h: '📖 نَسْتَمِعُ إِلَى الْآيَةِ (سُورَةُ الطَّلَاقِ ٢–٣)', lines: ['وَمَنْ يَتَّقِ اللّٰهَ يَجْعَلْ لَهُ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ'] },
+      { t: 'info', h: '💡 الْعِبْرَةُ', html: 'تَمَسَّكَتِ الْأُسْرَةُ بِالْأَمَانَةِ وَالنَّزَاهَةِ، فَجَاءَ الْفَرَجُ مِنْ حَيْثُ لَا يَحْتَسِبُونَ.<br><span class="ml" style="font-size:.95rem;color:#475569">സത്യസന്ധത കൈവിടാത്തവർക്ക് പ്രതീക്ഷിക്കാത്ത വഴിയിലൂടെ ദൈവം രക്ഷ നൽകും.</span>' },
+      { t: 'tf', h: '✅ صَحِيحٌ أَمْ خَطَأٌ؟', rows: [ { s: 'يَجْلِسُ غَانِمٌ مَعَ وَالِدَيْهِ حَزِينًا.', a: false, fix: 'يَجْلِسُ مَسْرُورًا.' }, { s: 'الْأَمَانَةُ وَالنَّزَاهَةُ أَثْمَنُ مِنْ أَيِّ مَالٍ.', a: true } ] }
+    ] },
+    { p: 67, icon: '🔄', title: 'نُرَاجِعُ وَنَتَخَيَّلُ نِهَايَةً بَدِيلَةً', items: [
+      { t: 'qa', h: '💬 نُرَاجِعُ النَّصَّ وَنُجِيبُ', qs: [ { q: 'مَنِ الشَّخْصِيَّةُ الَّتِي أَعْجَبَتْكَ فِي هٰذِهِ الْمَسْرَحِيَّةِ؟ لِمَ؟', a: 'أَعْجَبَنِي غَانِمٌ؛ لِأَنَّهُ رَفَضَ الرِّشْوَةَ رَغْمَ مَرَضِهِ، وَافْتَخَرَ بِنَزَاهَةِ أَبِيهِ.' }, { q: 'لِمَ رَفَضَ سُهَيْلٌ الرِّشْوَةَ مَعَ أَنَّهُ فِي أَمَسِّ الْحَاجَةِ إِلَى الْمَالِ؟', a: 'لِأَنَّهُ مُوَظَّفٌ نَزِيهٌ أَمِينٌ، وَيَعْرِفُ أَنَّ أَمْوَالَ الرِّشْوَةِ لَيْسَتْ نَقِيَّةً، وَأَنَّهَا تُفْسِدُ الضَّمِيرَ وَتُدَمِّرُ الْعَدَالَةَ.' } ] },
+      { t: 'write', h: '🔀 نِهَايَةٌ بَدِيلَةٌ (أ): قَرَّرَ الْمُوَظَّفُ قَبُولَ الرِّشْوَةِ', hint: 'സുഹൈലിന്റെ സ്വഭാവം? കൈക്കൂലി വാങ്ങിയാൽ മനസ്സ് എങ്ങനെ? ഗാനിം അറിഞ്ഞാൽ എന്ത് സംഭവിക്കും?', a: 'فَكَّرَ سُهَيْلٌ كَثِيرًا، لٰكِنْ مَا وَجَدَ سَبِيلًا. اشْتَدَّ مَرَضُ غَانِمٍ، وَاضْطُرَّ إِلَى قَبُولِ الرِّشْوَةِ. صَارَ قَلْبُهُ قَلِقًا. لَمَّا وَصَلَ إِلَى الْبَيْتِ سَأَلَهُ غَانِمٌ: «بَابَا... مَا لِي أَرَاكَ قَلِقًا؟» عَلِمَ غَانِمٌ بِأَنَّ أَبَاهُ قَبِلَ الرِّشْوَةَ، فَقَالَ: يَا بَابَا... الْمَوْتُ أَحَبُّ إِلَيَّ مِنْ قَبُولِ الرِّشْوَةِ لِأَجْلِي... وَاتَّصَلَ غَانِمٌ بِالْمُقَاوِلِ. رَدَّ سُهَيْلٌ مَبْلَغَ الرِّشْوَةِ إِلَيْهِ، فَصَارَ غَانِمٌ فَرِحًا.' },
+      { t: 'write', h: '🔀 نِهَايَةٌ بَدِيلَةٌ (ب): مَا دَفَعَ أَحَدٌ تَكَالِيفَ الْعَمَلِيَّةِ الْجِرَاحِيَّةِ', hint: 'പണം കണ്ടെത്താനുള്ള വഴികൾ, ഗാനിമിന്റെ നില, കുടുംബത്തിന്റെ നിലപാട്, സ്വത്തുക്കൾ (വീട് / ഭൂമി / കാർ)', a: 'اشْتَدَّ مَرَضُ غَانِمٍ، وَلَمْ يَجِدْ سُهَيْلٌ أَحَدًا يُسَاعِدُهُ بِالْمَالِ، وَلَمْ يُحِبَّ قَبُولَ الرِّشْوَةِ عَلَى الْإِطْلَاقِ، وَاعْتَرَفَ أَنَّهُ مُضْطَرٌّ أَنْ يَبِيعَ بَيْتَهُ، وَلَمْ يَمْلِكْ شَيْئًا إِلَّا هٰذَا الْبَيْتَ. وَشَاوَرَ زَوْجَتَهُ وَابْنَهُ، فَوَافَقَ جَمِيعُهُمْ عَلَى رَفْضِ الرِّشْوَةِ، وَقَرَّرُوا نَقْلَ مَسْكَنِهِمْ إِلَى شُقَّةٍ مُسْتَأْجَرَةٍ. بَاعَ سُهَيْلٌ بَيْتَهُ وَحَصَلَ عَلَى الْمَبْلَغِ الَّذِي يَحْتَاجُهُ لِعِلَاجِ غَانِمٍ.' },
+      { t: 'disc', h: '🗣️ نُنَاقِشُ حَوْلَ مَوْضُوعِ الرِّشْوَةِ وَكَيْفِيَّةِ مُكَافَحَتِهَا', qs: ['١. مَا رَأْيُكَ فِي الرِّشْوَةِ؟', '٢. هَلْ يُحِبُّ النَّاسُ شَخْصًا يَقْبَلُ الرِّشْوَةَ؟ لِمَ؟', '٣. مَا الشَّيْءُ الَّذِي يُحَرِّضُ عَلَى قَبُولِ الرِّشْوَةِ؟', '٤. هَلْ تَكُونُ الْحَيَاةُ سَعِيدَةً بِمَالِ الرِّشْوَةِ؟ بَيِّنْ رَأْيَكَ.'], a: '١. الرِّشْوَةُ جَرِيمَةٌ وَشَرٌّ اجْتِمَاعِيٌّ يُفْسِدُ الْمُجْتَمَعَ.<br>٢. لَا، لِأَنَّهُ خَائِنٌ لَا يَخْدُمُ النَّاسَ إِلَّا بِالْمَالِ، وَيَضِيعُ حَقُّ الْفَقِيرِ.<br>٣. الطَّمَعُ وَحُبُّ الْمَالِ وَضَعْفُ الْإِيمَانِ وَالْحَاجَةُ.<br>٤. لَا، لِأَنَّ الْمَالَ الْحَرَامَ لَا بَرَكَةَ فِيهِ، وَصَاحِبُهُ يَعِيشُ قَلِقًا خَائِفًا بِلَا رَاحَةِ ضَمِيرٍ.' },
+      { t: 'mcq', h: '🎨 نُلَاحِظُ الْكَلِمَاتِ الْمُلَوَّنَةَ: «دَعْنِي»', q: '«دَعْنِي أُسَاعِدْكَ» — مَعْنَى «دَعْنِي»:', opts: ['എന്നെ അനുവദിക്കൂ / ഞാൻ ... ചെയ്യട്ടെ (Let me)', 'എന്നെ വിളിക്കൂ', 'എന്നെ വിടൂ (പോകാൻ)', 'എന്നെ സഹായിക്കൂ'], ans: 0 },
+      { t: 'listen', h: '🔊 أَمْثِلَةُ «دَعْنِي»', lines: ['دَعْنِي أُسَاعِدْكَ', 'دَعْنِي أَتَّصِلْ بِهِ', 'دَعْنِي أَقُمْ بِالْعَمَلِيَّةِ'] },
+      { t: 'write', h: '✍️ نَسْتَعْمِلُ «دَعْنِي» فِي جُمَلٍ (حِوَارٌ قَصِيرٌ)', prompt: 'الدَّارِسُ: أَتْمَمْتُ الْوَاجِبَاتِ الْمَنْزِلِيَّةَ. — الْمُدَرِّسُ: دَعْنِي أَشُفْ.<br>الْأَوَّلُ: هَلْ عِنْدَكَ فِكْرَةٌ؟ — الثَّانِي: ......<br>الْفَقِيرُ: أَنَا لَمْ أَذُقْ طَعَامًا مُنْذُ يَوْمَيْنِ. — الْغَنِيُّ: ......', a: 'الثَّانِي: دَعْنِي أُفَكِّرْ.<br>الْغَنِيُّ: دَعْنِي أُعْطِكَ طَعَامًا.<br>أَمْثِلَةٌ أُخْرَى: دَعْنِي أَقْرَأِ الْكِتَابَ. دَعْنِي أَذْهَبْ إِلَى الْبَيْتِ. دَعْنِي أَكْتُبِ الرِّسَالَةَ.' }
+    ] },
+    { p: 68, icon: '💎', title: 'الْقِيَمُ، الْهُتَافَاتُ، وَالْفِعْلُ الْمَاضِي', items: [
+      { t: 'chips', h: '💎 نُرَاجِعُ النَّصَّ وَنَكْتَشِفُ مِنْهُ الْقِيَمَ الْأَخْلَاقِيَّةَ (اِخْتَرْ)', words: ['النَّزَاهَةُ', 'الْأَمَانَةُ', 'الصِّدْقُ', 'الْهِمَّةُ', 'ثِقَةُ النَّفْسِ', 'الْإِخْلَاصُ فِي الْعَمَلِ', 'الصَّبْرُ عِنْدَ الشِّدَّةِ', 'حُبُّ الْوَالِدَيْنِ', 'الْكَذِبُ', 'الطَّمَعُ', 'الْخِيَانَةُ', 'الْكَسَلُ', 'الرِّشْوَةُ'], correct: ['النَّزَاهَةُ', 'الْأَمَانَةُ', 'الصِّدْقُ', 'الْهِمَّةُ', 'ثِقَةُ النَّفْسِ', 'الْإِخْلَاصُ فِي الْعَمَلِ', 'الصَّبْرُ عِنْدَ الشِّدَّةِ', 'حُبُّ الْوَالِدَيْنِ'] },
+      { t: 'slogans', h: '📢 نُعِدُّ هُتَافَاتٍ ضِدَّ الرِّشْوَةِ', start: 'الرِّشْوَةُ جَرِيمَةٌ نَحْوَ الْوَطَنِ\n', list: ['الرِّشْوَةُ جَرِيمَةٌ نَحْوَ الْوَطَنِ', 'تَعَالَوْا يَا بَنِي الْإِنْسَانِ نُدَافِعْ آفَةَ الرِّشْوَةِ', 'طَعَامُ الرِّشْوَةِ فَسَادُ الْأُمَّةِ', 'النَّزَاهَةُ رَاحَةٌ وَالرِّشْوَةُ آفَةٌ', 'لَا لِلرِّشْوَةِ، نَعَمْ لِلْأَمَانَةِ', 'الْأَمَانَةُ شَرَفٌ وَالرِّشْوَةُ عَارٌ', 'بِالنَّزَاهَةِ نَبْنِي الْوَطَنَ', 'الْمُوَظَّفُ النَّزِيهُ فَخْرُ الْوَطَنِ'] },
+      { t: 'info', h: '📘 نَقْرَأُ وَنُلَاحِظُ: الْفِعْلُ الْمَاضِي (فَعَلَ)', html: '<div class="tbl-wrap"><table class="grid-t"><tr><th></th><th></th><th>الْمُفْرَدُ</th><th>الْمُثَنَّى</th><th>الْجَمْعُ</th></tr><tr><td class="lab" rowspan="2">الْمُخَاطَبُ</td><td class="lab">الْمُذَكَّرُ</td><td>فَعَلْتَ</td><td>فَعَلْتُمَا</td><td>فَعَلْتُمْ</td></tr><tr><td class="lab">الْمُؤَنَّثُ</td><td>فَعَلْتِ</td><td>فَعَلْتُمَا</td><td>فَعَلْتُنَّ</td></tr><tr><td class="lab">الْمُتَكَلِّمُ</td><td class="lab">الْمُذَكَّرُ / الْمُؤَنَّثُ</td><td>فَعَلْتُ</td><td colspan="2">فَعَلْنَا</td></tr></table></div><div class="ml" style="font-size:.95rem;color:#475569;margin-top:8px">ഭൂതകാല ക്രിയ: നീ ചെയ്തു (فَعَلْتَ), നിങ്ങൾ രണ്ടുപേർ ചെയ്തു (فَعَلْتُمَا), ഞാൻ ചെയ്തു (فَعَلْتُ), ഞങ്ങൾ ചെയ്തു (فَعَلْنَا)</div>' },
+      { t: 'listen', h: '🔊 أَمْثِلَةٌ (أَكَلَ)', lines: ['يَا سَلِيمُ، أَنْتَ أَكَلْتَ تُفَّاحَةً', 'يَا وَلَدَانِ، أَنْتُمَا أَكَلْتُمَا تُفَّاحَةً', 'يَا أَوْلَادُ، أَنْتُمْ أَكَلْتُمْ تُفَّاحَةً', 'يَا فَاطِمَةُ، أَنْتِ أَكَلْتِ تُفَّاحَةً', 'يَا بِنْتَانِ، أَنْتُمَا أَكَلْتُمَا تُفَّاحَةً', 'يَا بَنَاتُ، أَنْتُنَّ أَكَلْتُنَّ تُفَّاحَةً', 'أَنَا أَكَلْتُ تُفَّاحَةً', 'نَحْنُ أَكَلْنَا تُفَّاحَةً'] },
+      { t: 'table', h: '✏️ نُصَرِّفُ «نَصَرَ» فِي الْمَاضِي', cols: ['', 'الْمُفْرَدُ', 'الْمُثَنَّى', 'الْجَمْعُ'], rows: [ [{ v: 'الْمُخَاطَبُ', lab: 1 }, '?نَصَرْتَ', '?نَصَرْتُمَا', '?نَصَرْتُمْ'], [{ v: 'الْمُخَاطَبَةُ', lab: 1 }, '?نَصَرْتِ', '?نَصَرْتُمَا', '?نَصَرْتُنَّ'], [{ v: 'الْمُتَكَلِّمُ', lab: 1 }, '?نَصَرْتُ', { v: '?نَصَرْنَا', span: 2 }] ] }
+    ] },
+    { p: 69, icon: '📊', title: 'الْفِعْلُ الْمُضَارِعُ وَنُكَمِّلُ الْجَدَاوِلَ', items: [
+      { t: 'info', h: '📘 نَقْرَأُ وَنُلَاحِظُ: الْفِعْلُ الْمُضَارِعُ (يَفْعَلُ)', html: '<div class="tbl-wrap"><table class="grid-t"><tr><th></th><th></th><th>الْمُفْرَدُ</th><th>الْمُثَنَّى</th><th>الْجَمْعُ</th></tr><tr><td class="lab" rowspan="2">الْمُخَاطَبُ</td><td class="lab">الْمُذَكَّرُ</td><td>تَفْعَلُ</td><td>تَفْعَلَانِ</td><td>تَفْعَلُونَ</td></tr><tr><td class="lab">الْمُؤَنَّثُ</td><td>تَفْعَلِينَ</td><td>تَفْعَلَانِ</td><td>تَفْعَلْنَ</td></tr><tr><td class="lab">الْمُتَكَلِّمُ</td><td class="lab">الْمُذَكَّرُ / الْمُؤَنَّثُ</td><td>أَفْعَلُ</td><td colspan="2">نَفْعَلُ</td></tr></table></div><div class="ml" style="font-size:.95rem;color:#475569;margin-top:8px">വർത്തമാന/ഭാവി ക്രിയ: تَـ (നീ/നിങ്ങൾ), أَ (ഞാൻ), نَـ (ഞങ്ങൾ) എന്നിവ തുടക്കത്തിൽ വരുന്നു.</div>' },
+      { t: 'table', h: '✏️ نُكَمِّلُ (١): شَرِبَ — الْمَاضِي', cols: ['الْمُفْرَدُ', 'الْمُثَنَّى', 'الْجَمْعُ'], rows: [ ['شَرِبْتَ', '?شَرِبْتُمَا', 'شَرِبْتُمْ'], ['?شَرِبْتِ', 'شَرِبْتُمَا', '?شَرِبْتُنَّ'], ['?شَرِبْتُ', { v: 'شَرِبْنَا', span: 2 }] ] },
+      { t: 'table', h: '✏️ نُكَمِّلُ (٢): جَلَسَ — الْمُضَارِعُ', cols: ['الْمُفْرَدُ', 'الْمُثَنَّى', 'الْجَمْعُ'], rows: [ ['تَجْلِسُ', '?تَجْلِسَانِ', 'تَجْلِسُونَ'], ['?تَجْلِسِينَ', 'تَجْلِسَانِ', '?تَجْلِسْنَ'], ['?أَجْلِسُ', { v: '?نَجْلِسُ', span: 2 }] ] },
+      { t: 'listen', h: '🔊 أَمْثِلَةٌ (دَرَسَ)', lines: ['يَا أَحْمَدُ، أَنْتَ تَدْرُسُ جَيِّدًا', 'يَا وَلَدَانِ، أَنْتُمَا تَدْرُسَانِ جَيِّدًا', 'يَا أَوْلَادُ، أَنْتُمْ تَدْرُسُونَ جَيِّدًا', 'يَا رَاشِدَةُ، أَنْتِ تَدْرُسِينَ جَيِّدًا', 'يَا بَنَاتُ، أَنْتُنَّ تَدْرُسْنَ جَيِّدًا', 'أَنَا أَدْرُسُ جَيِّدًا', 'نَحْنُ نَدْرُسُ جَيِّدًا'] },
+      { t: 'table', h: '✏️ تَدْرِيبٌ إِضَافِيٌّ: لَعِبَ — الْمُضَارِعُ', cols: ['الْمُفْرَدُ', 'الْمُثَنَّى', 'الْجَمْعُ'], rows: [ ['?تَلْعَبُ', '?تَلْعَبَانِ', '?تَلْعَبُونَ'], ['?تَلْعَبِينَ', '?تَلْعَبَانِ', '?تَلْعَبْنَ'], ['?أَلْعَبُ', { v: '?نَلْعَبُ', span: 2 }] ] },
+      { t: 'html', h: '🧮 مُصَرِّفُ الْأَفْعَالِ التَّفَاعُلِيُّ', html: '<div class="btn-row"><button class="read-all-btn" onclick="go(\'extra:conj\')">🧮 اِفْتَحِ الْمُصَرِّفَ</button><button class="read-all-btn alt3" onclick="startGame(\'conj\')">🎮 لُعْبَةُ التَّصْرِيفِ</button></div>' }
+    ] },
+    { p: 70, icon: '👥', title: 'الضَّمَائِرُ: الْمُخَاطَبُ وَالْمُتَكَلِّمُ', items: [
+      { t: 'listen', h: '🔊 نَقْرَأُ الْجُمَلَ وَنُلَاحِظُ الْكَلِمَاتِ الْمُلَوَّنَةَ', lines: ['يَا بَابُو هَلْ أَنْتَ تُوَافِقُنِي؟', 'يَا صَدِيقَانِ أَنْتُمَا تَفْعَلَانِ فِعْلًا حَسَنًا', 'يَا أَوْلَادُ أَنْتُمْ تَحْتَاجُونَ إِلَى جُهْدٍ كَبِيرٍ', 'يَا جُمَانَةُ أَنْتِ تَكْتُبِينَ مَقَالَةً جَيِّدَةً', 'يَا بِنْتَانِ أَنْتُمَا تَدْرُسَانِ اللُّغَةَ الْعَرَبِيَّةَ', 'يَا بَنَاتُ أَنْتُنَّ تَشْكُرْنَ لِلْوَالِدَيْنِ', 'أَنَا لَا أَقْبَلُ الرِّشْوَةَ', 'أَنَا أُرِيدُ خَيْرًا لِلْجَمِيعِ', 'نَحْنُ نُحِبُّ وَطَنَنَا', 'نَحْنُ لَا نَكْذِبُ أَبَدًا'] },
+      { t: 'table', h: '✏️ نُكَمِّلُ جَدْوَلَ الضَّمَائِرِ', cols: ['', 'الْمُفْرَدُ', 'الْمُثَنَّى', 'الْجَمْعُ'], rows: [ [{ v: 'الْمُخَاطَبُ (الْمُذَكَّرُ)', lab: 1 }, '?أَنْتَ', '?أَنْتُمَا', '?أَنْتُمْ'], [{ v: 'الْمُخَاطَبُ (الْمُؤَنَّثُ)', lab: 1 }, '?أَنْتِ', '?أَنْتُمَا', '?أَنْتُنَّ'], [{ v: 'الْمُتَكَلِّمُ', lab: 1 }, '?أَنَا', { v: '?نَحْنُ', span: 2 }] ] },
+      { t: 'fill', h: '✏️ نَضَعُ الضَّمِيرَ الْمُنَاسِبَ', rows: [ { q: 'يَا بَابُو هَلْ ____ تُوَافِقُنِي؟', a: 'أَنْتَ' }, { q: 'يَا صَدِيقَانِ ____ تَفْعَلَانِ فِعْلًا حَسَنًا.', a: 'أَنْتُمَا' }, { q: 'يَا أَوْلَادُ ____ تَحْتَاجُونَ إِلَى جُهْدٍ كَبِيرٍ.', a: 'أَنْتُمْ' }, { q: 'يَا جُمَانَةُ ____ تَكْتُبِينَ مَقَالَةً جَيِّدَةً.', a: 'أَنْتِ' }, { q: 'يَا بَنَاتُ ____ تَشْكُرْنَ لِلْوَالِدَيْنِ.', a: 'أَنْتُنَّ' }, { q: '____ لَا أَقْبَلُ الرِّشْوَةَ.', a: 'أَنَا' }, { q: '____ نُحِبُّ وَطَنَنَا.', a: 'نَحْنُ' } ] },
+      { t: 'html', h: '🎭 نُمَثِّلُ هٰذِهِ الْمَسْرَحِيَّةَ فِي الصَّفِّ', html: '<div class="activity-line ml" style="font-size:1rem">ക്ലാസ്സിനെ 4 ഗ്രൂപ്പുകളാക്കി ഓരോ ഗ്രൂപ്പും ഒരു രംഗം അവതരിപ്പിക്കുക. കഥാപാത്രങ്ങളെ തിരഞ്ഞെടുക്കുക, സംഭാഷണങ്ങൾ എഴുതി പഠിക്കുക, വേദി ഒരുക്കുക. താഴെയുള്ള ബട്ടൺ വഴി നിങ്ങളുടെ കഥാപാത്രം തിരഞ്ഞെടുത്ത് പരിശീലിക്കാം.</div><div class="btn-row"><button class="read-all-btn alt3" onclick="go(\'extra:roleplay\')">🎭 التَّمْثِيلُ التَّفَاعُلِيُّ (Role-play)</button><button class="read-all-btn" onclick="go(\'extra:chars\')">👥 تَحْلِيلُ الشَّخْصِيَّاتِ</button></div>' }
+    ] },
+    { p: 71, icon: '✏️', title: 'نُكْمِلُ وَنُحَوِّلُ الْمَاضِيَ إِلَى الْمُضَارِعِ', items: [
+      { t: 'fill', h: '✏️ نُكْمِلُ كَمَا فِي الْمِثَالِ (مِثَالٌ: أَنْتَ تَشْرَبُ الْحَلِيبَ الطَّازَجَ — شَرِبَ)', rows: [ { q: 'أَنَا ____ إِلَى الْكُوَيْتِ فِي الشَّهْرِ الْقَادِمِ. (خَرَجَ)', a: 'أَخْرُجُ' }, { q: 'نَحْنُ ____ فِي الْأَعْمَالِ الْخَيْرِيَّةِ. (اِشْتَرَكَ)', a: 'نَشْتَرِكُ' }, { q: 'أَنْتُمْ ____ ضِدَّ الرِّشْوَةِ. (نَاقَشَ)', a: 'تُنَاقِشُونَ' }, { q: 'أَنْتِ ____ مُعَامَلَةً طَيِّبَةً. (عَامَلَ)', a: 'تُعَامِلِينَ' } ] },
+      { t: 'listen', h: '📖 نَقْرَأُ وَنُلَاحِظُ', lines: ['ذَاتَ صَبَاحٍ اِسْتَيْقَظَ صَادِقٌ مُبَكِّرًا، وَقَامَ مِنْ فِرَاشِهِ. شَرِبَ كُوبًا مِنَ الْقَهْوَةِ، وَفَكَّرَ فِي مَهَامِّهِ الْيَوْمِيَّةِ.', 'ثُمَّ جَلَسَ فِي غُرْفَتِهِ وَبَدَأَ فِي كِتَابَةِ تَقْرِيرٍ. بَعْدَ سَاعَاتٍ اِسْتَرَاحَ قَلِيلًا.', 'وَبَعْدَ الظُّهْرِ ذَهَبَ إِلَى الْمَكْتَبَةِ وَبَحَثَ عَنْ مَرَاجِعَ مُفِيدَةٍ، وَاتَّصَلَ بِصَدِيقِهِ، وَنَاقَشَ مَعَهُ بَعْضَ الْأَفْكَارِ.', 'وَفِي الْمَسَاءِ شَاهَدَ مُحَاضَرَةً عَلَى الْإِنْتَرْنَتْ. قَبْلَ النَّوْمِ اِسْتَعَدَّ جَيِّدًا لِلْيَوْمِ التَّالِي.'] },
+      { t: 'chips', h: '🔍 نَخْتَارُ الْأَفْعَالَ الْمَاضِيَةَ مِنَ الْفِقْرَةِ', words: ['اِسْتَيْقَظَ', 'قَامَ', 'شَرِبَ', 'فَكَّرَ', 'جَلَسَ', 'بَدَأَ', 'اِسْتَرَاحَ', 'ذَهَبَ', 'بَحَثَ', 'اِتَّصَلَ', 'نَاقَشَ', 'شَاهَدَ', 'اِسْتَعَدَّ', 'صَبَاحٍ', 'مُبَكِّرًا', 'فِرَاشِهِ', 'الْقَهْوَةِ', 'غُرْفَتِهِ', 'الْمَكْتَبَةِ', 'مُحَاضَرَةً'], correct: ['اِسْتَيْقَظَ', 'قَامَ', 'شَرِبَ', 'فَكَّرَ', 'جَلَسَ', 'بَدَأَ', 'اِسْتَرَاحَ', 'ذَهَبَ', 'بَحَثَ', 'اِتَّصَلَ', 'نَاقَشَ', 'شَاهَدَ', 'اِسْتَعَدَّ'] },
+      { t: 'table', h: '✏️ نَخْتَارُ مِنَ الْفِقْرَةِ أَفْعَالًا مَاضِيَةً وَنَكْتُبُ صِيَغَ الْمُضَارِعِ لَهَا', cols: ['الْفِعْلُ الْمَاضِي', 'الْفِعْلُ الْمُضَارِعُ'], rows: [ ['اِسْتَيْقَظَ', 'يَسْتَيْقِظُ'], ['قَامَ', '?يَقُومُ'], ['شَرِبَ', '?يَشْرَبُ'], ['فَكَّرَ', '?يُفَكِّرُ'], ['جَلَسَ', '?يَجْلِسُ'], ['بَدَأَ', '?يَبْدَأُ'], ['اِسْتَرَاحَ', '?يَسْتَرِيحُ'], ['ذَهَبَ', '?يَذْهَبُ'], ['بَحَثَ', '?يَبْحَثُ'], ['اِتَّصَلَ', '?يَتَّصِلُ'], ['نَاقَشَ', '?يُنَاقِشُ'], ['شَاهَدَ', '?يُشَاهِدُ'], ['اِسْتَعَدَّ', '?يَسْتَعِدُّ'] ] },
+      { t: 'disc', h: '🎲 لُعْبَةُ الْأَفْعَالِ فِي الصَّفِّ', qs: ['يَا سِنَانُ، مَاذَا شَرِبْتَ أَمْسِ؟ — شَرِبْتُ الْحَلِيبَ أَمْسِ.', 'مَاذَا شَرِبَ سِنَانٌ أَمْسِ؟ — شَرِبَ سِنَانٌ الْحَلِيبَ.', 'يَا سِنَانُ، مَاذَا تَشْرَبُ الْيَوْمَ؟ — أَشْرَبُ الْيَوْمَ عَصِيرًا.', 'مَاذَا يَشْرَبُ سِنَانٌ الْيَوْمَ؟ — يَشْرَبُ سِنَانٌ عَصِيرًا.'], a: 'اِسْتَعْمِلْ أَفْعَالًا أُخْرَى: قَرَأَ ← قَرَأْتَ / يَقْرَأُ ← تَقْرَأُ، أَكَلَ ← أَكَلْتَ / يَأْكُلُ ← تَأْكُلُ، كَتَبَ ← كَتَبْتَ / يَكْتُبُ ← تَكْتُبُ.' }
+    ] }
+  ],
+
+  home: [
+    { title: '📚 الدَّرْسُ', items: [
+      { label: '📖 نَقْرَأُ الْمَسْرَحِيَّةَ', ml: 'Read the Drama + ശബ്ദം + മലയാളം', cls: 'b1', go: 'reading' },
+      { label: '📄 صَفْحَةً صَفْحَةً', ml: 'Page-wise Activities (59–71)', cls: 'b6', go: 'pages' },
+      { label: '🎭 التَّمْثِيلُ التَّفَاعُلِيُّ', ml: 'Role-play — കഥാപാത്രമാകാം', cls: 'b10', go: 'extra:roleplay' },
+      { label: '👥 الشَّخْصِيَّاتُ', ml: 'Character Analysis', cls: 'b7', go: 'extra:chars' }
+    ] },
+    { title: '📄 صَفَحَاتُ الْكِتَابِ', items: [
+      { label: '🖼️ ص ٥٩ نُفَكِّرُ', ml: 'Think & Express', cls: 'b8', go: 'page:59' },
+      { label: '💼 ص ٦٠–٦١ الْمَشْهَدُ ١', ml: 'Scene 1', cls: 'b3', go: 'page:61' },
+      { label: '🏥 ص ٦٢–٦٣ الْمَشْهَدُ ٢', ml: 'Scene 2 + Story', cls: 'b5', go: 'page:62' },
+      { label: '👨‍👩‍👦 ص ٦٤–٦٥ الْمَشْهَدُ ٣', ml: 'Scene 3 + Who said?', cls: 'b4', go: 'page:64' },
+      { label: '🎉 ص ٦٦ الْمَشْهَدُ ٤', ml: 'Scene 4', cls: 'b2', go: 'page:66' },
+      { label: '🔄 ص ٦٧ نِهَايَةٌ بَدِيلَةٌ', ml: 'Alternative endings + دَعْنِي', cls: 'b10', go: 'page:67' },
+      { label: '💎 ص ٦٨ قِيَمٌ وَهُتَافَاتٌ', ml: 'Values + Slogans + Past', cls: 'b12', go: 'page:68' },
+      { label: '📊 ص ٦٩–٧١ الْقَوَاعِدُ', ml: 'Present, Pronouns, Practice', cls: 'b11', go: 'page:69' }
+    ] },
+    { title: '🧠 الْكَلِمَاتُ وَالْقَوَاعِدُ', items: [
+      { label: '🗂️ بِطَاقَاتُ الْكَلِمَاتِ', ml: 'Flip Word Cards', cls: 'b2', go: 'learn' },
+      { label: '📚 الْمُعْجَمُ', ml: 'Vocabulary + Glossary', cls: 'b7', go: 'vocab' },
+      { label: '🧮 مُصَرِّفُ الْأَفْعَالِ', ml: 'Verb Conjugator (ഭൂതം / വർത്തമാനം)', cls: 'b11', go: 'extra:conj' },
+      { label: '✍️ رُكْنُ الْكِتَابَةِ', ml: 'All Writing Tasks + Model Answers', cls: 'b6', go: 'writing' }
+    ] },
+    { title: '🎮 الْأَلْعَابُ وَالتَّقْوِيمُ', items: [
+      { label: '🎮 كُلُّ الْأَلْعَابِ (١٤)', ml: '14 Games', cls: 'b3', go: 'games' },
+      { label: '🗣️ مَنِ الْقَائِلُ؟', ml: 'Who said it?', cls: 'b10', go: 'game:mcq:0' },
+      { label: '🧩 رَتِّبِ الْكَلِمَاتِ', ml: 'Sentence Builder', cls: 'b5', go: 'game:arrange' },
+      { label: '🎡 عَجَلَةُ الْأَسْئِلَةِ', ml: 'Spin the Wheel', cls: 'b6', go: 'game:wheel' },
+      { label: '❓ اِخْتِبَارٌ', ml: 'Quiz (15)', cls: 'b4', go: 'quiz' },
+      { label: '🗒️ بَنْكُ الْأَسْئِلَةِ', ml: 'Question Bank + PDF', cls: 'b9', go: 'qbank' },
+      { label: 'ℹ️ التَّعْلِيمَاتُ', ml: 'Instructions', cls: 'b8', go: 'help' }
+    ] }
+  ],
+
+  help: [
+    '📖 <b>نَقْرَأُ</b>: നാടകം മുഴുവൻ വായിക്കാം. ഓരോ വരിയിലെയും 🔊 അമർത്തിയാൽ കേൾക്കാം. "Read All" മുഴുവൻ വായിക്കും. 🌐 ബട്ടൺ മലയാളം അർത്ഥം കാണിക്കും.',
+    '📄 <b>صَفْحَةً صَفْحَةً</b>: പാഠപുസ്തകത്തിലെ ഓരോ പേജിലെയും (59–71) എല്ലാ പ്രവർത്തനങ്ങളും — ഉത്തരം എഴുതാം, "Model Answer" നോക്കാം, "تَحَقَّقْ" വഴി പരിശോധിക്കാം.',
+    '🎭 <b>Role-play</b>: ഒരു കഥാപാത്രം തിരഞ്ഞെടുക്കുക; ബാക്കിയുള്ള വരികൾ ആപ്പ് വായിക്കും, നിങ്ങളുടെ വരി വരുമ്പോൾ നിങ്ങൾ ഉറക്കെ വായിക്കുക.',
+    '🧮 <b>مُصَرِّفُ الْأَفْعَالِ</b>: ഏത് ക്രിയയും ഭൂതകാലത്തിലും വർത്തമാനകാലത്തിലും എല്ലാ സർവ്വനാമങ്ങളോടും ചേർത്ത് കാണാം.',
+    '🎮 <b>14 കളികൾ</b>: വാക്ക് ഊഹിക്കൽ, ജോഡി ചേർക്കൽ, വാക്യം ക്രമീകരിക്കൽ, ആരാണ് പറഞ്ഞത്, ശരി/തെറ്റ്, ഓർമ്മക്കളി, സമയ മത്സരം, ചോദ്യചക്രം...',
+    '❓ <b>اِخْتِبَارٌ</b>: 15 ചോദ്യങ്ങൾ — ഉത്തരം തിരഞ്ഞെടുത്ത് Submit ചെയ്യുക.',
+    '🗒️ <b>بَنْكُ الْأَسْئِلَةِ</b>: എല്ലാ ചോദ്യോത്തരങ്ങളും; Print / PDF ആയി സേവ് ചെയ്യാം.',
+    '⭐ സ്കോർ, ❤️ ജീവൻ, 🏆 നക്ഷത്രങ്ങൾ മുകളിൽ കാണാം. 🔊 ശബ്ദം ഓഫ് ചെയ്യാം, ⛶ ഫുൾസ്ക്രീൻ ആക്കാം (ക്ലാസ്സ്‌റൂം പ്രൊജക്ടറിന് അനുയോജ്യം).'
+  ]
+};
+
+/* ===== L1 extras: role-play, characters, conjugator ===== */
+let rpState = null;
+function rpHalt() { if (rpState) { rpState.on = false; } }
+EXTRAS.roleplay = { title: '🎭 التَّمْثِيلُ التَّفَاعُلِيُّ <small class="ml" style="font-size:.8rem;color:#64748b">(Role-play)</small>', render: box => {
+  const lines = LESSON.reading.blocks.filter(b => b.k !== 'scene' || true);
+  box.innerHTML = `<div class="activity-line ml" style="font-size:1rem">1️⃣ നിങ്ങളുടെ കഥാപാത്രം തിരഞ്ഞെടുക്കുക (അല്ലെങ്കിൽ "👂 കേൾക്കുക" തിരഞ്ഞെടുക്കുക). 2️⃣ ▶️ അമർത്തുക. 3️⃣ നിങ്ങളുടെ വരി വരുമ്പോൾ സ്റ്റേജ് ഓറഞ്ച് നിറമാകും — ഉറക്കെ വായിച്ച് "التَّالِي" അമർത്തുക.</div><div class="char-grid" id="rpChars"></div><div class="rp-stage" id="rpStage"><div class="rp-who">🎬</div><div class="rp-line ar">اِخْتَرْ شَخْصِيَّتَكَ ثُمَّ اضْغَطْ ▶️</div></div><div class="center-row" style="margin-top:16px"><button class="read-all-btn" id="rpStart">▶️ اِبْدَأْ</button><button class="read-all-btn alt3" id="rpNext">⏭️ التَّالِي</button><button class="read-all-btn alt" id="rpStopB">⏹️ إِيقَاف</button><select class="fillbox" id="rpScene" style="width:auto"><option value="0">كُلُّ الْمَشَاهِدِ</option><option value="1">الْمَشْهَدُ ١</option><option value="2">الْمَشْهَدُ ٢</option><option value="3">الْمَشْهَدُ ٣</option><option value="4">الْمَشْهَدُ ٤</option></select></div>`;
+  let chosen = null; const cg = box.querySelector('#rpChars');
+  const opts = [['👂', 'اِسْتِمَاعٌ فَقَطْ', null], ...Object.entries(LESSON.chars).map(([n, c]) => [c.emoji, n, n])];
+  opts.forEach(([e, n, v]) => { const d = document.createElement('div'); d.className = 'char-card' + (v === null ? ' sel' : ''); d.innerHTML = `<div class="e">${e}</div><div class="ar" style="font-size:1.2rem">${n}</div>`; d.onclick = () => { cg.querySelectorAll('.char-card').forEach(x => x.classList.remove('sel')); d.classList.add('sel'); chosen = v; }; cg.appendChild(d); });
+  const stage = box.querySelector('#rpStage');
+  const show = b => { stage.classList.toggle('mine', !!(chosen && b.sp === chosen)); const c = b.sp ? LESSON.chars[b.sp] : null; stage.innerHTML = `<div class="rp-who">${b.k === 'scene' ? '🎬' : b.k === 'stage' ? '📝 وَصْفُ الْمَسْرَحِ' : (c ? c.emoji + ' ' : '') + b.sp}</div><div class="rp-line ar">${b.ar}</div>${chosen && b.sp === chosen ? '<div class="rp-turn ar">⭐ دَوْرُكَ! اِقْرَأْ بِصَوْتٍ عَالٍ ثُمَّ اضْغَطِ التَّالِي</div>' : ''}`; };
+  const step = () => { if (!rpState || !rpState.on) return; if (rpState.i >= rpState.list.length) { stage.classList.remove('mine'); stage.innerHTML = '<div class="rp-line ar">🎉 السِّتَارُ — أَحْسَنْتَ!</div>'; rpState.on = false; addScore(20); state.stars++; updateStats(); return; }
+    const b = rpState.list[rpState.i++]; show(b);
+    if (chosen && b.sp === chosen) { rpState.wait = true; return; }
+    rpState.wait = false; speakArabic(b.ar, () => setTimeout(step, 450)); };
+  box.querySelector('#rpStart').onclick = () => { stopSpeech(); const sc = +box.querySelector('#rpScene').value; let list = LESSON.reading.blocks;
+    if (sc) { const idx = []; let n = 0; list.forEach(b => { if (b.k === 'scene') n++; if (n === sc) idx.push(b); }); list = idx; }
+    rpState = { on: true, i: 0, list, wait: false }; step(); };
+  box.querySelector('#rpNext').onclick = () => { if (!rpState) return; stopSpeech(); if (!rpState.on) return; rpState.wait = false; step(); };
+  box.querySelector('#rpStopB').onclick = () => { rpHalt(); stopSpeech(); };
+} };
+
+EXTRAS.chars = { title: '👥 تَحْلِيلُ الشَّخْصِيَّاتِ <small class="ml" style="font-size:.8rem;color:#64748b">(Character Analysis)</small>', render: box => {
+  const data = [
+    ['سُهَيْل', 'مُوَظَّفُ الْبَلَدِيَّةِ', 'نَزِيهٌ، أَمِينٌ، حَازِمٌ، صَابِرٌ، مُؤْمِنٌ', 'സത്യസന്ധനായ ഉദ്യോഗസ്ഥൻ. മകന് ചികിത്സാപ്പണം അത്യാവശ്യമായിട്ടും കൈക്കൂലി നിരസിക്കുന്നു.', 'هٰذِهِ الْأَمْوَالُ لَيْسَتْ نَقِيَّةً.'],
+    ['طَارِق', 'الْمُقَاوِلُ', 'يُحَاوِلُ الرِّشْوَةَ أَوَّلًا ثُمَّ يَتُوبُ وَيَتَغَيَّرُ', 'കൈക്കൂലി നൽകാൻ ശ്രമിക്കുന്ന കോൺട്രാക്ടർ; ഗാനിമിന്റെ വാക്കുകൾ കേട്ട് മാനസാന്തരപ്പെടുന്നു.', 'كُنْتُ غَلْطَانَ فِي التَّفْكِيرِ.'],
+    ['غَانِم', 'ابْنُ سُهَيْلٍ (الْمَرِيضُ)', 'شُجَاعٌ، ذَكِيٌّ، صَادِقٌ، يُحِبُّ وَالِدَيْهِ', 'രോഗിയായ മകൻ; മരണമാണ് കൈക്കൂലിയേക്കാൾ ഇഷ്ടം എന്ന് പറയുന്ന ധീരനായ കുട്ടി.', 'الْمَوْتُ أَحَبُّ إِلَيَّ مِنَ الرِّشْوَةِ لِأَجْلِي.'],
+    ['هَالَة', 'زَوْجَةُ سُهَيْلٍ', 'أُمٌّ حَنُونٌ، صَابِرَةٌ، تَدْعُو اللّٰهَ', 'സ്നേഹമയിയായ ഉമ്മ; മകനുവേണ്ടി കരഞ്ഞ് പ്രാർത്ഥിക്കുന്നു.', 'يَا إِلٰهِي أَلْبِسْهُ لِبَاسَ الشِّفَاءِ.'],
+    ['زِيَاد', 'الطَّبِيبُ', 'مُخْلِصٌ فِي عَمَلِهِ، يُقَدِّرُ الْأَمَانَةَ', 'ആത്മാർത്ഥതയുള്ള ഡോക്ടർ; സത്യസന്ധതയെ ആദരിക്കുന്നു.', 'لَا يُحْتَرَمُ إِلَّا الْكَرِيمُ.']
+  ];
+  data.forEach(([n, r, t, m, q]) => { const c = LESSON.chars[n]; const d = document.createElement('div'); d.className = 'activity-block'; d.style.borderRight = `6px solid ${c.color}`;
+    d.innerHTML = `<div class="activity-heading ar" style="color:${c.color}">${c.emoji} ${n} — ${r}</div><div class="activity-line ar">✨ الصِّفَاتُ: ${t}</div><div class="activity-line ml" style="font-size:1rem">${m}</div><div class="stage ar" style="text-align:right">💬 «${q}»</div>`;
+    d.querySelector('.stage').onclick = () => speakArabic(q); box.appendChild(d); });
+  box.appendChild(renderItem({ t: 'qa', h: '✍️ نُحَلِّلُ', qs: [ { q: 'مَا الْفَرْقُ بَيْنَ طَارِقٍ فِي الْمَشْهَدِ الْأَوَّلِ وَطَارِقٍ فِي آخِرِ الْمَشْهَدِ الثَّانِي؟', a: 'فِي الْأَوَّلِ كَانَ يُحَاوِلُ الرِّشْوَةَ وَيَسْخَرُ مِنْ سُهَيْلٍ، وَفِي آخِرِ الثَّانِي اعْتَرَفَ بِخَطَئِهِ وَقَرَّرَ مُحَارَبَةَ الرِّشْوَةِ.' }, { q: 'أَيُّ صِفَةٍ مُشْتَرَكَةٍ بَيْنَ سُهَيْلٍ وَغَانِمٍ؟', a: 'النَّزَاهَةُ وَرَفْضُ الرِّشْوَةِ رَغْمَ الْحَاجَةِ.' } ] }, data.length + 1));
+} };
+
+/* conjugation engine for sound trilateral verbs */
+const VERBS = [
+  { p: 'كَتَبَ', r: 'كتب', m: 'َ', v: 'ُ', ml: 'എഴുതി' }, { p: 'شَرِبَ', r: 'شرب', m: 'ِ', v: 'َ', ml: 'കുടിച്ചു' }, { p: 'جَلَسَ', r: 'جلس', m: 'َ', v: 'ِ', ml: 'ഇരുന്നു' },
+  { p: 'دَرَسَ', r: 'درس', m: 'َ', v: 'ُ', ml: 'പഠിച്ചു' }, { p: 'لَعِبَ', r: 'لعب', m: 'ِ', v: 'َ', ml: 'കളിച്ചു' }, { p: 'فَتَحَ', r: 'فتح', m: 'َ', v: 'َ', ml: 'തുറന്നു' },
+  { p: 'ذَهَبَ', r: 'ذهب', m: 'َ', v: 'َ', ml: 'പോയി' }, { p: 'نَصَرَ', r: 'نصر', m: 'َ', v: 'ُ', ml: 'സഹായിച്ചു' }, { p: 'سَمِعَ', r: 'سمع', m: 'ِ', v: 'َ', ml: 'കേട്ടു' },
+  { p: 'فَهِمَ', r: 'فهم', m: 'ِ', v: 'َ', ml: 'മനസ്സിലാക്കി' }, { p: 'عَمِلَ', r: 'عمل', m: 'ِ', v: 'َ', ml: 'ജോലി ചെയ്തു' }, { p: 'رَجَعَ', r: 'رجع', m: 'َ', v: 'ِ', ml: 'മടങ്ങി' },
+  { p: 'خَرَجَ', r: 'خرج', m: 'َ', v: 'ُ', ml: 'പുറത്തുപോയി' }, { p: 'شَكَرَ', r: 'شكر', m: 'َ', v: 'ُ', ml: 'നന്ദി പറഞ്ഞു' }, { p: 'حَفِظَ', r: 'حفظ', m: 'ِ', v: 'َ', ml: 'മനഃപാഠമാക്കി' }, { p: 'طَبَخَ', r: 'طبخ', m: 'َ', v: 'ُ', ml: 'പാചകം ചെയ്തു' }
+];
+const PRON = [ ['أَنْتَ', 'നീ (പു.)'], ['أَنْتُمَا', 'നിങ്ങൾ രണ്ടുപേർ (പു.)'], ['أَنْتُمْ', 'നിങ്ങൾ (പു.)'], ['أَنْتِ', 'നീ (സ്ത്രീ)'], ['أَنْتُمَا', 'നിങ്ങൾ രണ്ടുപേർ (സ്ത്രീ)'], ['أَنْتُنَّ', 'നിങ്ങൾ (സ്ത്രീ)'], ['أَنَا', 'ഞാൻ'], ['نَحْنُ', 'ഞങ്ങൾ / നമ്മൾ'] ];
+function conj(vb) {
+  const [a, b, c] = [...vb.r]; const ps = a + 'َ' + b + vb.m + c + 'ْ';
+  const past = [ps + 'تَ', ps + 'تُمَا', ps + 'تُمْ', ps + 'تِ', ps + 'تُمَا', ps + 'تُنَّ', ps + 'تُ', ps + 'نَا'];
+  const st = a + 'ْ' + b + vb.v + c;
+  const pres = ['تَ' + st + 'ُ', 'تَ' + st + 'َانِ', 'تَ' + st + 'ُونَ', 'تَ' + st + 'ِينَ', 'تَ' + st + 'َانِ', 'تَ' + st + 'ْنَ', 'أَ' + st + 'ُ', 'نَ' + st + 'ُ'];
+  return { past, pres };
+}
+function conjTable(forms) {
+  return `<div class="tbl-wrap"><table class="grid-t"><tr><th></th><th>الْمُفْرَدُ</th><th>الْمُثَنَّى</th><th>الْجَمْعُ</th></tr>
+  <tr><td class="lab">الْمُخَاطَبُ (مُذَكَّر)</td><td class="clickable">${PRON[0][0]} ${forms[0]}</td><td class="clickable">${PRON[1][0]} ${forms[1]}</td><td class="clickable">${PRON[2][0]} ${forms[2]}</td></tr>
+  <tr><td class="lab">الْمُخَاطَبُ (مُؤَنَّث)</td><td class="clickable">${PRON[3][0]} ${forms[3]}</td><td class="clickable">${PRON[4][0]} ${forms[4]}</td><td class="clickable">${PRON[5][0]} ${forms[5]}</td></tr>
+  <tr><td class="lab">الْمُتَكَلِّمُ</td><td class="clickable">${PRON[6][0]} ${forms[6]}</td><td class="clickable" colspan="2">${PRON[7][0]} ${forms[7]}</td></tr></table></div>`;
+}
+EXTRAS.conj = { title: '🧮 مُصَرِّفُ الْأَفْعَالِ <small class="ml" style="font-size:.8rem;color:#64748b">(Verb Conjugator)</small>', render: box => {
+  box.innerHTML = `<div class="activity-line ml" style="font-size:1rem">ഒരു ക്രിയ തിരഞ്ഞെടുക്കുക — ഭൂതകാലവും (الْمَاضِي) വർത്തമാനകാലവും (الْمُضَارِع) എല്ലാ സർവ്വനാമങ്ങളോടും കൂടി. ഓരോ കളത്തിലും അമർത്തിയാൽ കേൾക്കാം.</div><div id="vchips" style="margin-bottom:14px"></div><div id="vout"></div>`;
+  const out = box.querySelector('#vout'); const ch = box.querySelector('#vchips');
+  const show = vb => { ch.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x.dataset.p === vb.p)); const f = conj(vb);
+    out.innerHTML = `<div class="grammar-box activity-block info"><div class="activity-heading ar">📘 ${vb.p} — <span class="ml" style="font-size:1rem">${vb.ml}</span> — الْمَاضِي</div>${conjTable(f.past)}</div><div class="activity-block"><div class="activity-heading ar">📗 ${vb.p} — الْمُضَارِعُ (يَ${[...vb.r][0]}ْ${[...vb.r][1]}${vb.v}${[...vb.r][2]}ُ)</div>${conjTable(f.pres)}</div>`;
+    out.querySelectorAll('td.clickable').forEach(td => td.onclick = () => speakArabic(td.innerText)); };
+  VERBS.forEach(vb => { const c = document.createElement('span'); c.className = 'chip ar'; c.dataset.p = vb.p; c.innerText = vb.p; c.onclick = () => show(vb); ch.appendChild(c); });
+  show(VERBS[0]);
+} };
+GAMES.conj = { name: 'لُعْبَةُ التَّصْرِيفِ', ml: 'ശരിയായ ക്രിയാരൂപം തിരഞ്ഞെടുക്കാം', icon: '🧮', instr: 'اِخْتَرِ الصِّيغَةَ الصَّحِيحَةَ لِلضَّمِيرِ!', rounds: 10,
+  init: () => Array.from({ length: 10 }, () => { const vb = VERBS[Math.floor(Math.random() * VERBS.length)]; const t = Math.random() < .5 ? 'past' : 'pres'; const pi = Math.floor(Math.random() * 8); return { vb, t, pi }; }),
+  render: (it, a) => { const f = conj(it.vb)[it.t]; const right = f[it.pi];
+    a.appendChild(box(`<div><div style="font-size:2rem">${PRON[it.pi][0]} + ${it.vb.p}</div><div class="ml" style="font-size:1rem;color:#64748b">${PRON[it.pi][1]} — ${it.t === 'past' ? 'الْمَاضِي (ഭൂതം)' : 'الْمُضَارِعُ (വർത്തമാനം)'}</div></div>`));
+    const others = shuffle([...new Set(f.filter(x => x !== right))]).slice(0, 3); optButtons(a, [right, ...others], right); } };
+
+</script>
+</body>
+</html>
